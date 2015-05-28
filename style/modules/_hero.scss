@@ -1,0 +1,61 @@
+
+.hero{
+    height:100vh;
+    background:url('../libs/img/temp.jpg') no-repeat center;
+    background-size: cover;
+    position:relative;
+    margin-top:0;
+}
+
+#smamologo{
+    margin-top:40px;
+    width:50%;
+    max-width: 320px;
+    display: block;
+    fill:#999;
+    @include center(true,true);
+    animation:fadeout .5s forwards;
+    animation-delay: 5.3s;
+}
+
+#smamologo .logo path{
+    fill:none;
+    stroke:rgba(0,0,0,.6);
+    stroke-dasharray: 280;
+    stroke-dashoffset:280;
+    stroke-width:.8px;
+    stroke-linecap:round;
+    animation: linedrawthemonkey 1800ms ease-in forwards;
+    animation-delay: .5s;
+
+}
+
+#smamologo .smart{display: none;}
+#smamologo .monkey{display: none;}
+
+
+.intro-text{
+    
+    @include center(true,true);
+    transform:scaleY(1.4);
+    font-size:42px;
+    
+    span{
+        @include center(true,true);
+        white-space: nowrap;
+        font-weight: 400;
+        text-transform: uppercase;
+        animation:squiggly-anim 340ms linear infinite;
+        color:transparent;
+        text-align:center;
+        transition:color .5s;
+        font-size:0px;
+        
+    }
+    
+    .active{
+        color:rgba(0,0,0,.7);
+        transition:color 0s;
+        font-size:inherit;
+    }
+}

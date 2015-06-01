@@ -6,6 +6,8 @@ require 'functions/post-types.php';
 
 require 'functions/images.php';
 
-require 'functions/scripts.php'; 
+require 'functions/scripts.php';
+
+require 'functions/no-emojis.php'; 
 
 ?>

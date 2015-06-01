@@ -3,20 +3,3 @@
     60%{stroke-dashoffset:0;fill:rgba(50,59,59,0);stroke-width:.3px;}
     100%{stroke-dashoffset:0;fill:rgba(59,59,59,.9);stroke-width:0px;}
 }
-
-@keyframes tohalf{
-    to{transform:scale(.5);}
-}
-
-@keyframes fadeout{
-    to{opacity:0;}
-}
-
-
-@keyframes squiggly-anim {
-    0% {filter: url("#squiggly-0");}
-    25% {filter: url("#squiggly-1");}
-    50% {filter: url("#squiggly-2");}
-    75% {filter: url("#squiggly-3");}
-    100% {filter: url("#squiggly-4");}
-}

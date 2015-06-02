@@ -7,13 +7,12 @@
     
 }
 
-.hero .inner{
+.hero .inner, .flickity-viewport, .flickity-slider{
     @extend %fill-all;
-
+    
     .hero-banner{
-        
-        height:100%;
         width:100%;
+        height:100%;
         @extend %base-padding;
         background-position: center;
         background-size: cover;
@@ -32,41 +31,46 @@
             background:rgba($monkey-green,.7);
             
         }
-    }
     
-    .hero-banner-text{
-        top:30%;
-    }
     
-    h3, p{
-        @extend %centered-read;
-        @extend %font-shadow;
-        display: block;
-        color:$monkey-white;
-        
-    }
-    
-    h3{
-        font-size:250%;
-        text-transform: uppercase;
-        padding-bottom: $base-margin;
-        border-bottom:2px solid $monkey-white;
-        text-align: center;
-    
-    }
-    
-        
-    p{
+        .hero-banner-text{
+            top:50%;
+            height:240px;
+            overflow:hidden;
+            width:100%;
+            transform: translateY(-50%);
 
-        @extend %article-font-style;
-        padding-top:$base-margin;
-        font-size:120%;
+        }
+
+        h3, p{
+            @extend %centered-read;
+            @extend %font-shadow;
+            display: block;
+            color:$monkey-white;
+
+        }
+
+        h3{
+            font-size:250%;
+            text-transform: uppercase;
+            padding-bottom: $base-margin;
+            border-bottom:2px solid $monkey-white;
+            text-align: center;
+
+        }
+
+
+        p{
+
+            @extend %article-font-style;
+            padding-top:$base-margin;
+            font-size:120%;
+        }
+        
     }
     
     .flickity-page-dots{
         position: absolute;
         bottom:$base-margin;
     }
-    
-    
 }

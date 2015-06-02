@@ -4,6 +4,7 @@ $(function(){
         prevNextButtons: false,
         pageDots: true,
         wrapAround: true,
+        setGallerySize: false,
     
     });
 

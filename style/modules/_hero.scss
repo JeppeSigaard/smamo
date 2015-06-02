@@ -13,6 +13,7 @@
     .hero-banner{
         
         height:100%;
+        width:100%;
         @extend %base-padding;
         background-position: center;
         background-size: cover;
@@ -34,8 +35,7 @@
     }
     
     .hero-banner-text{
-        top:45%;
-        transform: translateY(-50%);
+        top:30%;
     }
     
     h3, p{
@@ -47,7 +47,7 @@
     }
     
     h3{
-        font-size:300%;
+        font-size:250%;
         text-transform: uppercase;
         padding-bottom: $base-margin;
         border-bottom:2px solid $monkey-white;
@@ -61,6 +61,11 @@
         @extend %article-font-style;
         padding-top:$base-margin;
         font-size:120%;
+    }
+    
+    .flickity-page-dots{
+        position: absolute;
+        bottom:$base-margin;
     }
     
     

@@ -1,0 +1,1 @@
+//@koala-append 'modules/img-data-src.js';

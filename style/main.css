@@ -65,7 +65,7 @@ a, a:active, a:visited, a:hover {
     fill: rgba(59, 59, 59, 0.9);
     stroke-width: 0px; } }
 html, body {
-  font-family: 'Lato',sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 16px;
   box-sizing: border-box;
@@ -80,8 +80,8 @@ body * {
           backface-visibility: inherit; }
 
 img {
-  width: 100%;
-  max-width: 100%; }
+  max-width: 100%;
+  height: auto; }
 
 header, section, footer {
   display: block;

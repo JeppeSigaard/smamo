@@ -28,7 +28,7 @@
             @extend %fill-all;
             content:'';
             z-index:0;
-            background:rgba($monkey-green,.7);
+            background:rgba($monkey-green,.5);
             
         }
     
@@ -51,7 +51,7 @@
         }
 
         h3{
-            font-size:250%;
+            font-size:220%;
             text-transform: uppercase;
             padding-bottom: $base-margin;
             border-bottom:2px solid $monkey-white;

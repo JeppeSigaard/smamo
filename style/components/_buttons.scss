@@ -1,0 +1,135 @@
+$button-shadow: 1px 1px 2px rgba($monkey-black,.2);
+$button-text-shadow: 1px 1px 0px rgba($monkey-black,.1);
+$nav-button-size: 50px;
+$playbtn-size: 60px;
+
+.button, .button:visited{
+    background: $monkey-green;
+    position:relative;
+    z-index:1;
+    transition:opacity.2s;
+    color: $monkey-white;
+    padding: 10px 30px;
+    border-radius: 8px;
+    box-shadow: $button-shadow;
+    text-shadow: $button-text-shadow;
+    display: inline-block;
+    vertical-align:middle;
+    line-height: 1;
+    cursor: pointer;
+    opacity:.95;
+    
+    &.large{
+        font-size:110%;
+        padding: 12px 40px;
+    }
+    
+    &.black{
+         background: $monkey-black;
+    }
+    
+    &.red{
+         background: $monkey-red;
+    }
+    
+    
+    &:hover{
+        color: $monkey-white;
+        opacity:1;
+    }
+}
+
+.button-dir{
+    display: block;
+    background: $monkey-black;
+    color: $monkey-white;
+    height: $nav-button-size;
+    width: $nav-button-size;
+    line-height: $nav-button-size;
+    border-radius: $nav-button-size;
+    overflow: hidden;
+    box-shadow: $button-shadow;
+    text-shadow: $button-text-shadow;
+    display: inline-block;
+    vertical-align:middle;
+    cursor: pointer;
+    position:relative;
+    
+    &:before{
+        display: block;
+        font-family: 'dashicons';
+        content: '\f341';
+        font-size: $nav-button-size/2;
+        height: $nav-button-size;
+        width: $nav-button-size;
+        text-align: center;
+        font-weight: 300;
+        margin: 0px 0px 0px -2px;
+    }
+    
+    &.right:before{
+        content: '\f345';
+        margin: 0px 0px 0px 1px;
+    }
+    
+    &.up:before{
+        content: '\f343';
+        margin: -2px 0px 0px 0px;
+    }
+    
+    &.down:before{
+        content: '\f347';
+        margin: 2px 0px 0px 0px;
+    }
+    
+}
+
+.playbtn{
+    
+    cursor: pointer;
+    display: block;
+    background: $monkey-white;
+    color: $monkey-green;
+    height: $playbtn-size;
+    width: $playbtn-size;
+    line-height: $playbtn-size;
+    border-radius: $playbtn-size;
+    overflow: hidden;
+    box-shadow: $button-shadow;
+    text-shadow: $button-text-shadow;
+    display: inline-block;
+    vertical-align: middle;
+    transition: background .2s, color .2s;
+    
+    
+    &:before{
+        display: block;
+        font-family: 'dashicons';
+        content: "\f522";
+        font-size: $playbtn-size/2;
+        height: $playbtn-size;
+        width: $playbtn-size;
+        text-align: center;
+        font-weight: 300;
+        margin: 2px 0px 0px 2px;
+    }
+    
+    &:hover{
+        
+        background: $monkey-green;
+        color: $monkey-white;
+        
+    }
+    
+}
+
+.heart{
+    
+    color:$monkey-red;
+    
+    &:before{
+        content: "\f487";
+        font-family: dashicons;
+    }
+    
+}

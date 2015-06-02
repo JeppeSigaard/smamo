@@ -1,0 +1,43 @@
+%fill-all{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+
+%base-padding{
+    padding:$base-margin;
+}
+
+%centered-read{
+    max-width:$read-width-max;
+    margin:auto;
+    text-align: left;
+}
+
+%article-font-style{
+    line-height:$base-line-height;
+}
+
+%font-shadow{
+    text-shadow:1px 1px 2px rgba($monkey-black,.2);
+}
+
+%dark-marker{
+    display: inline;
+    background:$monkey-black;
+    color:$monkey-white;
+    box-decoration-break: clone;
+    padding:5px 10px;
+    
+}
+
+%light-marker{
+    display: inline;
+    background:$monkey-white;
+    color:$monkey-black;
+    box-decoration-break: clone;
+    padding:5px 10px;
+    
+}

@@ -1,9 +1,29 @@
+@charset "utf-8";
+
 // FONT
 $base-font:'Lato',sans-serif;
-$base-font-weight: 400;
-$base-font-size: 16px;
+$base-font-weight: 300;
+
+$base-font-size: 12px;
+$base-font-size-480: 14px;
+$base-font-size-640: 16px;
+$base-font-size-960: 18px;
+
+
+
+$base-line-height:1.4;
 
 // FARVE
-$monkey-white: #fff;
-$monkey-black: #333;
+$monkey-white: #ffffff;
+$monkey-light: #ebebeb;
+$monkey-black: #343434;
 $monkey-green: #669999;
+$monkey-red: #c04545;
+
+
+// Højde bredde basic
+$base-margin:12px;
+$page-width-max:1280px;
+$read-width-max:640px;
+
+

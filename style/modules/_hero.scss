@@ -1,0 +1,67 @@
+.hero{
+
+    position:relative;
+    height:60vh;
+    min-height:400px;
+    
+    
+}
+
+.hero .inner{
+    @extend %fill-all;
+
+    .hero-banner{
+        
+        height:100%;
+        @extend %base-padding;
+        background-position: center;
+        background-size: cover;
+        background-color: $monkey-green;
+        background-blend-mode: luminosity;
+        
+        & *{
+            z-index:1;
+            position:relative;
+            
+        }
+        &:before{
+            @extend %fill-all;
+            content:'';
+            z-index:0;
+            background:rgba($monkey-green,.7);
+            
+        }
+    }
+    
+    .hero-banner-text{
+        top:45%;
+        transform: translateY(-50%);
+    }
+    
+    h3, p{
+        @extend %centered-read;
+        @extend %font-shadow;
+        display: block;
+        color:$monkey-white;
+        
+    }
+    
+    h3{
+        font-size:300%;
+        text-transform: uppercase;
+        padding-bottom: $base-margin;
+        border-bottom:2px solid $monkey-white;
+        text-align: center;
+    
+    }
+    
+        
+    p{
+
+        @extend %article-font-style;
+        padding-top:$base-margin;
+        font-size:120%;
+    }
+    
+    
+}

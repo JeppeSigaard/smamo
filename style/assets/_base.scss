@@ -5,13 +5,27 @@ html,body{
     
     font-family:$base-font;
     font-weight: $base-font-weight;
-    font-size: $base-font-size;
+    font-size:$base-font-size;
+    @media only screen and(min-width:480px){font-size:$base-font-size-480;}
+    @media only screen and(min-width:640px){font-size:$base-font-size-640;}
+    @media only screen and(min-width:960px){font-size:$base-font-size-960;}
+    transition:font-size .2s;
     box-sizing:border-box;
     text-rendering: optimizeLegibility;
     backface-visibility: hidden;
     -webkit-text-size-adjust: 100%;
+    background:$monkey-light;
+    
+    
     
 }
+
+::selection {
+      background: $monkey-green; /* WebKit/Blink Browsers */
+    }
+::-moz-selection {
+      background: $monkey-green; /* Gecko Browsers */
+    }
 
 body *{
     box-sizing:inherit;
@@ -24,11 +38,18 @@ img{
 }
 
 header,section,footer{
+    position: relative;
+    z-index:1;
+    clear:both;
     display: block;
-    clear: both;
     overflow: auto;
 }
 
 .hidden{
     display:none;
+}
+
+article{
+    
+    @extend %article-font-style;
 }

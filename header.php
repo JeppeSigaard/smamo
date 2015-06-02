@@ -1,8 +1,14 @@
 <!DOCTYPE html>
-<html lang="da">
-<head>
-    <meta charset="UTF-8">
-    <title><?php wp_title(); ?></title>
-    <?php wp_head(); ?>
-</head>
-<body>
+<html <?php language_attributes(); ?>>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><?php wp_title(); ?></title>
+        <?php wp_head(); ?>
+    </head>
+    <body <?php body_class(); ?>>
+    <header>
+        <a class="header-logo" href="<?php bloginfo('url') ?>">
+            <?php include 'libs/img/logo.svg'; ?>
+        </a>
+    </header>

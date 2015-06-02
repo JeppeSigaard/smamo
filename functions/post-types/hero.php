@@ -6,17 +6,17 @@ function smamo_add_hero() {
 	register_post_type( 'hero', array(
 		
         'menu_icon' 		 => 'dashicons-format-video',
-		'public'             => true,
-		'publicly_queryable' => true,
+		'public'             => false,
+		'publicly_queryable' => false,
 		'show_ui'            => true,
 		'show_in_menu'       => true,
 		'query_var'          => true,
 		'rewrite'            => array( 'slug' => 'hero' ),
 		'capability_type'    => 'post',
-		'has_archive'        => true,
+		'has_archive'        => false,
 		'hierarchical'       => false,
 		'menu_position'      => 22,
-		'supports'           => array( 'title', 'thumbnail'),
+		'supports'           => array( 'title', 'thumbnail','excerpt'),
         'labels'             => array(
             
             'name'               => _x( 'Hero banner(e)', 'post type general name', 'smamo' ),

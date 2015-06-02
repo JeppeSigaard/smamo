@@ -1,0 +1,35 @@
+header{
+    z-index:1000;
+    overflow: visible;
+    position:relative;
+    height:0;
+    
+    &.fixed{
+        position:fixed;
+    }
+}
+
+.header-logo{
+    
+    display: block;
+    position:absolute;
+    background:$monkey-black;
+    width:90px;
+    height:80px;
+    top:60px;
+    box-shadow: $button-shadow;
+    
+    svg{
+        fill:$monkey-white;
+        position:relative;
+        display: block;
+        margin:0px auto;
+        top:14px;
+        height:70px;
+        width:70px;
+        
+        .smart,.monkey{
+            display: none;
+        }
+    }
+}

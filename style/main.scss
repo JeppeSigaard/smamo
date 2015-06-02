@@ -1,11 +1,3 @@
-/* Load Asssets */
-@import 'assets/reset';
-@import 'assets/vars';
-@import 'assets/animations';
-@import 'assets/mixins';
-@import 'assets/extends';
-@import 'assets/base';
-
-
-/* Load modules */
+@import 'assets/main';
+@import 'components/main';
 @import 'modules/main';

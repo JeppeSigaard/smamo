@@ -42,7 +42,7 @@ $playbtn-size: 60px;
 .button-dir{
     display: block;
     background: $monkey-black;
-    color: $monkey-white;
+    color: $monkey-white!important;
     height: $nav-button-size;
     width: $nav-button-size;
     line-height: $nav-button-size;
@@ -130,6 +130,19 @@ $playbtn-size: 60px;
     &:before{
         content: "\f487";
         font-family: dashicons;
+    }
+    
+}
+
+.prev-next-right{
+    position:absolute;
+    bottom:$base-margin * 2;
+    right:$base-margin * 2;
+    width:50px;
+    z-index:2;
+    
+    &>a{
+        margin:10px 0px 0px;   
     }
     
 }

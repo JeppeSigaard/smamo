@@ -10,4 +10,6 @@ require 'functions/scripts.php';
 
 require 'functions/no-emojis.php'; 
 
+require 'functions/users.php'; 
+
 ?>

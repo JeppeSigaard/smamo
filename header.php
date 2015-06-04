@@ -7,7 +7,7 @@
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
-    <header>
+    <header class="header">
         <a class="header-logo" href="<?php bloginfo('url') ?>">
             <?php include 'libs/img/logo.svg'; ?>
         </a>

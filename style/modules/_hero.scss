@@ -16,15 +16,15 @@
         @extend %base-padding;
         background-position: center;
         background-size: cover;
-        background-color: $monkey-green;
-        background-blend-mode: luminosity;
-        font-weight: 100;
+        //background-color: $monkey-green;
+        //background-blend-mode: luminosity;
         
         & *{
             z-index:1;
             position:relative;
             
         }
+        /*
         &:before{
             @extend %fill-all;
             content:'';
@@ -32,7 +32,7 @@
             background:rgba($monkey-green,.5);
             
         }
-    
+        */
     
         .hero-banner-text{
             top:50%;
@@ -57,6 +57,7 @@
             padding-bottom: $base-margin;
             border-bottom:2px solid $monkey-white;
             text-align: center;
+            font-weight:700;
 
         }
 

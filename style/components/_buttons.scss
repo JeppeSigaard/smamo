@@ -60,32 +60,55 @@ $playbtn-size: 60px;
         background:$monkey-green;
     }
     
-    &:before{
-        display: block;
-        font-family: 'dashicons';
-        content: '\f341';
-        font-size: $nav-button-size/2;
-        height: $nav-button-size;
-        width: $nav-button-size;
-        text-align: center;
-        font-weight: 300;
-        margin: 0px 0px 0px -2px;
+    &:before,&:after{
+        content:'';
+        position:absolute;
+        background:white;
+        width:$nav-button-size - 38;
+        height:$nav-button-size - 38;
+        top:19px;
+        left:19px;
+        transform: rotate(-135deg) translate(-1.5px,1.5px);
+        
     }
     
+    &:after{
+        background:inherit;
+        transform:  rotate(-135deg)translate(-3px,3px);
+    }
+    
+    
     &.right:before{
-        content: '\f345';
-        margin: 0px 0px 0px 1px;
+        transform: rotate(45deg) translate(-1.5px,1.5px);
+        
+    }
+    
+    &.right:after{
+        background:inherit;
+        transform:  rotate(45deg)translate(-3px,3px);
     }
     
     &.up:before{
-        content: '\f343';
-        margin: -2px 0px 0px 0px;
+        transform: rotate(-45deg) translate(-1.5px,1.5px);
+        
     }
     
-    &.down:before{
-        content: '\f347';
-        margin: 2px 0px 0px 0px;
+    &.up:after{
+        background:inherit;
+        transform:  rotate(-45deg)translate(-3px,3px);
     }
+    
+    
+    &.down:before{
+        transform: rotate(135deg) translate(-1.5px,1.5px);
+        
+    }
+    
+    &.down:after{
+        background:inherit;
+        transform:  rotate(135deg)translate(-3px,3px);
+    }
+    
     
 }
 

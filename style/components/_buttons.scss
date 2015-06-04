@@ -42,6 +42,7 @@ $playbtn-size: 60px;
 .button-dir{
     display: block;
     background: $monkey-black;
+    transition: background .2s;
     color: $monkey-white!important;
     height: $nav-button-size;
     width: $nav-button-size;
@@ -54,6 +55,10 @@ $playbtn-size: 60px;
     vertical-align:middle;
     cursor: pointer;
     position:relative;
+    
+    &:hover{
+        background:$monkey-green;
+    }
     
     &:before{
         display: block;
@@ -142,7 +147,7 @@ $playbtn-size: 60px;
     z-index:2;
     
     &>a{
-        margin:10px 0px 0px;   
+        margin:$base-margin 0px 0px;   
     }
     
 }

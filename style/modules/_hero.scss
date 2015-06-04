@@ -16,7 +16,7 @@
         @extend %base-padding;
         background-position: center;
         background-size: cover;
-        //background-color: $monkey-green;
+        background-color: $monkey-green;
         //background-blend-mode: luminosity;
         
         & *{
@@ -36,7 +36,6 @@
     
         .hero-banner-text{
             top:50%;
-            height:240px;
             overflow:hidden;
             width:100%;
             transform: translateY(-50%);
@@ -73,6 +72,6 @@
     
     .flickity-page-dots{
         position: absolute;
-        bottom:$base-margin;
+        bottom:$base-margin * 2;
     }
 }

@@ -3,6 +3,7 @@
     margin:0;
     padding:$base-margin / 2;
     background: $monkey-white;
+    box-shadow: $button-shadow;
     
     
     header{
@@ -19,7 +20,7 @@
     }
     
     footer{
-        padding:$base-margin 0px 30px;
+        padding:$base-margin 0px 70px;
         @extend %article-font-style;
         
         h3{

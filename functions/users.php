@@ -19,10 +19,10 @@ function smamo_add_users() {
 		'supports'           => array( 'title'),
         'labels'             => array(
             
-            'name'               => _x( 'Brugere', 'post type general name', 'smamo' ),
-            'singular_name'      => _x( 'Bruger', 'post type singular name', 'smamo' ),
-            'menu_name'          => _x( 'Brugere', 'admin menu', 'smamo' ),
-            'name_admin_bar'     => _x( 'Brugere', 'add new on admin bar', 'smamo' ),
+            'name'               => _x( 'Team', 'post type general name', 'smamo' ),
+            'singular_name'      => _x( 'Team', 'post type singular name', 'smamo' ),
+            'menu_name'          => _x( 'Team', 'admin menu', 'smamo' ),
+            'name_admin_bar'     => _x( 'Team', 'add new on admin bar', 'smamo' ),
             'add_new'            => _x( 'Tilføj ny ', 'bruger', 'smamo' ),
             'add_new_item'       => __( 'Tilføj ny', 'smamo' ),
             'new_item'           => __( 'Ny bruger', 'smamo' ),

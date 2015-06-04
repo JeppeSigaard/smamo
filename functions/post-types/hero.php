@@ -5,7 +5,7 @@ add_action( 'init', 'smamo_add_hero' );
 function smamo_add_hero() {
 	register_post_type( 'hero', array(
 		
-        'menu_icon' 		 => 'dashicons-format-video',
+        'menu_icon' 		 => 'dashicons-video-alt3',
 		'public'             => false,
 		'publicly_queryable' => false,
 		'show_ui'            => true,

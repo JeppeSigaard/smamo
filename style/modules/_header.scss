@@ -1,32 +1,83 @@
+$header-transition: 400ms;
+$header-transition-timing-function: cubic-bezier(.73, .15, .5, 1.5);
+
 header.header{
     z-index:1000;
     overflow: visible;
-    position:relative;
-    height:0;
+    position:absolute;
+    top:$base-margin * 2;
+    height:50px;
+    width:0px;
+    
+    @media only screen and(min-width:768px){
+        top:75px;
+        height:80px;
+    }
+    
+    background: $monkey-black;
+    transition:height $header-transition, width $header-transition;
+    box-shadow: $button-shadow;
+    transition-timing-function:$header-transition-timing-function;
+    
     
     &.fixed{
+        top:0;
         position:fixed;
+        height:50px;
+        width:100%;
+        
+        .header-logo{
+            height:50px;
+            
+            
+            svg{
+                top:11px;
+                height:35px;
+                width:35px;
+            }
+        }
     }
+    
+    
 }
 
 .header-logo{
-    
+    transition:height $header-transition, width $header-transition;
     display: block;
     position:absolute;
     background:$monkey-black;
-    width:90px;
-    height:80px;
-    top:60px;
-    box-shadow: $button-shadow;
+    width:60px;
+    height:50px;
+    top:0;
+    transition-timing-function:$header-transition-timing-function;
+    
+    @media only screen and(min-width:768px){
+        height:80px;
+        width:90px;
+    }
+    
     
     svg{
+        transition:height $header-transition, width $header-transition, top $header-transition, left $header-transition;
         fill:$monkey-white;
         position:relative;
         display: block;
-        margin:0px auto;
-        top:14px;
-        height:70px;
-        width:70px;
+        margin:0px auto 0px $base-margin;
+        
+        top:11px;
+        height:35px;
+        width:35px;
+        
+        
+        @media only screen and(min-width:768px){
+        
+            top:14px;
+            height:70px;
+            width:70px;
+        
+        }
+        
+        transition-timing-function:$header-transition-timing-function;
         
         .smart,.monkey{
             display: none;

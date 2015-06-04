@@ -2,7 +2,30 @@
 
     position:relative;
     height:60vh;
-    min-height:400px;
+    min-height:300px;
+    
+    @media only screen and(min-width:768px){
+    
+        min-height:400px;
+    
+    }
+    
+    overflow:hidden;
+    
+    .prev-next-right{
+        transition: right 500ms;
+        transition-timing-function: cubic-bezier(.42, -0.5, .47, 1.14);
+        right:-90px;
+        
+        @media only screen and(min-width:768px){
+            right:$base-margin * 2;
+            
+            &.hide{
+                right:-90px;
+            }
+        }
+        
+    }
     
     
 }

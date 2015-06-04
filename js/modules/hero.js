@@ -1,4 +1,21 @@
 $(function(){
+    
+    
+    $(window).scroll(function(){
+        var breakPointHero = $('.hero .prev-next-right').offset().top - 100;
+        
+        if($(window).scrollTop() > breakPointHero){
+        
+            $('.hero .prev-next-right').addClass('hide');
+            
+        }
+        
+        else{
+            
+            $('.hero .prev-next-right').removeClass('hide');
+        
+        }
+    });
 
     var $herobanner = $('.hero .inner').flickity({
         cellSelector: '.hero-banner',

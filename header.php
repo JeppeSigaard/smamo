@@ -11,4 +11,7 @@
         <a class="header-logo" href="<?php bloginfo('url') ?>">
             <?php include 'libs/img/logo.svg'; ?>
         </a>
+        <nav class="top-nav">
+            <?php wp_nav_menu(array( 'theme_location' => 'main_menu', 'container' => false, 'fallback_cb' => '', 'menu_id' => 'top-nav-menu', )); ?>
+        </nav>
     </header>

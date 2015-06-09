@@ -10,16 +10,6 @@
         
         .heart{
             background:$monkey-light;
-            width:20px;
-            height:20px;
-            line-height: 20px;
-            text-align: center;
-            display: block;
-            margin:auto;
-            position:relative;
-            top:12px;
-            font-size: 16px;
-            @extend %font-shadow;
         }
         
     }

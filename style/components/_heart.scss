@@ -1,0 +1,32 @@
+.heart{
+    width:20px;
+    height:20px;
+    line-height: 20px;
+    text-align: center;
+    display: block;
+    margin:auto;
+    position:relative;
+    top:12px;
+    font-size: 16px;
+    @extend %font-shadow;
+        
+    &:before,
+    &:after {
+        position: absolute;
+        content: "";
+        left: 10px;
+        top: 0;
+        width: 10px;
+        height: 17px;
+        background: $monkey-red;
+        border-radius: 50px 50px 0 0;
+        transform: rotate(-45deg);
+        transform-origin: 0 100%;
+        box-shadow: $base-shadow;
+    }
+    &:after {
+        left: 0;
+        transform: rotate(45deg);
+        transform-origin :100% 100%;
+    }
+}

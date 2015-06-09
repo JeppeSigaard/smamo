@@ -1,0 +1,35 @@
+nav.top-nav{
+    position:absolute;
+    right:0;
+    top:0;
+    padding:0px $base-margin;
+    
+    ul li{
+        display: inline-block;
+        
+        a{
+            display: block;
+            height:50px;
+            line-height:50px;
+            padding:0px $base-margin;
+            color:$monkey-light;
+            font-size:90%;
+        }
+    }
+}
+
+.home{
+    nav.top-nav{
+        top:-50px;
+        opacity:0;
+        transition:opacity 0s, top 3s;
+        transition-delay:0;
+    }
+    
+    header.fixed nav.top-nav{
+        top:0px;
+        opacity:1;
+        transition:opacity .2s, top .3s;
+        transition-delay:.4s;
+    }
+}

@@ -13,7 +13,8 @@ get_header();
     <article>
         <h3>Typografi</h3>
         <hr>
-        <h1>Heading 1 (bruges som reglen i markup)</h1>
+        <p>Typografi skrives aoutomatisk til typografiske elementer, der findes i et article-tag. </p>
+        <h1>Heading 1 (bruges som reglen i markup, derfor faulty render)</h1>
         <h2>Heading 2</h2>
         <h3>Heading 3</h3>
         <h4>Heading 4</h4>

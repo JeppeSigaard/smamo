@@ -1,7 +1,45 @@
 $header-transition: 400ms;
 $header-transition-timing-function: cubic-bezier(.73, .15, .5, 1.5);
+$header-shadow:$base-shadow;
 
 header.header{
+    
+    z-index:1000;
+    overflow: visible;
+    position:absolute;
+    background: $monkey-black;
+    transition:height $header-transition, width $header-transition;
+    box-shadow: $header-shadow;
+    transition-timing-function:$header-transition-timing-function;
+    top:0;
+    position:fixed;
+    height:50px;
+    width:100%;
+
+    .header-logo{
+        height:50px;
+
+
+        svg{
+            fill:$monkey-white;
+            position:relative;
+            display: block;
+            margin:0px auto 0px $base-margin;
+
+            top:12px;
+            height:37px;
+            width:37px;
+            
+            .smart,.monkey{
+                display: none;
+            }
+        }
+    }
+
+}
+
+
+.home header.header{
     z-index:1000;
     overflow: visible;
     position:absolute;
@@ -16,7 +54,7 @@ header.header{
     
     background: $monkey-black;
     transition:height $header-transition, width $header-transition;
-    box-shadow: $button-shadow;
+    box-shadow: $header-shadow;
     transition-timing-function:$header-transition-timing-function;
     
     
@@ -31,56 +69,54 @@ header.header{
             
             
             svg{
-                top:11px;
-                height:35px;
-                width:35px;
+                top:12px;
+                height:37px;
+                width:37px;
             }
         }
     }
-    
-    
+    .header-logo{
+        transition:height $header-transition, width $header-transition;
+        display: block;
+        position:absolute;
+        background:$monkey-black;
+        width:60px;
+        height:50px;
+        top:0;
+        transition-timing-function:$header-transition-timing-function;
+
+        @media only screen and(min-width:768px){
+            height:80px;
+            width:90px;
+        }
+
+
+        svg{
+            transition:height $header-transition, width $header-transition, top $header-transition, left $header-transition;
+            fill:$monkey-white;
+            position:relative;
+            display: block;
+            margin:0px auto 0px $base-margin;
+
+            top:11px;
+            height:35px;
+            width:35px;
+
+
+            @media only screen and(min-width:768px){
+
+                top:14px;
+                height:70px;
+                width:70px;
+
+            }
+
+            transition-timing-function:$header-transition-timing-function;
+
+            .smart,.monkey{
+                display: none;
+            }
+        }
+    }
 }
 
-.header-logo{
-    transition:height $header-transition, width $header-transition;
-    display: block;
-    position:absolute;
-    background:$monkey-black;
-    width:60px;
-    height:50px;
-    top:0;
-    transition-timing-function:$header-transition-timing-function;
-    
-    @media only screen and(min-width:768px){
-        height:80px;
-        width:90px;
-    }
-    
-    
-    svg{
-        transition:height $header-transition, width $header-transition, top $header-transition, left $header-transition;
-        fill:$monkey-white;
-        position:relative;
-        display: block;
-        margin:0px auto 0px $base-margin;
-        
-        top:11px;
-        height:35px;
-        width:35px;
-        
-        
-        @media only screen and(min-width:768px){
-        
-            top:14px;
-            height:70px;
-            width:70px;
-        
-        }
-        
-        transition-timing-function:$header-transition-timing-function;
-        
-        .smart,.monkey{
-            display: none;
-        }
-    }
-}

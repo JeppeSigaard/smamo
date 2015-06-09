@@ -17,10 +17,10 @@ html,body{
 }
 
 ::selection {
-      background: $monkey-green; /* WebKit/Blink Browsers */
+      background: lighten($monkey-green,10); /* WebKit/Blink Browsers */
     }
 ::-moz-selection {
-      background: $monkey-green; /* Gecko Browsers */
+      background: lighten($monkey-green,10); /* Gecko Browsers */
     }
 
 body *{
@@ -53,4 +53,13 @@ article{
 
 .center{
     text-align: center;
+}
+
+.padding{
+    padding:$base-margin;
+}
+
+hr{
+    border-color: rgba($monkey-black,.2);
+    border-radius: none;
 }

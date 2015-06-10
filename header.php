@@ -12,6 +12,9 @@
             <?php include 'libs/img/logo.svg'; ?>
         </a>
         <nav class="top-nav">
-            <?php wp_nav_menu(array( 'theme_location' => 'main_menu', 'container' => false, 'fallback_cb' => '', 'menu_id' => 'top-nav-menu', )); ?>
+            <?php //get_search_form('true'); ?>
+            <a class="search-icon" href="#">Søg</a>
+            <a class="hamburger" href="#">Menu</a>
+            <?php //wp_nav_menu(array( 'theme_location' => 'main_menu', 'container' => false, 'fallback_cb' => '', 'menu_id' => 'top-nav-menu', )); ?>
         </nav>
     </header>

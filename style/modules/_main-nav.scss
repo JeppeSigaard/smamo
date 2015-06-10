@@ -33,3 +33,52 @@ nav.top-nav{
         transition-delay:.4s;
     }
 }
+
+
+.hamburger{
+    text-indent: -99999px;
+    display: block;
+    position:absolute;
+    top:16px;
+    right:$base-margin * 2;
+    border:solid $monkey-light;
+    border-width:2px 0px;
+    height:18px;
+    width:27px;
+    
+    &:before{
+        display: block;
+        position:absolute;
+        border-top:2px solid $monkey-light;
+        content:'';
+        top:6px;
+        left:0;
+        width:100%;
+    }
+    
+}
+
+.search-icon{
+    @extend .hamburger;
+    border:none;
+    right:($base-margin * 3) + 27px;
+    
+    &:before{
+        content:'';
+        width:10px;
+        border:2px solid $monkey-light;
+        height:10px;
+        border-radius:10px;
+        top:0;
+    }
+    
+    &:after{
+        position:absolute;
+        left:0;
+        content:'';
+        width:10px;
+        height:2px;
+        background:$monkey-light;
+        transform: translate(9px, 13px)rotate(45deg);
+    }
+}

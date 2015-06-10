@@ -2,7 +2,7 @@ $(function(){
 
     function setDataImgSrc(){
         
-        console.log('trigger');
+        //console.log('trigger');
         
         $('img').each(function(i){    
 

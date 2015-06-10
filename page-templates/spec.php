@@ -66,6 +66,8 @@ get_header();
         <br/>
         <br/>
         <hr/>
+        <p>Abe</p>
+        <a class="ape-circle"></a>
     </article>
 </section>
 
@@ -73,52 +75,94 @@ get_header();
 <section class="forms">
     <article>
         <h3>Formularer</h3>
-        <p>Text, email, tel, number, select</p>
+        <p>Text, email, tel, number, select, checkbox, range</p>
+        <h5>Standardformular:</h5>
+        <form>
+            <div>
+                <select>
+                    <option value="hide"></option>
+                    <option>1 kasse øller</option>
+                    <option>2 kasser rom</option>
+                    <option>3 kasser dej</option>
+                    <option>4 kasser løse patroner</option>
+                </select>
+                <label>Vælg en mulighed</label>
+            </div>
+            <div>
+                <input type="text" name="fname">
+                <label for="fname">Dit navn</label>
+            </div>
+            <div>
+                <input type="email" name="email">
+                <label for="email">Din email</label>
+            </div>
+            <div>
+                <input type="tel" name="tel">
+                <label for="tel">Dit telefonnummer</label>
+            </div>
+            <div>
+                <input type="number" >
+                <label>Antal besøgende</label>
+            </div>
+            <div>
+                <textarea rows="1"></textarea>
+                <label>Tilføj en kommentar</label>
+            </div>
+            <div>
+                <input type="checkbox">
+                <label>Ving checkbox af</label>
+            </div>
+            <div>
+                <input type="range">
+                <label>Træk skyderen til ønsket position</label>
+            </div>
+        </form>
+        <br>
+        <br>
+        <h5>Formular på hvidt papir (class="sheeted-form small"):</h5>
+        <form class="sheeted-form small">
+            <div>
+                <select>
+                    <option value="hide"></option>
+                    <option>1 kasse øller</option>
+                    <option>2 kasser rom</option>
+                    <option>3 kasser dej</option>
+                    <option>4 kasser løse patroner</option>
+                </select>
+                <label>Vælg en mulighed</label>
+            </div>
+            <div>
+                <input type="text" name="fname">
+                <label for="fname">Dit navn</label>
+            </div>
+            <div>
+                <input type="email" name="email">
+                <label for="email">Din email</label>
+            </div>
+            <div>
+                <input type="tel" name="tel">
+                <label for="tel">Dit telefonnummer</label>
+            </div>
+            <div>
+                <input type="number" >
+                <label>Antal besøgende</label>
+            </div>
+            <div>
+                <textarea rows="1"></textarea>
+                <label>Tilføj en kommentar</label>
+            </div>
+            <div>
+                <input type="checkbox">
+                <label>Ving checkbox af</label>
+            </div>
+            <div>
+                <input type="range">
+                <label>Træk skyderen til ønsket position</label>
+            </div>
+        </form>
+        <br/>
+        <br/>
     </article>
-    <form class="sheeted-form">
-        <div>
-            <select>
-                <option value="hide"></option>
-                <option>1 kasse øller</option>
-                <option>2 kasser rom</option>
-                <option>3 kasser dej</option>
-                <option>4 kasser løse patroner</option>
-            </select>
-            <label>Vælg en mulighed</label>
-        </div>
-        <div>
-            <input type="text" name="fname">
-            <label for="fname">Dit navn</label>
-        </div>
-        <div>
-            <input type="email" name="email">
-            <label for="email">Din email</label>
-        </div>
-        <div>
-            <input type="tel" name="tel">
-            <label for="tel">Dit telefonnummer</label>
-        </div>
-        <div>
-            <input type="number" >
-            <label>Antal besøgende</label>
-        </div>
-        <div>
-            <textarea rows="1"></textarea>
-            <label>Tilføj en kommentar</label>
-        </div>
-        <div>
-            <input type="checkbox">
-            <label>Ving checkbox af</label>
-        </div>
-        <div>
-            <input type="range">
-            <label>Træk skyderen til ønsket position</label>
-        </div>
-        <div>
-            <a class="button black">Send</a>
-        </div>
-        
-    </form>
     
     
     

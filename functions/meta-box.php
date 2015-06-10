@@ -7,6 +7,7 @@ function smamo_add_boxes(){
     require 'meta-box/cittaslow.php'; 
     require 'meta-box/hero.php'; 
     require 'meta-box/users.php'; 
+    require 'meta-box/klippekort.php'; 
 
 return $mb;
 }

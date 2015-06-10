@@ -5,23 +5,6 @@
     background: $monkey-white;
     box-shadow: $button-shadow;
     
-    .box:hover header{
-        
-        
-        &:before{
-            opacity:.8;
-        }
-        
-        &:after{
-            top:25%;
-        }
-        .links{
-            top:75%;
-            transition-delay: .15s;
-        }
-
-    }
-    
     .box{
         position:relative;
     }
@@ -56,7 +39,12 @@
         background:$monkey-black;
         overflow: hidden;
         
-        
+        @media only screen and(min-width:768px){
+            padding-bottom: 90%;
+        }
+        @media only screen and(min-width:1280px){
+            padding-bottom: 70%;
+        }
         
         img{
             width:100%;
@@ -67,7 +55,7 @@
         &:before{
             content:'';
             @extend %fill-all;
-            background:$monkey-light;
+            background:$monkey-black;
             z-index:2;
             opacity:0;
             transition:opacity .3s;
@@ -107,31 +95,6 @@
             
         }
         
-        .links{
-            position:absolute;
-            top:110%;
-            left:50%;
-            transform: translate(-50%,-50%);
-            width:100%;
-            transition:top .15s;
-            transition-delay: 0s;
-            z-index:3;
-            
-            a{
-                display: block;
-                text-align: center;
-                height:25px;
-                line-height: 25px;
-            }
-        }
-        
-        @media only screen and(min-width:768px){
-            padding-bottom: 90%;
-        }
-        @media only screen and(min-width:1280px){
-            padding-bottom: 70%;
-        }
-        
     }
     
     footer{
@@ -149,8 +112,18 @@
             color:$monkey-green;
         }
         
-        span{
+        span,a{
             display: block;
+        }
+        
+        a{
+            margin-top:5px;
+            font-weight:400;
+            font-size:80%;
+            
+            &:hover{
+                text-decoration: underline;
+            }
         }
     }
     

@@ -21,14 +21,9 @@ $person = new WP_Query(array(
         $email = get_post_meta(get_the_ID(),'email',true);
         ?>
         <li class="box person">
-            <a class="box-inner" href="<?php the_permalink(); ?>"></a>
             <header>
                 <?php $image_url = wp_get_attachment_image_src(get_post_meta(get_the_ID(),'profile_img',true),'front-people');?>
                 <img src="<?php echo $image_url[0]; ?>">
-                <div class="links">
-                    <a href="mailto:<?php echo $email ?>"><?php echo $email;?></a>
-                    <a href="tel:<?php echo $telefon ?>"><?php echo $telefon;?></a>
-                </div>
             </header>
             <footer>
                 <h3><?php echo get_post_meta(get_the_ID(),'titel',true); ?></h3>
@@ -36,6 +31,8 @@ $person = new WP_Query(array(
                 <?php $subtitles = get_post_meta(get_the_ID(),'undertitel',true); foreach ($subtitles as $sub) : ?>
                 <span><?php echo esc_textarea($sub); ?></span>
                 <?php endforeach; ?>
+                <a href="mailto:<?php echo $email ?>"><?php echo $email;?></a>
+                <a href="tel:<?php echo $telefon ?>"><?php echo get_post_meta(get_the_ID(),'telefon',true);?></a>
             </footer>
         </li>
         <?php endwhile; ?>

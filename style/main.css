@@ -83,25 +83,29 @@ form input[type="email"],
 form input[type="tel"],
 form input[type="password"],
 form input[type="number"],
-form textarea, .hero .inner .hero-banner p, .flickity-viewport .hero-banner p, .flickity-slider .hero-banner p, .person-gallery footer {
+form textarea, section.page main, section.page aside, .hero .inner .hero-banner p, .flickity-viewport .hero-banner p, .flickity-slider .hero-banner p, .person-gallery footer {
   line-height: 1.4; }
 
-html, body, .box, form > div {
+html, body, .box, form > div, section.page main, section.page aside {
   font-size: 13px;
   -webkit-transition: font-size .2s;
           transition: font-size .2s; }
   @media only screen and (min-width: 480px) {
-    html, body, .box, form > div {
+    html, body, .box, form > div, section.page main, section.page aside {
       font-size: 14px; } }
   @media only screen and (min-width: 640px) {
-    html, body, .box, form > div {
+    html, body, .box, form > div, section.page main, section.page aside {
       font-size: 15px; } }
   @media only screen and (min-width: 960px) {
-    html, body, .box, form > div {
+    html, body, .box, form > div, section.page main, section.page aside {
       font-size: 16px; } }
 
 .heart, .hero .inner .hero-banner h3, .hero .inner .hero-banner p, .flickity-viewport .hero-banner h3, .flickity-viewport .hero-banner p, .flickity-slider .hero-banner h3, .flickity-slider .hero-banner p {
   text-shadow: 1px 1px 2px rgba(52, 52, 52, 0.2); }
+
+section.page main .inner, section.page aside .inner {
+  padding: 13px;
+  background: white; }
 
 html, body {
   font-family: "Lato", sans-serif;
@@ -834,6 +838,39 @@ form {
         -ms-transform-origin: 100% 100%;
             transform-origin: 100% 100%; }
 
+section.page {
+  margin: 56.5px 6.5px;
+  min-height: 100vh;
+  font-size: 0;
+  position: relative; }
+  section.page main, section.page aside {
+    padding: 6.5px; }
+  @media only screen and (min-width: 640px) {
+    section.page aside {
+      display: inline-block;
+      vertical-align: top;
+      width: 50%; } }
+  @media only screen and (min-width: 768px) {
+    section.page main {
+      width: 67%;
+      float: left; }
+    section.page aside {
+      width: 33%;
+      float: right;
+      clear: right; } }
+  @media only screen and (min-width: 1160px) {
+    section.page main {
+      width: 50%;
+      margin-left: 25%;
+      float: none; }
+    section.page aside {
+      position: absolute;
+      width: 25%;
+      right: 0;
+      top: 0; }
+    section.page aside.left {
+      left: 0; } }
+
 header.header {
   z-index: 1000;
   overflow: visible;
@@ -1059,14 +1096,6 @@ nav.top-nav {
   padding: 6.5px;
   background: #ffffff;
   box-shadow: 1px 1px 2px rgba(52, 52, 52, 0.2); }
-  .person-gallery .box:hover header:before {
-    opacity: .8; }
-  .person-gallery .box:hover header:after {
-    top: 25%; }
-  .person-gallery .box:hover header .links {
-    top: 75%;
-    -webkit-transition-delay: .15s;
-            transition-delay: .15s; }
   .person-gallery .box {
     position: relative; }
   .person-gallery .box-inner {
@@ -1091,13 +1120,19 @@ nav.top-nav {
     padding-bottom: 70%;
     background: #343434;
     overflow: hidden; }
+    @media only screen and (min-width: 768px) {
+      .person-gallery header {
+        padding-bottom: 90%; } }
+    @media only screen and (min-width: 1280px) {
+      .person-gallery header {
+        padding-bottom: 70%; } }
     .person-gallery header img {
       width: 100%;
       -webkit-transition: opacity .2s;
               transition: opacity .2s; }
     .person-gallery header:before {
       content: '';
-      background: #ebebeb;
+      background: #343434;
       z-index: 2;
       opacity: 0;
       -webkit-transition: opacity .3s;
@@ -1131,30 +1166,6 @@ nav.top-nav {
           height: 60px;
           width: 60px;
           background-size: 50px; } }
-    .person-gallery header .links {
-      position: absolute;
-      top: 110%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%);
-      width: 100%;
-      -webkit-transition: top .15s;
-              transition: top .15s;
-      -webkit-transition-delay: 0s;
-              transition-delay: 0s;
-      z-index: 3; }
-      .person-gallery header .links a {
-        display: block;
-        text-align: center;
-        height: 25px;
-        line-height: 25px; }
-    @media only screen and (min-width: 768px) {
-      .person-gallery header {
-        padding-bottom: 90%; } }
-    @media only screen and (min-width: 1280px) {
-      .person-gallery header {
-        padding-bottom: 70%; } }
   .person-gallery footer {
     padding: 13px 0px 70px; }
     .person-gallery footer h3 {
@@ -1164,18 +1175,20 @@ nav.top-nav {
       margin-bottom: 5px; }
     .person-gallery footer h4 {
       color: #669999; }
-    .person-gallery footer span {
+    .person-gallery footer span, .person-gallery footer a {
       display: block; }
+    .person-gallery footer a {
+      margin-top: 5px;
+      font-weight: 400;
+      font-size: 80%; }
+      .person-gallery footer a:hover {
+        text-decoration: underline; }
 
 .simple-cta {
   padding-top: 70px;
   padding-bottom: 100px; }
   .simple-cta h3 {
     font-weight: 300; }
-
-section.page {
-  margin-top: 62px;
-  min-height: 100vh; }
 
 .footer {
   margin: 13px;

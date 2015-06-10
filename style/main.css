@@ -71,7 +71,7 @@ form label, form input[type="checkbox"]:after, .hero .inner, .flickity-viewport,
   bottom: 0; }
 
 .hero .inner .hero-banner, .flickity-viewport .hero-banner, .flickity-slider .hero-banner {
-  padding: 12px; }
+  padding: 13px; }
 
 .hero .inner .hero-banner h3, .hero .inner .hero-banner p, .flickity-viewport .hero-banner h3, .flickity-viewport .hero-banner p, .flickity-slider .hero-banner h3, .flickity-slider .hero-banner p {
   max-width: 640px;
@@ -111,7 +111,8 @@ html, body {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -webkit-text-size-adjust: 100%;
-  background: #ebebeb; }
+  background: #ebebeb;
+  line-height: 1; }
 
 ::-moz-selection {
   background: #85adad
@@ -149,18 +150,18 @@ header, section, footer {
   text-align: center; }
 
 .padding {
-  padding: 12px; }
+  padding: 13px; }
 
 hr {
   border-color: rgba(52, 52, 52, 0.2);
   border-radius: none; }
 
 section {
-  margin: 12px; }
+  margin: 13px; }
 
 body article {
   color: #343434;
-  line-height: 1.6; }
+  line-height: 1.4; }
   body article header {
     background: none; }
   body article h1 {
@@ -497,12 +498,12 @@ body article .button:visited {
 
 .prev-next-right {
   position: absolute;
-  bottom: 24px;
-  right: 24px;
+  bottom: 26px;
+  right: 26px;
   width: 50px;
   z-index: 2; }
   .prev-next-right > a {
-    margin: 12px 0px 0px; }
+    margin: 13px 0px 0px; }
 
 .ape-circle {
   display: block;
@@ -524,7 +525,7 @@ body article .button:visited {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  padding: 6px; }
+  padding: 6.5px; }
   @media only screen and (min-width: 480px) {
     .box {
       width: 50%; } }
@@ -556,7 +557,7 @@ form textarea:focus + label {
   opacity: .4; }
 
 form.sheeted-form {
-  padding: 12px;
+  padding: 13px;
   background: #ffffff;
   box-shadow: 1px 1px 4px rgba(52, 52, 52, 0.3);
   margin: auto; }
@@ -574,11 +575,11 @@ form {
     position: relative;
     display: block;
     height: 0px;
-    margin: 12px 0px;
+    margin: 13px 0px;
     border-bottom: 1px dashed rgba(52, 52, 52, 0.3); }
   form > div {
     position: relative;
-    margin-top: 27px; }
+    margin-top: 28px; }
   form label {
     z-index: 1;
     padding: 4px 0px;
@@ -650,7 +651,7 @@ form {
     display: block;
     color: #343434;
     width: 100%;
-    height: 30px; }
+    height: 32.5px; }
   form .select-hidden {
     display: none; }
   form .select-styled {
@@ -663,8 +664,8 @@ form {
     background-color: transparent;
     -webkit-transition: background-color 100ms, border-bottom 100ms;
             transition: background-color 100ms, border-bottom 100ms;
-    height: 30px;
-    line-height: 30px; }
+    height: 32.5px;
+    line-height: 32.5px; }
     form .select-styled.success {
       border-bottom: 1px solid #669999;
       font-weight: 400; }
@@ -676,7 +677,7 @@ form {
       border-color: rgba(52, 52, 52, 0.5) transparent transparent transparent;
       position: absolute;
       top: 13px;
-      right: 12px; }
+      right: 13px; }
     form .select-styled:active:after, form .select-styled.active:after {
       top: 7px;
       border-color: transparent transparent #343434 transparent; }
@@ -686,7 +687,7 @@ form {
     top: 100%;
     right: 0;
     left: 0;
-    top: 30px;
+    top: 32.5px;
     box-shadow: 1px 1px 2px rgba(52, 52, 52, 0.2);
     z-index: 999;
     margin: 0;
@@ -695,8 +696,8 @@ form {
     background-color: #ebebeb; }
     form .select-options li {
       margin: 0;
-      padding: 9.6px 0;
-      text-indent: 12px;
+      padding: 10.4px 0;
+      text-indent: 13px;
       font-weight: 400;
       -webkit-transition: background-color 100ms, color 100ms;
               transition: background-color 100ms, color 100ms; }
@@ -853,7 +854,7 @@ header.header {
       fill: #ffffff;
       position: relative;
       display: block;
-      margin: 0px auto 0px 12px;
+      margin: 0px auto 0px 13px;
       top: 12px;
       height: 37px;
       width: 37px; }
@@ -864,7 +865,7 @@ header.header {
   z-index: 1000;
   overflow: visible;
   position: absolute;
-  top: 24px;
+  top: 26px;
   height: 50px;
   width: 0px;
   background: #343434;
@@ -909,7 +910,7 @@ header.header {
       fill: #ffffff;
       position: relative;
       display: block;
-      margin: 0px auto 0px 12px;
+      margin: 0px auto 0px 13px;
       top: 11px;
       height: 35px;
       width: 35px;
@@ -927,14 +928,14 @@ nav.top-nav {
   position: absolute;
   right: 0;
   top: 0;
-  padding: 0px 12px; }
+  padding: 0px 13px; }
   nav.top-nav ul li {
     display: inline-block; }
     nav.top-nav ul li a {
       display: block;
       height: 50px;
       line-height: 50px;
-      padding: 0px 12px;
+      padding: 0px 13px;
       color: #ebebeb;
       font-size: 90%; }
 
@@ -958,7 +959,7 @@ nav.top-nav {
   display: block;
   position: absolute;
   top: 16px;
-  right: 24px;
+  right: 26px;
   border: solid #ebebeb;
   border-width: 2px 0px;
   height: 18px;
@@ -974,7 +975,7 @@ nav.top-nav {
 
 .search-icon {
   border: none;
-  right: 63px; }
+  right: 66px; }
   .search-icon:before {
     content: '';
     width: 10px;
@@ -1006,7 +1007,7 @@ nav.top-nav {
     right: -90px; }
     @media only screen and (min-width: 768px) {
       .hero .prev-next-right {
-        right: 24px; }
+        right: 26px; }
         .hero .prev-next-right.hide {
           right: -90px; } }
 
@@ -1041,20 +1042,21 @@ nav.top-nav {
   .hero .inner .hero-banner h3, .flickity-viewport .hero-banner h3, .flickity-slider .hero-banner h3 {
     font-size: 220%;
     text-transform: uppercase;
-    padding-bottom: 12px;
+    padding-bottom: 13px;
     border-bottom: 2px solid #ffffff;
     text-align: center;
-    font-weight: 700; }
+    font-weight: 700;
+    margin-top: 3px; }
   .hero .inner .hero-banner p, .flickity-viewport .hero-banner p, .flickity-slider .hero-banner p {
-    padding-top: 12px;
+    padding-top: 13px;
     font-size: 120%; }
 .hero .inner .flickity-page-dots, .flickity-viewport .flickity-page-dots, .flickity-slider .flickity-page-dots {
   position: absolute;
-  bottom: 24px; }
+  bottom: 26px; }
 
 .person-gallery {
   margin: 0;
-  padding: 6px;
+  padding: 6.5px;
   background: #ffffff;
   box-shadow: 1px 1px 2px rgba(52, 52, 52, 0.2); }
   .person-gallery .box:hover header:before {
@@ -1083,10 +1085,12 @@ nav.top-nav {
       .person-gallery header {
         padding-bottom: 70%; } }
   .person-gallery footer {
-    padding: 12px 0px 70px; }
+    padding: 13px 0px 70px; }
     .person-gallery footer h3 {
       text-transform: uppercase;
-      font-weight: 700; }
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 5px; }
     .person-gallery footer h4 {
       color: #669999; }
     .person-gallery footer span {
@@ -1103,7 +1107,7 @@ section.page {
   min-height: 100vh; }
 
 .footer {
-  margin: 12px;
+  margin: 13px;
   margin-top: 50px;
   padding: 0px 0px 50px;
   min-height: 350px; }

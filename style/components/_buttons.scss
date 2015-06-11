@@ -51,10 +51,11 @@ body article .button:visited,{
     }
     
     
-    &:hover{
+    &:hover, &:focus{
         color: $monkey-white;
         text-decoration: none!important;
         opacity:1;
+        outline:none;
     }
 }
 
@@ -75,7 +76,8 @@ body article .button:visited,{
     cursor: pointer;
     position:relative;
     
-    &:hover{
+    &:focus,&:hover{
+        outline:none;
         background:$monkey-green;
     }
     

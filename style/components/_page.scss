@@ -1,5 +1,11 @@
-section.page{
-    margin:($base-margin / 2) + 50 $base-margin / 2;
+$half-margin: $base-margin / 2;
+
+.fancy-sidebars{
+    margin:$half-margin + 50 $half-margin;
+    @media only screen and(min-width:768px){
+    margin:$half-margin + 50 0;
+    }
+    
     min-height:100vh;
     font-size: 0;
     position:relative;
@@ -10,7 +16,15 @@ section.page{
         padding:$base-margin / 2;
         
         .inner{
-           @extend %paper-container;
+            @extend %paper-container;
+            position:relative;
+            padding:$base-margin * 2;
+            margin-top: $base-margin;
+            
+            &:first-child{
+                margin-top:0;
+            }
+            
         }
     }
     
@@ -29,38 +43,92 @@ section.page{
         main{
             
             width:67%;
-            float:left;
+            padding:$half-margin $half-margin $half-margin $base-margin;
             
         }
         
-        aside{
+        .fancy-asides{
+            position:fixed;
+            padding:$base-margin $base-margin $base-margin $half-margin;
             width:33%;
-            float:right;
-            clear: right;
+            top:50px;
+            right:0;
+            height:calc(100% - 50px);
+            overflow: hidden;
+            
+            aside{
+                display: block;
+                padding:0;
+                width:auto;
+                
+                &.aside-right{
+                    margin-top:$base-margin;
+                }
+            }
+            
+            &.stop{
+                position: absolute;
+                padding: 13px 13px 6.5px 6.5px;
+                top: auto;
+                height: auto;
+                min-height: 100vh;
+                bottom: 0px;
+            }
             
         }
     }
     
     @media only screen and(min-width:1160px){
         
+        
         main{
             
             width:50%;
             margin-left:25%;
-            float:none;
+            position:relative;
+            z-index:2;
+            padding:$half-margin $half-margin $half-margin $half-margin;
+        
+        }
+        .fancy-asides{
             
-        }
-        
-        aside{
-            position:absolute;
-            width:25%;
-            right:0;
-            top:0;
-        }
-        
-        aside.left{
-            left:0;
-        }
+            width:100%;
+            padding:$half-margin 0 $half-margin;
+            
+            &.stop{
+                padding:$half-margin 0 0 ;
+            }
+            
+                aside{
+                    
+                    width:25%;
+                    
+                    &.aside-left{
+                        padding:$half-margin $half-margin $half-margin $base-margin;
+                    }
+                    
+                    &.aside-right{
+                        position:fixed;
+                        margin:0;
+                        right: 0px;
+                        padding: $base-margin $base-margin $base-margin $half-margin;
+                        top:50px;
+                        width:25%;
+                        height:calc(100% - 50px);
+                        overflow:hidden;
+                        
+                        &.stop{
+                            position: absolute;
+                            padding: 13px 13px 6.5px 6.5px;
+                            top: auto;
+                            height: auto;
+                            min-height: 100vh;
+                            bottom: 0px;
+                        }
+                    }
+                }
+            
+            }
+       
     }
-    
 }

@@ -5,4 +5,5 @@
 //@koala-append 'modules/header.js';
 //@koala-append 'modules/img-data-src.js';
 //@koala-append 'modules/form.js';
-//@koala-append 'modules/fancySideBars.js';
+//@koala-append 'modules/fancySidebars.js';
+//@koala-append 'modules/form-cta.js';

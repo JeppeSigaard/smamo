@@ -83,27 +83,27 @@ form input[type="email"],
 form input[type="tel"],
 form input[type="password"],
 form input[type="number"],
-form textarea, section.page main, section.page aside, .hero .inner .hero-banner p, .flickity-viewport .hero-banner p, .flickity-slider .hero-banner p, .person-gallery footer {
+form textarea, .fancy-sidebars main, .fancy-sidebars aside, .hero .inner .hero-banner p, .flickity-viewport .hero-banner p, .flickity-slider .hero-banner p, .person-gallery footer {
   line-height: 1.4; }
 
-html, body, .box, form > div, section.page main, section.page aside {
+html, body, .box, form > div, .fancy-sidebars main, .fancy-sidebars aside {
   font-size: 13px;
   -webkit-transition: font-size .2s;
           transition: font-size .2s; }
   @media only screen and (min-width: 480px) {
-    html, body, .box, form > div, section.page main, section.page aside {
+    html, body, .box, form > div, .fancy-sidebars main, .fancy-sidebars aside {
       font-size: 14px; } }
   @media only screen and (min-width: 640px) {
-    html, body, .box, form > div, section.page main, section.page aside {
+    html, body, .box, form > div, .fancy-sidebars main, .fancy-sidebars aside {
       font-size: 15px; } }
   @media only screen and (min-width: 960px) {
-    html, body, .box, form > div, section.page main, section.page aside {
+    html, body, .box, form > div, .fancy-sidebars main, .fancy-sidebars aside {
       font-size: 16px; } }
 
 .heart, .hero .inner .hero-banner h3, .hero .inner .hero-banner p, .flickity-viewport .hero-banner h3, .flickity-viewport .hero-banner p, .flickity-slider .hero-banner h3, .flickity-slider .hero-banner p {
   text-shadow: 1px 1px 2px rgba(52, 52, 52, 0.2); }
 
-section.page main .inner, section.page aside .inner {
+.fancy-sidebars main .inner, .fancy-sidebars aside .inner {
   padding: 13px;
   background: white; }
 
@@ -152,6 +152,12 @@ header, section, footer {
 
 .center {
   text-align: center; }
+
+.left {
+  text-align: left; }
+
+.right {
+  text-align: right; }
 
 .padding {
   padding: 13px; }
@@ -393,13 +399,17 @@ body article .button:visited {
     body article .button.flat:hover,
     body article .button:visited.flat:hover {
       color: #343434; }
-  .button:hover,
+  .button:hover, .button:focus,
   .button:visited:hover,
+  .button:visited:focus,
   body article .button:hover,
-  body article .button:visited:hover {
+  body article .button:focus,
+  body article .button:visited:hover,
+  body article .button:visited:focus {
     color: #ffffff;
     text-decoration: none !important;
-    opacity: 1; }
+    opacity: 1;
+    outline: none; }
 
 .button-dir {
   display: block;
@@ -418,7 +428,8 @@ body article .button:visited {
   vertical-align: middle;
   cursor: pointer;
   position: relative; }
-  .button-dir:hover {
+  .button-dir:focus, .button-dir:hover {
+    outline: none;
     background: #669999; }
   .button-dir:before, .button-dir:after {
     content: '';
@@ -572,9 +583,11 @@ form {
   /* RANGE */
   /* thumb */ }
   form.small {
-    max-width: 320px; }
+    max-width: 320px;
+    margin: auto; }
   form.smaller {
-    max-width: 220px; }
+    max-width: 220px;
+    margin: auto; }
   form .spacer {
     position: relative;
     display: block;
@@ -838,38 +851,84 @@ form {
         -ms-transform-origin: 100% 100%;
             transform-origin: 100% 100%; }
 
-section.page {
+.fancy-sidebars {
   margin: 56.5px 6.5px;
   min-height: 100vh;
   font-size: 0;
   position: relative; }
-  section.page main, section.page aside {
+  @media only screen and (min-width: 768px) {
+    .fancy-sidebars {
+      margin: 56.5px 0; } }
+  .fancy-sidebars main, .fancy-sidebars aside {
     padding: 6.5px; }
+    .fancy-sidebars main .inner, .fancy-sidebars aside .inner {
+      position: relative;
+      padding: 26px;
+      margin-top: 13px; }
+      .fancy-sidebars main .inner:first-child, .fancy-sidebars aside .inner:first-child {
+        margin-top: 0; }
   @media only screen and (min-width: 640px) {
-    section.page aside {
+    .fancy-sidebars aside {
       display: inline-block;
       vertical-align: top;
       width: 50%; } }
   @media only screen and (min-width: 768px) {
-    section.page main {
+    .fancy-sidebars main {
       width: 67%;
-      float: left; }
-    section.page aside {
+      padding: 6.5px 6.5px 6.5px 13px; }
+    .fancy-sidebars .fancy-asides {
+      position: fixed;
+      padding: 13px 13px 13px 6.5px;
       width: 33%;
-      float: right;
-      clear: right; } }
+      top: 50px;
+      right: 0;
+      height: calc(100% - 50px);
+      overflow: hidden; }
+      .fancy-sidebars .fancy-asides aside {
+        display: block;
+        padding: 0;
+        width: auto; }
+        .fancy-sidebars .fancy-asides aside.aside-right {
+          margin-top: 13px; }
+      .fancy-sidebars .fancy-asides.stop {
+        position: absolute;
+        padding: 13px 13px 6.5px 6.5px;
+        top: auto;
+        height: auto;
+        min-height: 100vh;
+        bottom: 0px; } }
   @media only screen and (min-width: 1160px) {
-    section.page main {
+    .fancy-sidebars main {
       width: 50%;
       margin-left: 25%;
-      float: none; }
-    section.page aside {
-      position: absolute;
-      width: 25%;
-      right: 0;
-      top: 0; }
-    section.page aside.left {
-      left: 0; } }
+      position: relative;
+      z-index: 2;
+      padding: 6.5px 6.5px 6.5px 6.5px; }
+    .fancy-sidebars .fancy-asides {
+      width: 100%;
+      padding: 6.5px 0 6.5px; }
+      .fancy-sidebars .fancy-asides.stop {
+        padding: 6.5px 0 0; }
+      .fancy-sidebars .fancy-asides aside {
+        width: 25%; }
+        .fancy-sidebars .fancy-asides aside.aside-left {
+          padding: 6.5px 6.5px 6.5px 13px; }
+        .fancy-sidebars .fancy-asides aside.aside-right {
+          position: fixed;
+          margin: 0;
+          right: 0px;
+          padding: 13px 13px 13px 6.5px;
+          top: 50px;
+          width: 25%;
+          height: calc(100% - 50px);
+          overflow: hidden; }
+          .fancy-sidebars .fancy-asides aside.aside-right.stop {
+            position: absolute;
+            padding: 13px 13px 6.5px 6.5px;
+            top: auto;
+            height: auto;
+            min-height: 100vh;
+            bottom: 0px; } }
 
 header.header {
   z-index: 1000;
@@ -1184,10 +1243,10 @@ nav.top-nav {
       .person-gallery footer a:hover {
         text-decoration: underline; }
 
-.simple-cta {
+.simple-cta, .form-cta {
   padding-top: 70px;
   padding-bottom: 100px; }
-  .simple-cta h3 {
+  .simple-cta h3, .form-cta h3 {
     font-weight: 300; }
 
 .footer {

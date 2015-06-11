@@ -40,7 +40,6 @@
         </div>
         <div class="inner">
            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam sequi unde voluptas pariatur omnis dolorum cum saepe eveniet enim, id possimus aut ut ex repudiandae, expedita, deleniti tempore dolor suscipit!Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam sequi unde voluptas pariatur omnis dolorum cum saepe eveniet enim, id possimus aut ut ex repudiandae, expedita, deleniti tempore dolor suscipit!Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         </div>  
          <div class="inner">
            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam sequi unde voluptas pariatur omnis dolorum cum saepe eveniet enim, id possimus aut ut ex repudiandae, expedita, deleniti tempore dolor suscipit!Lorem ipsum dolor sit amet, consectetur adipisicing elit.

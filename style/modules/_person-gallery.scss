@@ -52,49 +52,6 @@
             transition:opacity .2s;
         }
         
-        &:before{
-            content:'';
-            @extend %fill-all;
-            background:$monkey-black;
-            z-index:2;
-            opacity:0;
-            transition:opacity .3s;
-            
-        }
-        
-        &:after{
-            content:'';
-            position:absolute;
-            top:100%;
-            left:50%;
-            transition:top .3s;
-            transform: translate(-50%,0);
-            @extend .ape-circle;
-            z-index:3;
-            height:45px;
-            width:45px;
-            background-size:30px;
-            
-            @media only screen and(min-width:648px){
-                height:60px;
-                width:60px;
-                background-size:50px;
-            }
-            
-            @media only screen and(min-width:768px){
-                height:45px;
-                width:45px;
-                background-size:30px;
-            }
-            
-            @media only screen and(min-width:960px){
-                height:60px;
-                width:60px;
-                background-size:50px;
-            }
-            
-        }
-        
     }
     
     footer{

@@ -122,17 +122,29 @@
             content:'';
             background-image:url(../libs/img/smamo-indk.png);
             background-repeat:no-repeat;
-            background-color:transparent;
             background-position: -50px center;
             background-size: 50px;
-            transition:background-position .4s, background-color .3s;
+            transition:background-position .4s;
+            trasition-delay:0s;
             transition-timing-function: cubic-bezier(.61, -0.22, .47, 1.33);
             @extend %fill-all;
         }
         
         &.shop a:hover:before{
             background-position:center center;
-            background-color:rgba($monkey-black,.5);
+            trasition-delay:.2s;
+            background-color:transparent;
+        }
+        
+        &.shop a:after{
+            content:'';
+            @extend %fill-all;
+            background-color:transparent;
+            transition:background-color .3s;
+        }
+        
+        &.shop a:hover:after{
+            background-color:rgba($monkey-green,.8);
         }
     }
     

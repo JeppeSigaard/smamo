@@ -8,6 +8,7 @@ function smamo_add_boxes(){
     require 'meta-box/hero.php'; 
     require 'meta-box/users.php'; 
     require 'meta-box/klippekort.php'; 
+    require 'meta-box/case.php'; 
 
 return $mb;
 }

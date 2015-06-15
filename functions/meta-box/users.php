@@ -87,4 +87,21 @@ $mb[] = array(
     ),
 );
 
+$mb[] = array(
+    'id' => 'add_user',
+    'title' => __( 'Bruger', 'rwmb' ),
+    'pages' => array('team'),
+    'context' => 'side',
+    'priority' => 'default',
+    'autosave' => true,
+    'fields' => array(
+        
+        array(
+            'name'  => __( 'Tilføj login (ID)', 'rwmb' ),
+            'id'    => "add_user",
+            'type' => 'text',
+            ),
+    ),
+);
+
 ?>

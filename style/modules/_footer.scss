@@ -14,4 +14,20 @@
         
     }
     
+    .center{
+        margin-top: $base-margin * 2;
+    }
+    
+    .smartmonkey{
+        width: 180px;
+        margin: $base-margin * 2 auto 0;
+        height: 50px;
+        position: relative;
+        display: block;
+        
+        svg{
+            fill:$monkey-black-2;
+        }
+    }
+    
 }

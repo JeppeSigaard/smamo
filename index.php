@@ -4,8 +4,10 @@
 
 <?php get_template_part('section/simple','cta'); ?>
 
+<?php get_template_part('section/front','work'); ?>
+
 <?php get_template_part('section/person','gallery'); ?>
 
-<?php get_template_part('section/form','cta'); ?>
+
 
 <?php get_footer(); ?>

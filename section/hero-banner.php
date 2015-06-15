@@ -21,8 +21,8 @@ $heroes = new WP_query(array(
             </div>
         <?php endwhile; endif; ?>  
         <div class="prev-next-right">
-            <a href="#" class="button-dir"></a>
-            <a href="#" class="button-dir right"></a>
+            <a href="#" tabindex="-1" nofollow class="button-dir"></a>
+            <a href="#" tabindex="-1" nofollow class="button-dir right"></a>
         </div>
     </div>
 </section>

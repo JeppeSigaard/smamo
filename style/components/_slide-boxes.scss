@@ -1,0 +1,139 @@
+.slide-boxes{
+    margin:0;
+    font-size:0;
+    
+    >.inner{
+        @extend %font-size;
+        @extend %article-font-style;
+        position:relative;
+        padding: 50px + ($base-margin * 2) 0 $base-margin;
+        
+        @media only screen and(min-width:640px){
+            width:50%;
+            display: inline-block;
+            vertical-align: top;
+            padding:$base-margin 0 50px + ($base-margin * 2);
+            
+            header{
+                top:auto;
+                bottom:- $base-margin / 2;
+                
+            }
+            
+            &.inner-left .inner{
+                margin:$base-margin $base-margin / 2 $base-margin / 2 $base-margin;
+            }
+            
+            &.inner-right .inner{
+                margin:$base-margin $base-margin $base-margin / 2 $base-margin / 2;
+            }
+            
+            &.inner-right .box-slider{
+                border-right-width:$base-margin; 
+            }
+            
+            &.inner-left .box-slider{
+                border-left-width:$base-margin;
+            }
+        }
+        
+        @media only screen and(min-width:960px){
+            width:33.3333%;
+            
+            &.double{
+                width:66.6666%;
+                
+                .box-slider a{
+                    width:50%;
+                }
+                
+            }
+            
+        }
+        
+        @media only screen and(min-width:1160px){
+           
+            .box-slider{
+                height:400px;
+            }
+            
+        }
+        
+    }
+    
+    header{
+        width: 100%;
+        position:absolute;
+        top: 0;
+        left: 0;
+        
+        .inner{
+            background: $monkey-light;
+            padding:$base-margin;
+            margin:$base-margin;
+            overflow: auto;
+        }
+        
+        
+        nav{
+            float:right;
+            vertical-align: top;
+            
+            a{
+                margin-left:$base-margin;
+                vertical-align: middle;
+            }
+        }
+    }
+    
+    .flickity-viewport, .flickity-slider{
+        @extend %fill-all;
+    }
+    
+    .flickity-viewport{
+        margin: 0px -6.5px;
+    }
+    
+    .box-slider{
+        height:280px;
+        background:$monkey-light;
+        position:relative;
+        border:solid $monkey-light;
+        border-width:$base-margin / 2 $base-margin;
+        @media only screen and(min-width:640px){
+            border-width:$base-margin / 2 ;
+        }
+        
+        overflow: hidden;
+        
+        a{
+            width:100%;
+            height:100%;
+            background-position: center;
+            background-size: cover;
+            background-color: $monkey-green;
+            border:solid $monkey-light;
+            border-width:$base-margin / 2 $base-margin / 4;
+            
+            
+        }
+        
+        &.shop a:before{
+            content:'';
+            background-image:url(../libs/img/smamo-indk.png);
+            background-repeat:no-repeat;
+            background-color:transparent;
+            background-position: -50px center;
+            background-size: 50px;
+            transition:background-position .4s, background-color .3s;
+            transition-timing-function: cubic-bezier(.61, -0.22, .47, 1.33);
+            @extend %fill-all;
+        }
+        
+        &.shop a:hover:before{
+            background-position:center center;
+            background-color:rgba($monkey-black,.5);
+        }
+    }
+    
+}

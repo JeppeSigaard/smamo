@@ -63,7 +63,7 @@ a, a:active, a:visited, a:hover {
     stroke-dashoffset: 0;
     fill: rgba(59, 59, 59, 0.9);
     stroke-width: 0px; } }
-form label, form input[type="checkbox"]:after, .hero .inner, .flickity-viewport, .flickity-slider, .person-gallery header:before {
+form label, form input[type="checkbox"]:after, .slide-boxes .flickity-viewport, .slide-boxes .flickity-slider, .slide-boxes .box-slider.shop a:before, .hero .inner, .flickity-viewport, .flickity-slider, .person-gallery header:before {
   position: absolute;
   top: 0;
   left: 0;
@@ -83,21 +83,21 @@ form input[type="email"],
 form input[type="tel"],
 form input[type="password"],
 form input[type="number"],
-form textarea, .fancy-sidebars main, .fancy-sidebars aside, .hero .inner .hero-banner p, .flickity-viewport .hero-banner p, .flickity-slider .hero-banner p, .person-gallery footer {
+form textarea, .fancy-sidebars main, .fancy-sidebars aside, .slide-boxes > .inner, .hero .inner .hero-banner p, .flickity-viewport .hero-banner p, .flickity-slider .hero-banner p, .person-gallery footer {
   line-height: 1.4; }
 
-html, body, .box, form > div, .fancy-sidebars main, .fancy-sidebars aside {
+html, body, .box, form > div, .fancy-sidebars main, .fancy-sidebars aside, .slide-boxes > .inner {
   font-size: 13px;
   -webkit-transition: font-size .2s;
           transition: font-size .2s; }
   @media only screen and (min-width: 480px) {
-    html, body, .box, form > div, .fancy-sidebars main, .fancy-sidebars aside {
+    html, body, .box, form > div, .fancy-sidebars main, .fancy-sidebars aside, .slide-boxes > .inner {
       font-size: 14px; } }
   @media only screen and (min-width: 640px) {
-    html, body, .box, form > div, .fancy-sidebars main, .fancy-sidebars aside {
+    html, body, .box, form > div, .fancy-sidebars main, .fancy-sidebars aside, .slide-boxes > .inner {
       font-size: 15px; } }
   @media only screen and (min-width: 960px) {
-    html, body, .box, form > div, .fancy-sidebars main, .fancy-sidebars aside {
+    html, body, .box, form > div, .fancy-sidebars main, .fancy-sidebars aside, .slide-boxes > .inner {
       font-size: 16px; } }
 
 .heart, .hero .inner .hero-banner h3, .hero .inner .hero-banner p, .flickity-viewport .hero-banner h3, .flickity-viewport .hero-banner p, .flickity-slider .hero-banner h3, .flickity-slider .hero-banner p {
@@ -374,8 +374,10 @@ body article .button:visited {
   .button:visited.large,
   body article .button.large,
   body article .button:visited.large {
-    font-size: 110%;
-    padding: 12px 40px; }
+    font-size: 120%;
+    padding: 0px 40px;
+    height: 50px;
+    line-height: 50px; }
   .button.black,
   .button:visited.black,
   body article .button.black,
@@ -541,7 +543,7 @@ body article .button:visited {
   height: 100%;
   overflow: hidden;
   padding: 6.5px; }
-  @media only screen and (min-width: 480px) {
+  @media only screen and (min-width: 320px) {
     .box {
       width: 50%; } }
   @media only screen and (min-width: 768px) {
@@ -932,6 +934,90 @@ form {
             min-height: 100vh;
             bottom: 0px; } }
 
+.slide-boxes {
+  margin: 0;
+  font-size: 0; }
+  .slide-boxes > .inner {
+    position: relative;
+    padding: 76px 0 13px; }
+    @media only screen and (min-width: 640px) {
+      .slide-boxes > .inner {
+        width: 50%;
+        display: inline-block;
+        vertical-align: top;
+        padding: 13px 0 76px; }
+        .slide-boxes > .inner header {
+          top: auto;
+          bottom: -6.5px; }
+        .slide-boxes > .inner.inner-left .inner {
+          margin: 13px 6.5px 6.5px 13px; }
+        .slide-boxes > .inner.inner-right .inner {
+          margin: 13px 13px 6.5px 6.5px; }
+        .slide-boxes > .inner.inner-right .box-slider {
+          border-right-width: 13px; }
+        .slide-boxes > .inner.inner-left .box-slider {
+          border-left-width: 13px; } }
+    @media only screen and (min-width: 960px) {
+      .slide-boxes > .inner {
+        width: 33.3333%; }
+        .slide-boxes > .inner.double {
+          width: 66.6666%; }
+          .slide-boxes > .inner.double .box-slider a {
+            width: 50%; } }
+    @media only screen and (min-width: 1160px) {
+      .slide-boxes > .inner .box-slider {
+        height: 400px; } }
+  .slide-boxes header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .slide-boxes header .inner {
+      background: #ebebeb;
+      padding: 13px;
+      margin: 13px;
+      overflow: auto; }
+    .slide-boxes header nav {
+      float: right;
+      vertical-align: top; }
+      .slide-boxes header nav a {
+        margin-left: 13px;
+        vertical-align: middle; }
+  .slide-boxes .flickity-viewport {
+    margin: 0px -6.5px; }
+  .slide-boxes .box-slider {
+    height: 280px;
+    background: #ebebeb;
+    position: relative;
+    border: solid #ebebeb;
+    border-width: 6.5px 13px;
+    overflow: hidden; }
+    @media only screen and (min-width: 640px) {
+      .slide-boxes .box-slider {
+        border-width: 6.5px; } }
+    .slide-boxes .box-slider a {
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      background-color: #669999;
+      border: solid #ebebeb;
+      border-width: 6.5px 3.25px; }
+    .slide-boxes .box-slider.shop a:before {
+      content: '';
+      background-image: url(../libs/img/smamo-indk.png);
+      background-repeat: no-repeat;
+      background-color: transparent;
+      background-position: -50px center;
+      background-size: 50px;
+      -webkit-transition: background-position .4s, background-color .3s;
+              transition: background-position .4s, background-color .3s;
+      -webkit-transition-timing-function: cubic-bezier(0.61, -0.22, 0.47, 1.33);
+              transition-timing-function: cubic-bezier(0.61, -0.22, 0.47, 1.33); }
+    .slide-boxes .box-slider.shop a:hover:before {
+      background-position: center center;
+      background-color: rgba(52, 52, 52, 0.5); }
+
 header.header {
   z-index: 1000;
   overflow: visible;
@@ -1250,6 +1336,10 @@ nav.top-nav {
   padding-bottom: 100px; }
   .simple-cta h3, .form-cta h3 {
     font-weight: 300; }
+
+.front-work {
+  background: #454545;
+  padding: 80px 0px 120px; }
 
 .footer {
   margin: 13px;

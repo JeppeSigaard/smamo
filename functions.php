@@ -14,4 +14,6 @@ require 'functions/users.php';
 
 require 'functions/menus.php'; 
 
+require 'functions/woo.php'; 
+
 ?>

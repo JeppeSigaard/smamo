@@ -8,3 +8,4 @@
 //@koala-append 'modules/fancySidebars.js';
 //@koala-append 'modules/form-cta.js';
 //@koala-append 'modules/box-slider.js';
+//@koala-append 'modules/menu-toggle.js';

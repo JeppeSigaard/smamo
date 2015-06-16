@@ -1,23 +1,26 @@
 $header-transition: 400ms;
 $header-transition-timing-function: cubic-bezier(.73, .15, .5, 1.5);
 $header-shadow:$base-shadow;
-
 header.header{
     
     z-index:1000;
     overflow: visible;
     position:absolute;
     background: $monkey-black;
-    transition:height $header-transition, width $header-transition;
+    transition:height $header-transition, width $header-transition, left $menu-transition-time, right $menu-transition-time;
     box-shadow: $header-shadow;
     transition-timing-function:$header-transition-timing-function;
     top:0;
+    left:0;
+    right:0;
     position:fixed;
     height:50px;
     width:100%;
 
     .header-logo{
         height:50px;
+        width:50px;
+        display: block;
 
 
         svg{
@@ -53,7 +56,7 @@ header.header{
     }
     
     background: $monkey-black;
-    transition:height $header-transition, width $header-transition;
+    transition:height $header-transition, width $header-transition, left $menu-transition-time, right $menu-transition-time;
     box-shadow: $header-shadow;
     transition-timing-function:$header-transition-timing-function;
     

@@ -1,3 +1,28 @@
+body{
+    transition:right $menu-transition-time;
+    transition-timing-function: $header-transition-timing-function;
+    right:0;
+    width:100%;
+    position:relative;
+    overflow-x: hidden;
+    left:auto;
+}
+
+
+
+body.menu-out{
+    left:auto;
+    right:$menu-width;
+   
+    header.header{
+        left:-$menu-width;
+    }
+    
+    #top-nav-menu{
+        right:0;
+    }
+}
+
 nav.top-nav{
     position:absolute;
     right:0;
@@ -15,6 +40,28 @@ nav.top-nav{
             color:$monkey-light;
             font-size:90%;
         }
+    }
+}
+
+#top-nav-menu{
+    position:fixed;
+    right:-$menu-width;
+    width:$menu-width;
+    transition:right $menu-transition-time;
+    transition-timing-function: $header-transition-timing-function;
+    padding:0 $base-margin;
+    height:100vh;
+    min-height: 500px;
+    background:$monkey-light;
+    box-shadow: $base-shadow inset;
+    color:$monkey-black-2;
+    top:0;
+    font-siz:150%;
+    
+    a{
+        display: block;
+        padding:$base-margin 0;
+        border-bottom: 1px solid darken($monkey-light,10);
     }
 }
 
@@ -41,15 +88,17 @@ nav.top-nav{
     position:absolute;
     top:16px;
     right:$base-margin * 2;
+    transition:border .2s;
     border:solid $monkey-light;
     border-width:2px 0px;
     height:18px;
     width:27px;
     
-    &:before{
+    &:before,&:after{
         display: block;
         position:absolute;
         border-top:2px solid $monkey-light;
+        transition:transform .2s;
         content:'';
         top:6px;
         left:0;
@@ -58,7 +107,23 @@ nav.top-nav{
     
 }
 
-.search-icon{
+body.menu-out .hamburger{
+    border:solid transparent;
+    border-width:2px 0px;
+    
+    
+    &:before{
+        transform:rotate(40deg);
+    }
+    &:after{
+        transform:rotate(-40deg);
+    }
+    
+}
+
+
+body .search-icon,
+body.menu-out .search-icon{
     @extend .hamburger;
     border:none;
     right:($base-margin * 3) + 27px;
@@ -73,12 +138,12 @@ nav.top-nav{
     }
     
     &:after{
-        position:absolute;
-        left:0;
-        content:'';
-        width:10px;
-        height:2px;
-        background:$monkey-light;
-        transform: translate(9px, 13px)rotate(45deg);
+        position: absolute;
+        left: 0;
+        content: '';
+        width: 12px;
+        height: 1px;
+        background: #ebebeb;
+        transform: translate(8px, 8px) rotate(45deg);
     }
 }

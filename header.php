@@ -15,6 +15,6 @@
             <?php //get_search_form('true'); ?>
             <a class="search-icon" href="#">Søg</a>
             <a class="hamburger" href="#">Menu</a>
-            <?php //wp_nav_menu(array( 'theme_location' => 'main_menu', 'container' => false, 'fallback_cb' => '', 'menu_id' => 'top-nav-menu', )); ?>
         </nav>
+        <?php wp_nav_menu(array( 'theme_location' => 'main_menu', 'container' => false, 'fallback_cb' => '', 'menu_id' => 'top-nav-menu', )); ?>
     </header>

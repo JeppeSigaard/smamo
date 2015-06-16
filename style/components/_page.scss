@@ -1,5 +1,20 @@
 $half-margin: $base-margin / 2;
 
+.post-title{
+    font-size:200%;
+    font-weight:400;
+    line-height: 1.2;
+    margin-bottom: $base-margin;
+    margin-top:0;
+}
+
+.byline{
+    position: relative;
+    border-bottom: 1px solid $monkey-light;
+    font-size:90%;
+    margin-bottom: $base-margin;
+}
+
 .fancy-sidebars{
     margin:$half-margin + 50 $half-margin;
     @media only screen and(min-width:768px){
@@ -18,7 +33,7 @@ $half-margin: $base-margin / 2;
         .inner{
             @extend %paper-container;
             position:relative;
-            padding:$base-margin * 2;
+            padding:$base-margin;
             margin-top: $base-margin;
             
             &:first-of-type{
@@ -71,7 +86,7 @@ $half-margin: $base-margin / 2;
                 padding: 13px 13px 6.5px 6.5px;
                 top: auto;
                 height: auto;
-                min-height: 100vh;
+                min-height:calc(100vh - 50px);
                 bottom: 0px;
             }
             
@@ -126,7 +141,7 @@ $half-margin: $base-margin / 2;
                             padding: 13px 13px 6.5px 6.5px;
                             top: auto;
                             height: auto;
-                            min-height: 100vh;
+                            min-height: calc(100vh - 50px);
                             bottom: 0px;
                         }
                     }

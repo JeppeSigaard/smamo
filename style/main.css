@@ -87,7 +87,7 @@ form textarea, .fancy-sidebars main, .fancy-sidebars aside, .slide-boxes > .inne
   line-height: 1.4; }
 
 html, body, .box, form > div, .fancy-sidebars main, .fancy-sidebars aside, .slide-boxes > .inner {
-  font-size: 13px;
+  font-size: 14px;
   -webkit-transition: font-size .2s;
           transition: font-size .2s; }
   @media only screen and (min-width: 480px) {
@@ -855,6 +855,19 @@ form {
         -ms-transform-origin: 100% 100%;
             transform-origin: 100% 100%; }
 
+.post-title {
+  font-size: 200%;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 13px;
+  margin-top: 0; }
+
+.byline {
+  position: relative;
+  border-bottom: 1px solid #ebebeb;
+  font-size: 90%;
+  margin-bottom: 13px; }
+
 .fancy-sidebars {
   margin: 56.5px 6.5px;
   min-height: 100vh;
@@ -867,7 +880,7 @@ form {
     padding: 6.5px; }
     .fancy-sidebars main .inner, .fancy-sidebars aside .inner {
       position: relative;
-      padding: 26px;
+      padding: 13px;
       margin-top: 13px; }
       .fancy-sidebars main .inner:first-of-type, .fancy-sidebars aside .inner:first-of-type {
         margin-top: 0; }
@@ -899,7 +912,7 @@ form {
         padding: 13px 13px 6.5px 6.5px;
         top: auto;
         height: auto;
-        min-height: 100vh;
+        min-height: calc(100vh - 50px);
         bottom: 0px; } }
   @media only screen and (min-width: 1160px) {
     .fancy-sidebars main {
@@ -933,7 +946,7 @@ form {
             padding: 13px 13px 6.5px 6.5px;
             top: auto;
             height: auto;
-            min-height: 100vh;
+            min-height: calc(100vh - 50px);
             bottom: 0px; } }
 
 .slide-boxes {

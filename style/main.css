@@ -103,6 +103,14 @@ html, body, .box, form > div, .fancy-sidebars main, .fancy-sidebars aside, .slid
 .heart, .hero .inner .hero-banner h3, .hero .inner .hero-banner p, .flickity-viewport .hero-banner h3, .flickity-viewport .hero-banner p, .flickity-slider .hero-banner h3, .flickity-slider .hero-banner p {
   text-shadow: 1px 1px 2px rgba(52, 52, 52, 0.2); }
 
+.hero-footer a {
+  display: inline;
+  background: #343434;
+  color: #ffffff;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
+  padding: 5px 10px; }
+
 .fancy-sidebars main .inner, .fancy-sidebars aside .inner {
   padding: 13px;
   background: white; }
@@ -1001,12 +1009,15 @@ form {
   .slide-boxes .flickity-viewport {
     margin: 0px -6.5px; }
   .slide-boxes .box-slider {
-    height: 280px;
+    height: 200px;
     background: #ebebeb;
     position: relative;
     border: solid #ebebeb;
     border-width: 6.5px 13px;
     overflow: hidden; }
+    @media only screen and (min-width: 480px) {
+      .slide-boxes .box-slider {
+        height: 280px; } }
     @media only screen and (min-width: 640px) {
       .slide-boxes .box-slider {
         border-width: 6.5px; } }
@@ -1031,7 +1042,9 @@ form {
               transition-timing-function: cubic-bezier(0.61, -0.22, 0.47, 1.33); }
     .slide-boxes .box-slider.shop a:hover:before {
       background-position: center center;
-      trasition-delay: .2s;
+      left: -10px;
+      -webkit-transition-delay: .2s;
+              transition-delay: .2s;
       background-color: transparent; }
     .slide-boxes .box-slider.shop a:after {
       content: '';
@@ -1039,7 +1052,7 @@ form {
       -webkit-transition: background-color .3s;
               transition: background-color .3s; }
     .slide-boxes .box-slider.shop a:hover:after {
-      background-color: rgba(102, 153, 153, 0.8); }
+      background-color: rgba(102, 153, 153, 0.9); }
 
 header.header {
   z-index: 1000;
@@ -1114,7 +1127,7 @@ header.header {
     @media only screen and (min-width: 768px) {
       .home header.header .header-logo {
         height: 80px;
-        width: 90px; } }
+        width: 95px; } }
     .home header.header .header-logo svg {
       -webkit-transition: height 400ms, width 400ms, top 400ms, left 400ms;
               transition: height 400ms, width 400ms, top 400ms, left 400ms;
@@ -1151,7 +1164,7 @@ body.menu-out {
   right: 240px; }
   body.menu-out header.header {
     left: -240px; }
-  body.menu-out #top-nav-menu {
+  body.menu-out .top-nav-menu {
     right: 0; }
 
 nav.top-nav {
@@ -1169,7 +1182,7 @@ nav.top-nav {
       color: #ebebeb;
       font-size: 90%; }
 
-#top-nav-menu {
+.top-nav-menu {
   position: fixed;
   right: -240px;
   width: 240px;
@@ -1185,7 +1198,7 @@ nav.top-nav {
   color: #454545;
   top: 0;
   font-siz: 150%; }
-  #top-nav-menu a {
+  .top-nav-menu a {
     display: block;
     padding: 13px 0;
     border-bottom: 1px solid #d2d2d2; }
@@ -1270,10 +1283,34 @@ body.menu-out .search-icon {
         -ms-transform: translate(8px, 8px) rotate(45deg);
             transform: translate(8px, 8px) rotate(45deg); }
 
+.menu-user {
+  font-size: 90%;
+  margin: 0 -13px;
+  padding: 13px 13px 26px;
+  background: #ababab;
+  color: #ffffff;
+  position: relative;
+  margin-top: -1px;
+  box-shadow: 1px 1px 4px rgba(52, 52, 52, 0.3); }
+  .menu-user header {
+    padding: 6.5px 0;
+    border-bottom: 1px solid #9f9f9f; }
+    .menu-user header strong {
+      font-weight: 400; }
+  .menu-user nav {
+    font-size: 90%; }
+    .menu-user nav a {
+      border-bottom: none;
+      padding: 13px 0 0;
+      -webkit-transition: color .2s;
+              transition: color .2s; }
+      .menu-user nav a.logout:hover {
+        color: #e7b7b7; }
+
 .hero {
   position: relative;
-  height: 50vh;
-  min-height: 300px;
+  height: 60vh;
+  min-height: 400px;
   overflow: hidden; }
   .hero .prev-next-right {
     -webkit-transition: right 500ms;
@@ -1329,6 +1366,21 @@ body.menu-out .search-icon {
 .hero .inner .flickity-page-dots, .flickity-viewport .flickity-page-dots, .flickity-slider .flickity-page-dots {
   position: absolute;
   bottom: 26px; }
+
+.hero-footer {
+  display: none;
+  position: relative;
+  top: -104px;
+  height: 0;
+  overflow: visible; }
+  @media only screen and (min-width: 640px) {
+    .hero-footer {
+      display: block; } }
+  .hero-footer a {
+    display: inline-block;
+    padding: 8px 13px 8px 26px;
+    margin: 0 0 13px;
+    box-shadow: 1px 1px 4px rgba(52, 52, 52, 0.3); }
 
 .person-gallery {
   margin: 0;
@@ -1444,6 +1496,10 @@ body.menu-out .search-icon {
               transition-delay: 0s; }
     .front-work .box-slider a:hover:before {
       background-color: rgba(52, 52, 52, 0.9); }
+  .front-work .box-slider.shop a span {
+    margin-top: -42px; }
+    .front-work .box-slider.shop a span:nth-of-type(2) {
+      margin-top: 42px; }
 
 .footer {
   margin: 13px;

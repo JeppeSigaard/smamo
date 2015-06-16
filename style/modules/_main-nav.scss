@@ -18,7 +18,7 @@ body.menu-out{
         left:-$menu-width;
     }
     
-    #top-nav-menu{
+    .top-nav-menu{
         right:0;
     }
 }
@@ -43,7 +43,7 @@ nav.top-nav{
     }
 }
 
-#top-nav-menu{
+.top-nav-menu{
     position:fixed;
     right:-$menu-width;
     width:$menu-width;
@@ -146,4 +146,38 @@ body.menu-out .search-icon{
         background: #ebebeb;
         transform: translate(8px, 8px) rotate(45deg);
     }
+}
+
+.menu-user{
+    font-size:90%;
+    margin:0 0-$base-margin;
+    padding:$base-margin $base-margin $base-margin*2;
+    background:lighten($monkey-black-2,40);
+    color:$monkey-white;
+    position:relative;
+    margin-top:-1px;
+    box-shadow: $base-shadow;
+    
+    header{
+        padding:$base-margin / 2 0;
+        border-bottom: 1px solid darken($monkey-light,30);
+        
+        strong{
+            font-weight:400;
+        }
+    }
+    
+    nav{
+        font-size:90%;
+        a{
+            border-bottom:none;
+            padding:$base-margin 0 0;
+            transition:color .2s;
+            
+            &.logout:hover{
+                color:lighten($monkey-red,30);
+            }
+        }
+    }
+    
 }

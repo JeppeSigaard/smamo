@@ -50,6 +50,9 @@ $products = new WP_Query(array(
             <?php while ($products->have_posts()) : $products->the_post();  ?>
                 <?php $image_url = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'full' ); ?>
                 <a href="<?php the_permalink(); ?>" <?php post_class() ?> style="background-image:url(<?php echo $image_url[0] ?>);">
+                    <span><?php the_title() ?></span>
+                    
+                    <span>675,-</span>
                 </a>
             <?php endwhile ?>
         </div>

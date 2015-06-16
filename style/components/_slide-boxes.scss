@@ -95,7 +95,11 @@
     }
     
     .box-slider{
-        height:280px;
+        height:200px;
+        @media only screen and(min-width:480px){
+            height:280px;
+        }
+        
         background:$monkey-light;
         position:relative;
         border:solid $monkey-light;
@@ -132,7 +136,8 @@
         
         &.shop a:hover:before{
             background-position:center center;
-            trasition-delay:.2s;
+            left:-10px;
+            transition-delay:.2s;
             background-color:transparent;
         }
         
@@ -144,7 +149,7 @@
         }
         
         &.shop a:hover:after{
-            background-color:rgba($monkey-green,.8);
+            background-color:rgba($monkey-green,.9);
         }
     }
     

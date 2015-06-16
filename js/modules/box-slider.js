@@ -14,13 +14,15 @@ $(function(){
         });
     
         
-        $('.slide-boxes nav a').on('click',function(e){
-            e.preventDefault();
+        $('.slide-boxes').on('click',function(e){
+            
             
             var target = $(e.target),
                 slideContainer = target.parents('.slide-boxes .inner'),
                 slider = slideContainer.children('.box-slider');;
             
+            if(target.is('.slide-boxes nav a')){
+                e.preventDefault();
                 if(target.hasClass('next')){
                     slider.flickity('next');
                 }
@@ -28,8 +30,13 @@ $(function(){
                     slider.flickity('previous');
                 }
                 target.blur();
-        });
+            }
+            
+        });    
         
+        $('.box-slider a').one('touchend',function(e){
+            e.preventDefault();
+        });
     }
 
     

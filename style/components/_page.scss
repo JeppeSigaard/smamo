@@ -16,9 +16,9 @@ $half-margin: $base-margin / 2;
 }
 
 .fancy-sidebars{
-    margin:$half-margin + 50 $half-margin;
+    margin:$half-margin $half-margin;
     @media only screen and(min-width:768px){
-    margin:$half-margin + 50 0;
+    margin:$half-margin 0;
     }
     
     min-height:100vh;
@@ -85,13 +85,18 @@ $half-margin: $base-margin / 2;
                 }
             }
             
-            &.stop{
+            &.stop,&.start{
                 position: absolute;
                 padding: 13px 13px 6.5px 6.5px;
                 top: auto;
                 height: auto;
                 min-height:calc(100vh - 50px);
-                bottom: 0px;
+                top: -$base-margin/2;
+            }
+            
+            &.stop{
+                top:auto;
+                bottom:0;
             }
             
         }
@@ -113,8 +118,8 @@ $half-margin: $base-margin / 2;
             
             width:100%;
             padding:$half-margin 0 $half-margin;
-            
-            &.stop{
+
+            &.stop, &.start{
                 padding:$half-margin 0 0 ;
             }
             
@@ -140,13 +145,18 @@ $half-margin: $base-margin / 2;
                         height:calc(100% - 50px);
                         overflow:hidden;
                         
-                        &.stop{
+                        &.stop, &.start{
                             position: absolute;
                             padding: 13px 13px 6.5px 6.5px;
                             top: auto;
                             height: auto;
                             min-height: calc(100vh - 50px);
-                            bottom: 0px;
+                            top: 0;
+                        }
+                        
+                        &.stop{
+                            top:auto;
+                            bottom:0;
                         }
                     }
                 }
@@ -160,7 +170,7 @@ $half-margin: $base-margin / 2;
 body.menu-out .fancy-sidebars .fancy-asides{
     right:$menu-width;
     
-    &.stop{
+    &.stop,&.start{
         right:0;
         transition:right 0s;
     }
@@ -168,7 +178,7 @@ body.menu-out .fancy-sidebars .fancy-asides{
     aside.aside-right{
         right:$menu-width;
         
-        &.stop{
+        &.stop,&.start{
             right:0;
             transition:right 0s;
     }

@@ -13,8 +13,8 @@
             <?php endwhile; ?>
         </div>  
     </main>
-    <div class="fancy-asides">
-        <aside class="aside-right">
+    <div class="fancy-asides start">
+        <aside class="aside-right start">
             <?php get_template_part('sidebar/single','author') ?> 
         </aside>
         <aside class="aside-left">

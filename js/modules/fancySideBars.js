@@ -17,8 +17,19 @@ $(function(){if($('.fancy-sidebars').length){
         fancyAside.scrollTop(fancyAsideAmount);
         fancyScroll.scrollTop(fancyScrollAmount);
         
+        if($('.fancy-sidebars').offset().top - 50 > $(this).scrollTop()){
+
+            fancyScroll.addClass('start').scrollTop(0);
+            fancyAside.addClass('start').scrollTop(0);
+        }
+        else{
+            fancyScroll.removeClass('start');
+            fancyAside.removeClass('start');
+        }
+        
         if (st > lastScrollTop){
-            // downscroll code
+            // Nedad
+            
             if(scrollStop > fancyHeight ){
                 fancyScroll.addClass('stop');
                 
@@ -27,7 +38,8 @@ $(function(){if($('.fancy-sidebars').length){
                 }
             }
         } else {
-            // upscroll code
+            // Opad
+            
              if(scrollStop < fancyHeight ){
                 $('.fancy-asides.stop').removeClass('stop').scrollTop($(this).scrollTop());
                  

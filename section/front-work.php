@@ -47,12 +47,12 @@ $products = new WP_Query(array(
             </div>
         </header>
         <div class="box-slider shop">
-            <?php while ($products->have_posts()) : $products->the_post();  ?>
+            <?php while ($products->have_posts()) : $products->the_post(); $sale = ''; ?>
                 <?php $image_url = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'full' ); ?>
                 <a href="<?php the_permalink(); ?>" <?php post_class() ?> style="background-image:url(<?php echo $image_url[0] ?>);">
                     <span><?php the_title() ?></span>
-                    
-                    <span>675,-</span>
+                    <?php $sale = get_post_meta( get_the_ID(), '_sale_price', true); ?>
+                    <span><?php echo ($sale !== '') ? $sale : get_post_meta( get_the_ID(), '_regular_price', true); ?>,-</span>
                 </a>
             <?php endwhile ?>
         </div>

@@ -1,8 +1,9 @@
 .hero{
 
     position:relative;
-    height:60vh;
+    height:100vh;
     min-height:400px;
+    margin:0;
     
     @media only screen and(min-width:768px){
     
@@ -25,6 +26,13 @@
             }
         }
         
+    }
+    
+    .inner{
+        top:$base-margin;
+        left:$base-margin;
+        right:$base-margin;
+        bottom:$base-margin;
     }
     
     
@@ -97,6 +105,21 @@
     .flickity-page-dots{
         position: absolute;
         bottom:$base-margin * 2;
+        
+        .dot{
+            
+            width:$base-margin;
+            height:$base-margin;
+            border-radius:$base-margin;
+            opacity:1;
+            background: $monkey-light;
+            transition:background .2s;
+            
+            &:hover,
+            &.is-selected{
+                background: $monkey-black;
+            }
+        }
     }
 }
 
@@ -107,7 +130,7 @@
     }
     
     position:relative;
-    top:0 - ($base-margin * 7.5);
+    top:0 - ($base-margin * 8.5);
     height: 0;
     overflow: visible;
     

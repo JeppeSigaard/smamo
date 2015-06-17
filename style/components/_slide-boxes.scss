@@ -64,11 +64,11 @@
     header{
         width: 100%;
         position:absolute;
-        top: 0;
+        top: -$base-margin;
         left: 0;
         
         .inner{
-            background: $monkey-light;
+            background: darken($monkey-light,5);
             padding:$base-margin;
             margin:$base-margin;
             overflow: auto;

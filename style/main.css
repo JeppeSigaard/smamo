@@ -1028,10 +1028,10 @@ body.menu-out .fancy-sidebars .fancy-asides {
   .slide-boxes header {
     width: 100%;
     position: absolute;
-    top: 0;
+    top: -13px;
     left: 0; }
     .slide-boxes header .inner {
-      background: #ebebeb;
+      background: #dedede;
       padding: 13px;
       margin: 13px;
       overflow: auto; }
@@ -1088,6 +1088,30 @@ body.menu-out .fancy-sidebars .fancy-asides {
               transition: background-color .3s; }
     .slide-boxes .box-slider.shop a:hover:after {
       background-color: rgba(102, 153, 153, 0.9); }
+
+[data-bg],
+[data-src] {
+  background-image: url("../libs/img/img-loading.gif");
+  background-size: 16px !important;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.video-wrap {
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0px; }
+  .video-wrap iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; }
+  .video-wrap .playbtn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
 
 header.header {
   z-index: 1000;
@@ -1344,8 +1368,9 @@ body.menu-out .search-icon {
 
 .hero {
   position: relative;
-  height: 60vh;
+  height: 100vh;
   min-height: 400px;
+  margin: 0;
   overflow: hidden; }
   .hero .prev-next-right {
     -webkit-transition: right 500ms;
@@ -1358,6 +1383,11 @@ body.menu-out .search-icon {
         right: 26px; }
         .hero .prev-next-right.hide {
           right: -90px; } }
+  .hero .inner {
+    top: 13px;
+    left: 13px;
+    right: 13px;
+    bottom: 13px; }
 
 .hero .inner .hero-banner, .flickity-viewport .hero-banner, .flickity-slider .hero-banner {
   width: 100%;
@@ -1401,11 +1431,21 @@ body.menu-out .search-icon {
 .hero .inner .flickity-page-dots, .flickity-viewport .flickity-page-dots, .flickity-slider .flickity-page-dots {
   position: absolute;
   bottom: 26px; }
+  .hero .inner .flickity-page-dots .dot, .flickity-viewport .flickity-page-dots .dot, .flickity-slider .flickity-page-dots .dot {
+    width: 13px;
+    height: 13px;
+    border-radius: 13px;
+    opacity: 1;
+    background: #ebebeb;
+    -webkit-transition: background .2s;
+            transition: background .2s; }
+    .hero .inner .flickity-page-dots .dot:hover, .hero .inner .flickity-page-dots .dot.is-selected, .flickity-viewport .flickity-page-dots .dot:hover, .flickity-viewport .flickity-page-dots .dot.is-selected, .flickity-slider .flickity-page-dots .dot:hover, .flickity-slider .flickity-page-dots .dot.is-selected {
+      background: #343434; }
 
 .hero-footer {
   display: none;
   position: relative;
-  top: -97.5px;
+  top: -110.5px;
   height: 0;
   overflow: visible; }
   @media only screen and (min-width: 640px) {
@@ -1423,7 +1463,7 @@ body.menu-out .search-icon {
   margin: 0;
   padding: 6.5px;
   background: #ffffff;
-  box-shadow: 1px 1px 2px rgba(52, 52, 52, 0.2); }
+  position: relative; }
   .person-gallery .box {
     position: relative; }
   .person-gallery .box-inner {

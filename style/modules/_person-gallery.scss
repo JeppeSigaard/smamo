@@ -3,7 +3,9 @@
     margin:0;
     padding:$base-margin / 2;
     background: $monkey-white;
-    box-shadow: $button-shadow;
+    //box-shadow: $button-shadow;
+    position:relative;
+    //z-index:3;
     
     .box{
         position:relative;

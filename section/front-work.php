@@ -27,7 +27,7 @@ $products = new WP_Query(array(
         <div class="box-slider">
             <?php while ($cases->have_posts()) : $cases->the_post();  ?>
                 <?php $image_url = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'full' ); ?>
-                <a href="<?php the_permalink(); ?>" <?php post_class() ?> style="background-image:url(<?php echo $image_url[0] ?>);">
+                <a href="<?php the_permalink(); ?>" <?php post_class() ?> data-bg="<?php echo $image_url[0] ?>">
                     <span><?php the_title() ?></span>
                     <?php $client = get_post(get_post_meta(get_the_ID(),'attach_client',true)) ?>
                     <span><?php echo (get_post_meta(get_the_ID(),'attach_client',true) !== '') ? $client->post_title: ''; ?></span>
@@ -49,7 +49,7 @@ $products = new WP_Query(array(
         <div class="box-slider shop">
             <?php while ($products->have_posts()) : $products->the_post(); $sale = ''; ?>
                 <?php $image_url = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'full' ); ?>
-                <a href="<?php the_permalink(); ?>" <?php post_class() ?> style="background-image:url(<?php echo $image_url[0] ?>);">
+                <a href="<?php the_permalink(); ?>" <?php post_class() ?> data-bg="<?php echo $image_url[0] ?>">
                     <span><?php the_title() ?></span>
                     <?php $sale = get_post_meta( get_the_ID(), '_sale_price', true); ?>
                     <span><?php echo ($sale !== '') ? $sale : get_post_meta( get_the_ID(), '_regular_price', true); ?>,-</span>

@@ -5,8 +5,8 @@ $image_url = '';
 // TEAM
 if ($post_type == 'team'){
     
-    $image_url = wp_get_attachment_image_src( get_post_meta(get_the_ID(),'profile_img',true), 'full' );
-    $img_bg = 'style="background-image:url('.$image_url[0].');"';
+    $image_url = wp_get_attachment_image_src( get_post_meta(get_the_ID(),'profile_img',true), 'widescreen' );
+    $img_bg = 'data-bg="'.$image_url[0].'"';
     $email = get_post_meta(get_the_ID(),'email',true);
     $tlf = get_post_meta(get_the_ID(),'telefon',true);
     
@@ -16,8 +16,8 @@ if ($post_type == 'team'){
 
 // PRODUKT
 elseif ($post_type == 'product'){
-    $image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
-    $img_bg = 'style="background-image:url('.$image_url[0].');"';
+    $image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'widescreen' );
+    $img_bg = 'data-bg="'.$image_url[0].'"';
     
     $sale = get_post_meta( get_the_ID(), '_sale_price', true); 
     $price = ($sale !== '') ? $sale : get_post_meta( get_the_ID(), '_regular_price', true); 
@@ -29,16 +29,16 @@ elseif ($post_type == 'product'){
 
 // CASE
 elseif ($post_type == 'case'){
-    $image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
-    $img_bg = 'style="background-image:url('.$image_url[0].');"';
+    $image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'widescreen' );
+    $img_bg = 'data-bg="'.$image_url[0].'"';
     $client = get_post(get_post_meta(get_the_ID(),'attach_client',true));
     $subtitle = '<div><span>'.$client->post_title.'</span></div>';
 }
 
 // ALT ANDET
 else{
-    $image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
-    $img_bg = 'style="background-image:url('.$image_url[0].');"';
+    $image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'widescreen' );
+    $img_bg = 'data-bg="'.$image_url[0].'"';
 }
 ?>
 

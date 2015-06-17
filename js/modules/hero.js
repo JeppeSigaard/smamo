@@ -34,6 +34,7 @@ $(function(){
 
             if(target.is('a.button-dir')){
                 e.preventDefault();
+                target.blur();
 
                 if(target.hasClass('right')){
                     $herobanner.flickity('next');
@@ -45,6 +46,11 @@ $(function(){
             }
 
 
+        });
+        
+        $('.hero').height($(window).height());
+        $(window).resize(function(){
+            $('.hero').height($(window).height());
         });
     }
 });

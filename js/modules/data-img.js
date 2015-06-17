@@ -2,12 +2,32 @@ $(function(){
 
     $(window).on('load',function(){
         
-        $('img').each(function(e){
+        $('[data-bg]').each(function(e){
         
-            var img = $(this),
-                imgSrc = img.attr('data-bg');
+            var $img = $(this),
+                $imgSrc = $(this).attr('data-bg'),
+                $imgPlaceholder = new Image();
+            
+            $imgPlaceholder.src = $imgSrc;
+            $imgPlaceholder.onload = function(){
+                 $img.removeAttr('data-bg').css({
+                    backgroundImage: 'url('+$imgSrc+')',
+                });   
+            };
             
             
+        });
+        
+        $('img[data-src]').each(function(e){
+            
+            var $img = $(this),
+                $imgSrc = $(this).attr('data-src'),
+                $imgPlaceholder = new Image();
+            
+            $imgPlaceholder.src = $imgSrc;
+            $imgPlaceholder.onload = function(){
+                $img.removeAttr('data-src').attr('src',$imgSrc);   
+            };
         });
         
     });

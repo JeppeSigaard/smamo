@@ -1322,7 +1322,7 @@ body.menu-out .search-icon {
   font-size: 90%;
   margin: 0 -13px;
   padding: 13px 13px 26px;
-  background: #ababab;
+  background: #454545;
   color: #ffffff;
   position: relative;
   margin-top: -1px;
@@ -1540,6 +1540,7 @@ body.menu-out .search-icon {
   margin-top: 63px;
   height: 256px;
   padding-bottom: 0;
+  margin-bottom: 0;
   background-size: cover;
   background-position: center;
   overflow: visible;
@@ -1555,7 +1556,15 @@ body.menu-out .search-icon {
               transition: padding-bottom .2s; } }
   @media only screen and (min-width: 1160px) {
     .page-header {
-      padding-bottom: 25%; } }
+      padding-bottom: 25%;
+      -webkit-transition: padding-bottom 0s;
+              transition: padding-bottom 0s; } }
+  @media only screen and (min-width: 1600px) {
+    .page-header {
+      -webkit-transition: padding-bottom 0s;
+              transition: padding-bottom 0s;
+      padding-bottom: 0;
+      height: 400px; } }
   .page-header .inner {
     position: absolute;
     top: 50%;
@@ -1588,6 +1597,21 @@ body.menu-out .search-icon {
       display: inline-block;
       padding: 5px 10px 5px 26px;
       box-shadow: 1px 1px 4px rgba(52, 52, 52, 0.3); }
+  .page-header .button,
+  .page-header .playbtn,
+  .page-header .button-dir {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+    @media only screen and (max-width: 640px) {
+      .page-header .button,
+      .page-header .playbtn,
+      .page-header .button-dir {
+        top: auto;
+        bottom: 13px; } }
 
 .footer {
   margin: 13px;

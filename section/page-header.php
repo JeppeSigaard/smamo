@@ -1,6 +1,8 @@
 <?php
 $post_type = get_post_type( get_the_ID() );
 $image_url = '';
+
+// TEAM
 if ($post_type == 'team'){
     
     $image_url = wp_get_attachment_image_src( get_post_meta(get_the_ID(),'profile_img',true), 'full' );
@@ -12,14 +14,20 @@ if ($post_type == 'team'){
     $subtitle_2 = '<div><a href="tel:'.str_replace(' ','',$tlf).'">'.$tlf.'</a></div>';
 }
 
+// PRODUKT
 elseif ($post_type == 'product'){
     $image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
     $img_bg = 'style="background-image:url('.$image_url[0].');"';
+    
     $sale = get_post_meta( get_the_ID(), '_sale_price', true); 
     $price = ($sale !== '') ? $sale : get_post_meta( get_the_ID(), '_regular_price', true); 
     $subtitle = '<div><span>'.$price.',-</span></div>';
+    
+    $product = new WC_Product(get_the_ID());
+    $button = '<a class="button black" href="'.$product->add_to_cart_url().'">Køb nu</a>';
 }
 
+// CASE
 elseif ($post_type == 'case'){
     $image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
     $img_bg = 'style="background-image:url('.$image_url[0].');"';
@@ -27,6 +35,7 @@ elseif ($post_type == 'case'){
     $subtitle = '<div><span>'.$client->post_title.'</span></div>';
 }
 
+// ALT ANDET
 else{
     $image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
     $img_bg = 'style="background-image:url('.$image_url[0].');"';
@@ -39,4 +48,5 @@ else{
         <?php if(isset($subtitle)){ echo $subtitle;} ?>
         <?php if(isset($subtitle_2)){ echo $subtitle_2;} ?>
     </div>
+    <?php if(isset($button)){ echo $button;} ?>
 </section>

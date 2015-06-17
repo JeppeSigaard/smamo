@@ -1405,7 +1405,7 @@ body.menu-out .search-icon {
 .hero-footer {
   display: none;
   position: relative;
-  top: -104px;
+  top: -97.5px;
   height: 0;
   overflow: visible; }
   @media only screen and (min-width: 640px) {
@@ -1414,8 +1414,10 @@ body.menu-out .search-icon {
   .hero-footer a {
     display: inline-block;
     padding: 8px 13px 8px 26px;
-    margin: 0 0 13px;
+    margin: 0 0 6.5px;
     box-shadow: 1px 1px 4px rgba(52, 52, 52, 0.3); }
+    .hero-footer a:nth-of-type(2) {
+      margin: 0 0 13px; }
 
 .person-gallery {
   margin: 0;
@@ -1477,8 +1479,6 @@ body.menu-out .search-icon {
 .simple-cta, .form-cta {
   padding-top: 70px;
   padding-bottom: 100px; }
-  .simple-cta h3, .form-cta h3 {
-    font-weight: 300; }
 
 .front-work {
   background: #ffffff;

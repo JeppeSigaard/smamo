@@ -3,9 +3,9 @@
 //@koala-append 'assets/styledselect.js';
 //@koala-append 'modules/hero.js';
 //@koala-append 'modules/header.js';
-//@koala-append 'modules/img-data-src.js';
 //@koala-append 'modules/form.js';
 //@koala-append 'modules/fancySidebars.js';
 //@koala-append 'modules/form-cta.js';
 //@koala-append 'modules/box-slider.js';
 //@koala-append 'modules/menu-toggle.js';
+//@koala-append 'modules/data-img.js';

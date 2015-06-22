@@ -28,7 +28,7 @@
     background-size: cover;
     background-position: center;
     overflow:visible;
-    box-shadow: $base-shadow inset;
+    box-shadow: $base-shadow;
     
     .inner{
         @include center(false,true);

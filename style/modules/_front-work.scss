@@ -49,13 +49,16 @@
         }
         
         &:hover span:first-of-type,
-        &:hover span:nth-of-type(2){
+        &:hover span:nth-of-type(2),
+        &.go span:first-of-type,
+        &.go span:nth-of-type(2){
             top:50%;
             transition-delay: 0s;
             
         }
         
-        &:hover:before{
+        &:hover:before,
+        &.go:before{
             background-color:rgba($monkey-black,.9);
         }
     }

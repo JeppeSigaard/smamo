@@ -3,6 +3,21 @@ $text-margin:.7em;
 body article{
     color:$monkey-black;
     
+    a.button,
+    a.button-dir,
+    a.playbtn{
+        
+        margin-top: $base-margin;
+        
+        @media only screen and(min-width:640px){
+            margin-right: $base-margin;
+            
+            &:last-child{
+                margin-right: auto;
+            }
+        }
+    }
+    
     header{
         background:none;
     }

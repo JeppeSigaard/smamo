@@ -9,16 +9,26 @@ get_header();
 $client = get_post(86);
 
 ?>
-
-<section class="page">
+<div class="top-space"></div>
+<section class="page fancy-sidebars">
     <main>
-        <article>
-            <?php var_dump($client); ?>
-        </article>
+        <div class="inner">
+            <?php while (have_posts()) : the_post(); ?>
+            <header>
+                <h1 class="post-title"><?php the_title(); ?></h1>
+            </header>
+            <article <?php post_class(); ?>>
+                <?php the_content(); ?>
+            </article>
+            <?php endwhile; ?>
+        </div>  
     </main>
-    <aside>
-        
-    </aside>
-</section>
+    <div class="fancy-asides start">
+        <aside class="aside-right start">
+        </aside>
+        <aside class="aside-left">
 
+        </aside>
+    </div>
+</section>
 <?php get_footer(); ?>

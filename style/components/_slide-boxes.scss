@@ -134,7 +134,8 @@
             @extend %fill-all;
         }
         
-        &.shop a:hover:before{
+        &.shop a:hover:before,
+        &.shop a.go:before{
             background-position:center center;
             left:-10px;
             transition-delay:.2s;
@@ -148,7 +149,8 @@
             transition:background-color .3s;
         }
         
-        &.shop a:hover:after{
+        &.shop a:hover:after,
+        &.shop a.go:after{
             background-color:rgba($monkey-green,.9);
         }
     }

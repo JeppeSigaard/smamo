@@ -22,7 +22,7 @@ $person = new WP_Query(array(
         ?>
         <li class="box person">
             <header>
-                <?php $image_url = wp_get_attachment_image_src(get_post_meta(get_the_ID(),'profile_img',true),'front-people');?>
+                <?php $image_url = wp_get_attachment_image_src(get_post_meta(get_the_ID(),'profile_img',true),'letterbox');?>
                 <a href="<?php the_permalink(); ?>"><img data-src="<?php echo $image_url[0]; ?>"></a>
             </header>
             <footer>

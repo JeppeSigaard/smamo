@@ -34,8 +34,15 @@ $(function(){
             
         });    
         
-        $('.box-slider a').one('touchend',function(e){
-            e.preventDefault();
+        $('.box-slider a').on('touchstart',function(e){
+            var t = $(e.target);
+            if (!$(this).hasClass('go')){
+                
+                e.preventDefault();
+                
+                $('.box-slider a').removeClass('go');
+                $(this).addClass('go');
+            }
         });
     }
 

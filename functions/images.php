@@ -2,6 +2,7 @@
 
 add_theme_support('post-thumbnails');
 add_image_size( 'widescreen', 1600, 900, true );
+add_image_size( 'letterbox', 640, 480, true );
 add_image_size( 'hero', 1600, 650, true );
 add_image_size( 'hero-small', 640, 400, true );
 add_image_size( 'front-people', 305, 275, true );

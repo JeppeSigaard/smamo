@@ -192,6 +192,19 @@ section {
 body article {
   color: #343434;
   line-height: 1.4; }
+  body article a.button,
+  body article a.button-dir,
+  body article a.playbtn {
+    margin-top: 13px; }
+    @media only screen and (min-width: 640px) {
+      body article a.button,
+      body article a.button-dir,
+      body article a.playbtn {
+        margin-right: 13px; }
+        body article a.button:last-child,
+        body article a.button-dir:last-child,
+        body article a.playbtn:last-child {
+          margin-right: auto; } }
   body article header {
     background: none; }
   body article h1 {
@@ -1075,7 +1088,7 @@ body.menu-out .fancy-sidebars .fancy-asides {
       trasition-delay: 0s;
       -webkit-transition-timing-function: cubic-bezier(0.61, -0.22, 0.47, 1.33);
               transition-timing-function: cubic-bezier(0.61, -0.22, 0.47, 1.33); }
-    .slide-boxes .box-slider.shop a:hover:before {
+    .slide-boxes .box-slider.shop a:hover:before, .slide-boxes .box-slider.shop a.go:before {
       background-position: center center;
       left: -10px;
       -webkit-transition-delay: .2s;
@@ -1086,7 +1099,7 @@ body.menu-out .fancy-sidebars .fancy-asides {
       background-color: transparent;
       -webkit-transition: background-color .3s;
               transition: background-color .3s; }
-    .slide-boxes .box-slider.shop a:hover:after {
+    .slide-boxes .box-slider.shop a:hover:after, .slide-boxes .box-slider.shop a.go:after {
       background-color: rgba(102, 153, 153, 0.9); }
 
 [data-bg],
@@ -1112,6 +1125,9 @@ body.menu-out .fancy-sidebars .fancy-asides {
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); }
+
+.top-space {
+  height: 50px; }
 
 header.header {
   z-index: 1000;
@@ -1485,12 +1501,9 @@ body.menu-out .search-icon {
     z-index: 3;
     position: relative;
     height: 0;
-    padding-bottom: 70%;
+    padding-bottom: 75%;
     background: #343434;
     overflow: hidden; }
-    @media only screen and (min-width: 768px) {
-      .person-gallery header {
-        padding-bottom: 90%; } }
     @media only screen and (min-width: 1280px) {
       .person-gallery header {
         padding-bottom: 70%; } }
@@ -1565,11 +1578,11 @@ body.menu-out .search-icon {
       .front-work .box-slider a span:nth-of-type(2) {
         top: 100%;
         margin-top: 12px; }
-    .front-work .box-slider a:hover span:first-of-type, .front-work .box-slider a:hover span:nth-of-type(2) {
+    .front-work .box-slider a:hover span:first-of-type, .front-work .box-slider a:hover span:nth-of-type(2), .front-work .box-slider a.go span:first-of-type, .front-work .box-slider a.go span:nth-of-type(2) {
       top: 50%;
       -webkit-transition-delay: 0s;
               transition-delay: 0s; }
-    .front-work .box-slider a:hover:before {
+    .front-work .box-slider a:hover:before, .front-work .box-slider a.go:before {
       background-color: rgba(52, 52, 52, 0.9); }
   .front-work .box-slider.shop a span {
     margin-top: -42px; }
@@ -1584,7 +1597,7 @@ body.menu-out .search-icon {
   background-size: cover;
   background-position: center;
   overflow: visible;
-  box-shadow: 1px 1px 4px rgba(52, 52, 52, 0.3) inset; }
+  box-shadow: 1px 1px 4px rgba(52, 52, 52, 0.3); }
   @media only screen and (min-width: 640px) {
     .page-header {
       padding-bottom: 40%;

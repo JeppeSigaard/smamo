@@ -32,7 +32,7 @@ $products = new WP_Query(array(
                     <?php $client = get_post(get_post_meta(get_the_ID(),'attach_client',true)) ?>
                     <span><?php echo (get_post_meta(get_the_ID(),'attach_client',true) !== '') ? $client->post_title: ''; ?></span>
                 </a>
-            <?php endwhile ?>
+            <?php endwhile; wp_reset_postdata(); ?>
         </div>
         
     </div>
@@ -54,7 +54,7 @@ $products = new WP_Query(array(
                     <?php $sale = get_post_meta( get_the_ID(), '_sale_price', true); ?>
                     <span><?php echo ($sale !== '') ? $sale : get_post_meta( get_the_ID(), '_regular_price', true); ?>,-</span>
                 </a>
-            <?php endwhile ?>
+            <?php endwhile; wp_reset_postdata(); ?>
         </div>
     </div>
 </section>

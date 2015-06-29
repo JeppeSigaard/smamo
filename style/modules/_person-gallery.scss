@@ -54,7 +54,7 @@
     }
     
     footer{
-        padding:$base-margin 0px 70px;
+        padding:$base-margin 0px $base-margin;
         @extend %article-font-style;
         
         h3{

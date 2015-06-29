@@ -1,0 +1,30 @@
+.showreel{
+    background:$monkey-green;
+    margin:0;
+    padding:26px 13px;
+    
+    .inner{
+        max-width:960px;
+        margin:auto;
+        border: $base-margin solid darken($monkey-green,10);
+    }
+    
+    .video-wrap{
+        background:$monkey-black;
+    }
+    
+    .playbtn{
+        &.hidden{
+            display: none;
+        }
+        
+        &.loading{
+            
+            background:$monkey-green url(../libs/img/img-loading.gif) center no-repeat;
+            
+            &:after,&:before{
+                display: none;
+            }
+        }
+    }
+}

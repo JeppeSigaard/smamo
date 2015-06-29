@@ -31,7 +31,7 @@ input:-webkit-autofill {
 }
 
 form.sheeted-form{
-    padding:$base-margin;
+    padding:$base-margin*2;
     background:$monkey-white;
     box-shadow: $base-shadow;
     margin:auto;
@@ -56,10 +56,28 @@ form{
         border-bottom: $input-border-width dashed rgba($monkey-black,.3);
     }
     
-    >div{
+    >div,.split>div{
         position:relative;
         @extend %font-size;
         margin-top:$label-active-size + $base-margin;
+    }
+    
+    .split{
+        margin-top:0;
+        font-size:0;
+        
+        >div{
+        
+            @media only screen and(min-width:768px){
+            
+                display: inline-block;
+                width:50%;
+                
+                &:first-child{
+                    padding-right:$base-margin;
+                }
+            }
+        }
     }
     
     label{

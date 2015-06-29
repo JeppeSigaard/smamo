@@ -8,6 +8,4 @@
 
 <?php get_template_part('section/person','gallery'); ?>
 
-
-
 <?php get_footer(); ?>

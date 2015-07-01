@@ -83,21 +83,21 @@ form input[type="email"],
 form input[type="tel"],
 form input[type="password"],
 form input[type="number"],
-form textarea, .fancy-sidebars main, .fancy-sidebars aside, .slide-boxes > .inner, .hero .inner .hero-banner p, .flickity-viewport .hero-banner p, .flickity-slider .hero-banner p, .person-gallery footer {
+form textarea, .fancy-sidebars main, .fancy-sidebars aside, .slide-boxes .wrap > .inner, .hero .inner .hero-banner p, .flickity-viewport .hero-banner p, .flickity-slider .hero-banner p, .person-gallery footer {
   line-height: 1.4; }
 
-html, body, .box, form > div, form .split > div, .fancy-sidebars main, .fancy-sidebars aside, .slide-boxes > .inner {
+html, body, .box, form > div, form .split > div, .fancy-sidebars main, .fancy-sidebars aside, .slide-boxes .wrap > .inner {
   font-size: 14px;
   -webkit-transition: font-size .2s;
           transition: font-size .2s; }
   @media only screen and (min-width: 480px) {
-    html, body, .box, form > div, form .split > div, .fancy-sidebars main, .fancy-sidebars aside, .slide-boxes > .inner {
+    html, body, .box, form > div, form .split > div, .fancy-sidebars main, .fancy-sidebars aside, .slide-boxes .wrap > .inner {
       font-size: 14px; } }
   @media only screen and (min-width: 640px) {
-    html, body, .box, form > div, form .split > div, .fancy-sidebars main, .fancy-sidebars aside, .slide-boxes > .inner {
+    html, body, .box, form > div, form .split > div, .fancy-sidebars main, .fancy-sidebars aside, .slide-boxes .wrap > .inner {
       font-size: 15px; } }
   @media only screen and (min-width: 960px) {
-    html, body, .box, form > div, form .split > div, .fancy-sidebars main, .fancy-sidebars aside, .slide-boxes > .inner {
+    html, body, .box, form > div, form .split > div, .fancy-sidebars main, .fancy-sidebars aside, .slide-boxes .wrap > .inner {
       font-size: 16px; } }
 
 .heart, .hero .inner .hero-banner h3, .hero .inner .hero-banner p, .flickity-viewport .hero-banner h3, .flickity-viewport .hero-banner p, .flickity-slider .hero-banner h3, .flickity-slider .hero-banner p {
@@ -566,7 +566,9 @@ body article .button:visited {
   box-shadow: 1px 1px 2px rgba(52, 52, 52, 0.2); }
 
 .box-container {
-  font-size: 0; }
+  font-size: 0;
+  max-width: 960px;
+  margin: auto; }
 
 .box {
   vertical-align: top;
@@ -631,7 +633,7 @@ form {
   form .split {
     margin-top: 0;
     font-size: 0; }
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 640px) {
       form .split > div {
         display: inline-block;
         width: 50%; }
@@ -1015,36 +1017,33 @@ body.menu-out .fancy-sidebars .fancy-asides {
 .slide-boxes {
   margin: 0;
   font-size: 0; }
-  .slide-boxes > .inner {
+  .slide-boxes .wrap > .inner {
     position: relative;
     padding: 76px 0 13px; }
     @media only screen and (min-width: 640px) {
-      .slide-boxes > .inner {
+      .slide-boxes .wrap > .inner {
         width: 50%;
         display: inline-block;
         vertical-align: top;
         padding: 13px 0 76px; }
-        .slide-boxes > .inner header {
+        .slide-boxes .wrap > .inner header {
           top: auto;
           bottom: -6.5px; }
-        .slide-boxes > .inner.inner-left .inner {
+        .slide-boxes .wrap > .inner.inner-left .inner {
           margin: 13px 6.5px 6.5px 13px; }
-        .slide-boxes > .inner.inner-right .inner {
+        .slide-boxes .wrap > .inner.inner-right .inner {
           margin: 13px 13px 6.5px 6.5px; }
-        .slide-boxes > .inner.inner-right .box-slider {
+        .slide-boxes .wrap > .inner.inner-right .box-slider {
           border-right-width: 13px; }
-        .slide-boxes > .inner.inner-left .box-slider {
+        .slide-boxes .wrap > .inner.inner-left .box-slider {
           border-left-width: 13px; } }
     @media only screen and (min-width: 960px) {
-      .slide-boxes > .inner {
+      .slide-boxes .wrap > .inner {
         width: 33.3333%; }
-        .slide-boxes > .inner.double {
+        .slide-boxes .wrap > .inner.double {
           width: 66.6666%; }
-          .slide-boxes > .inner.double .box-slider a {
+          .slide-boxes .wrap > .inner.double .box-slider a {
             width: 50%; } }
-    @media only screen and (min-width: 1160px) {
-      .slide-boxes > .inner .box-slider {
-        height: 400px; } }
   .slide-boxes header {
     width: 100%;
     position: absolute;
@@ -1132,6 +1131,8 @@ body.menu-out .fancy-sidebars .fancy-asides {
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); }
+  .video-wrap.mobile .playbtn {
+    pointer-events: none; }
 
 .top-space {
   height: 50px; }
@@ -1539,10 +1540,32 @@ body.menu-out .search-icon {
 
 .front-work {
   background: #ffffff;
-  padding: 60px 0px 60px; }
+  padding: 40px 0px 60px;
+  position: relative; }
   @media only screen and (min-width: 640px) {
     .front-work {
-      padding: 80px 0px 120px; } }
+      padding: 40px 0px 80px; } }
+  @media only screen and (min-width: 960px) {
+    .front-work:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      top: 40px;
+      background: whitesmoke;
+      height: 280px;
+      border: solid #e6e6e6;
+      border-width: 13px 0;
+      z-index: -1; }
+    .front-work:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      top: 27px;
+      height: 306px;
+      background: whitesmoke;
+      border: solid #dedede;
+      border-width: 13px 0;
+      z-index: -1; } }
   .front-work .box-slider a {
     overflow: hidden;
     position: relative;

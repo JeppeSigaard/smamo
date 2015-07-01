@@ -2,7 +2,7 @@
     margin:0;
     font-size:0;
     
-    >.inner{
+    .wrap>.inner{
         @extend %font-size;
         @extend %article-font-style;
         position:relative;
@@ -47,14 +47,6 @@
                     width:50%;
                 }
                 
-            }
-            
-        }
-        
-        @media only screen and(min-width:1160px){
-           
-            .box-slider{
-                height:400px;
             }
             
         }

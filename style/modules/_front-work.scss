@@ -1,8 +1,39 @@
 .front-work{
     background:$monkey-white;
-    padding:60px 0px 60px;
+    padding:40px 0px 60px;
+    position: relative;
+    
     @media only screen and(min-width:640px){
-        padding:80px 0px 120px;
+        padding:40px 0px 80px;
+    }
+    
+    @media only screen and(min-width:$wrapper-width){
+        
+        &:after{
+            content:'';
+            position: absolute;
+            width:100%;
+            top:40px;
+            background:lighten($monkey-light,4);
+            height:280px ;
+            border:solid darken($monkey-light,2);
+            border-width:$base-margin 0;
+            z-index:-1;
+
+        }
+        
+        &:before{
+            content:'';
+            position: absolute;
+            width:100%;
+            top:40px - $base-margin;
+            height:280px + $base-margin * 2;
+            background:lighten($monkey-light,4);
+            border:solid darken($monkey-light,5);
+            border-width:$base-margin 0;
+            z-index:-1;
+        }
+    
     }
     
     .box-slider a{

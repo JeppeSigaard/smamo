@@ -13,4 +13,8 @@
     .playbtn{
         @include center(true,true);
     }
+    
+    &.mobile .playbtn{
+        pointer-events: none;
+    }
 }

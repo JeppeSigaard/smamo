@@ -47,11 +47,21 @@ get_header();
                         <p>Standard knapper: Store og små, grøn sort, rød.</p>
 
                         <a class="button">Klik her</a>
-                        <a class="button large">Klik her</a>
+                        <a class="button large">Klik her</a><br/>
+                        
                         <a class="button black">Klik her</a>
-                        <a class="button black large">Klik her</a>
+                        <a class="button black large">Klik her</a><br/>
+                        
                         <a class="button red">Klik her</a>
-                        <a class="button red large">Klik her</a>
+                        <a class="button red large">Klik her</a><br/>
+                        
+                        <a class="button outline">Klik her</a>
+                        <a class="button outline black">Klik her</a>
+                        <a class="button outline red">Klik her</a><br/>
+                        
+                        <a class="button outline large">Klik her</a>
+                        <a class="button outline black large">Klik her</a>
+                        <a class="button outline red large">Klik her</a><br/>
                         <br/>
                         <br/>
                         <hr>

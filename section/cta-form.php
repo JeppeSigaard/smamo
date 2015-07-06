@@ -26,8 +26,9 @@
                 <textarea rows="2"></textarea>
                 <label>Hvad kan vi gøre for dig?</label>
             </div>
-            <div class="right">
-                <a class="button large" title="send" href="#">Send</a>
+            <div class="">
+                <a class="button" title="send" href="#">Send</a>
+                <a class="button outline" title="send" href="mailto:form@smartmonkey.dk">Skriv en e-mail i stedet</a>
             </div>
         </form>
     </article>

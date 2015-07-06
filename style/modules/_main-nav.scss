@@ -21,6 +21,19 @@ body.menu-out{
     .top-nav-menu{
         right:0;
     }
+    
+    .hamburger{
+        right:$menu-width + $base-margin;
+    }
+    
+    @media only screen and(min-width:768px){
+        
+        .top-nav-menu ul{
+            right:50px + $base-margin + $menu-width;
+        }
+        
+    }
+    
 }
 
 nav.top-nav{
@@ -30,15 +43,36 @@ nav.top-nav{
     padding:0px $base-margin;
     
     ul li{
-        display: inline-block;
+        display: block;
+        vertical-align: top;
+        color:$monkey-black;
+        
+        @media only screen and(min-width:768px){
+        
+            display: inline-block;
+            vertical-align: top;
+            color:$monkey-white;
+            
+        }
         
         a{
             display: block;
+            position:relative;
             height:50px;
             line-height:50px;
             padding:0px $base-margin;
-            color:$monkey-light;
             font-size:90%;
+            transition:background-color 200ms;
+            @media only screen and(min-width:768px){
+                font-size: 80%;
+                text-transform: uppercase;
+                border-bottom: 0;
+                top:-2;
+                
+                &:hover{
+                    background-color:rgba($monkey-light,.1);
+                }
+            }
         }
     }
 }
@@ -63,90 +97,65 @@ nav.top-nav{
         padding:$base-margin 0;
         border-bottom: 1px solid darken($monkey-light,10);
     }
+    
+    @media only screen and(min-width:768px){
+        
+        ul{
+            position:fixed;
+            top:0;
+            height:50px;
+            line-height:50px;
+            right:50px + $base-margin;
+            transition: all $menu-transition-time;
+            transition-timing-function: $menu-transition-timing-function;
+        }
+        
+    }
+    
 }
 
 .home{
-    nav.top-nav{
-        top:-50px;
-        opacity:0;
-        transition:opacity 0s, top 3s;
-        transition-delay:0;
+    
+    .hamburger{
+        top:$base-margin;
     }
     
-    header.fixed nav.top-nav{
-        top:0px;
-        opacity:1;
-        transition:opacity .2s, top .3s;
-        transition-delay:.4s;
+    header.fixed .hamburger{
+        top:0;
+    }
+    
+    .top-nav-menu ul{
+        top:$base-margin;
+    }
+    
+    header.fixed .top-nav-menu ul{
+        top:0;
     }
 }
 
 
 .hamburger{
-    text-indent: -99999px;
-    display: block;
-    position:absolute;
-    top:16px;
-    right:$base-margin * 2;
-    transition:border .2s;
-    border:solid $monkey-light;
-    border-width:2px 0px;
-    height:18px;
-    width:27px;
     
-    &:before,&:after{
-        display: block;
-        position:absolute;
-        border-top:2px solid $monkey-light;
-        transition:transform .2s;
-        content:'';
-        top:6px;
-        left:0;
-        width:100%;
+    font-size: 0;
+    position:fixed;
+    top:0;
+    right:13px;
+    transition: all $menu-transition-time;
+    transition-timing-function: $menu-transition-timing-function;
+    background:transparent url('../libs/img/icons/menu_white.svg') no-repeat center;
+    @media only screen and(min-width:768px){
+        background:transparent url('../libs/img/icons/more_vert_white.svg') no-repeat center;
+    }
+    
+    height:50px;
+    width:50px;
+    
+    &:hover{
+        background-color:rgba($monkey-light,.1);
     }
     
 }
 
-body.menu-out .hamburger{
-    border:solid transparent;
-    border-width:2px 0px;
-    
-    
-    &:before{
-        transform:rotate(40deg);
-    }
-    &:after{
-        transform:rotate(-40deg);
-    }
-    
-}
-
-
-body .search-icon,
-body.menu-out .search-icon{
-    @extend .hamburger;
-    border:none;
-    right:($base-margin * 3) + 27px;
-    
-    &:before{
-        content:'';
-        width:10px;
-        border:2px solid $monkey-light;
-        height:10px;
-        border-radius:10px;
-        top:0;
-    }
-    
-    &:after{
-        position: absolute;
-        left: 0;
-        content: '';
-        width: 12px;
-        height: 1px;
-        background: #ebebeb;
-        transform: translate(8px, 8px) rotate(45deg);
-    }
-}
 
 .menu-user{
     font-size:90%;

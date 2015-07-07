@@ -55,15 +55,6 @@
             position:relative;
             
         }
-        /*
-        &:before{
-            @extend %fill-all;
-            content:'';
-            z-index:0;
-            background:rgba($monkey-green,.5);
-            
-        }
-        */
     
         .hero-banner-text{
             top:50%;
@@ -72,34 +63,48 @@
             transform: translateY(-50%);
 
         }
-
-        h3, p{
-            @extend %centered-read;
-            @extend %font-shadow;
-            display: block;
-            color:$monkey-white;
-
-        }
-
-        h3{
-            font-size:220%;
-            text-transform: uppercase;
-            padding-bottom: $base-margin;
-            border-bottom:2px solid $monkey-white;
-            text-align: center;
-            font-weight:700;
-            margin-top:3px;
-
-        }
-
-
-        p{
-
-            @extend %article-font-style;
-            padding-top:$base-margin;
-            font-size:120%;
+        
+        .plx-text-layer {
+            @extend article;
+            position: absolute;
+            left:0;
+            top: 50%;
+            width:100%;
+            transform: translate(0,-50%);
+            z-index: 10;
+            padding:0px $base-margin 80px;   
         }
         
+        
+        .plx-layer {
+            backface-visibility: hidden;
+            left:0;
+            position: absolute;
+            width: 100%;
+            background-size: cover;
+            background-position: 50% 50%;
+            height: 100%;
+            
+            &.layer-1{
+                z-index:5;
+            }
+            
+            &.layer-2{
+                z-index:4;
+            }
+            
+            &.layer-3{
+                z-index:3;
+            }
+            
+            &.layer-4{
+                z-index:2;
+            }
+            
+            &.layer-5{
+                z-index:1;
+            }
+        }  
     }
     
     .flickity-page-dots{
@@ -112,7 +117,7 @@
             height:$base-margin;
             border-radius:$base-margin;
             opacity:1;
-            background: $monkey-light;
+            background: darken($monkey-light,10);
             transition:background .2s;
             
             &:hover,

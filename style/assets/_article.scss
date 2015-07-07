@@ -59,6 +59,10 @@ body article{
 
     p{
         margin-bottom: $text-margin;
+        
+        &.large{
+            font-size:110%;
+        }
     }
 
     ul{

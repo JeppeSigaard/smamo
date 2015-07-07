@@ -4,7 +4,7 @@ template name: Forside
 */
 get_header(); ?>
 
-<?php get_template_part('section/hero','banner'); ?>
+<?php get_template_part('section/parallax','hero'); ?>
 
 <section class="page front-page-article">
     <article class="inner center read-width">

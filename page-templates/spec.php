@@ -6,7 +6,6 @@ Template name: spec
 
 get_header();
 ?>
-<div style="height:50px;"></div>
 <section class="page fancy-sidebars">
     <main>
         <div class="inner">

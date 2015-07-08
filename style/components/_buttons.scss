@@ -27,6 +27,8 @@ body article .button:visited,{
     opacity:.95;
     text-transform: uppercase;
     font-weight:400;
+    cursor: pointer;
+    border: none;
     
     &.large{
         font-size:120%;

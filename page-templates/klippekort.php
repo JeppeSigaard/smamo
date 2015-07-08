@@ -9,7 +9,6 @@ get_header();
 $client = get_post(86);
 
 ?>
-<div class="top-space"></div>
 <section class="page fancy-sidebars">
     <main>
         <div class="inner">

@@ -1,26 +1,28 @@
 <?php
-
-    $mb[] = array(
-        'id' => 'attach_client',
-        'title' => __( 'Kunde', 'rwmb' ),
-        'pages' => array('kort'),
-        'context' => 'side',
-        'priority' => 'default',
-        'autosave' => true,
-        'fields' => array(
-            
-            array(
-                'name'  => __( 'Tilkyttet kunde', 'rwmb' ),
-                'id'    => "attach_client",
-                'type' => 'post',
-                'post_type' => 'kunde',
-                'desc'   => __('<br/><a href="'.get_bloginfo('url').'/wp-admin/post-new.php?post_type=kunde">Klik her for at tilføje en ny kunde</a>'),
-                ),
-        ),
-    );
     
 
-   $mb[] = array(
+$mb[] = array(
+    'id' => 'attach_client',
+    'title' => __( 'Kunde', 'rwmb' ),
+    'pages' => array('kort'),
+    'context' => 'side',
+    'priority' => 'default',
+    'autosave' => true,
+    'fields' => array(
+
+        array(
+            'name'  => __( 'Tilkyttet kunde', 'rwmb' ),
+            'id'    => "attach_client",
+            'type' => 'select_advanced',
+            'placeholder'   => 'vælg en eksisterende bruger',
+            'options'   => $smamo_user_list,
+            'desc'   => __('<br/><a href="'.get_bloginfo('url').'/wp-admin/user-new.php">Klik her for at tilføje en ny kunde</a>'),
+            ),
+    ),
+);
+    
+
+$mb[] = array(
     'id' => 'tasks',
     'title' => __( 'Opgaver', 'rwmb' ),
     'pages' => array('kort'),

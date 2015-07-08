@@ -37,12 +37,22 @@ body.menu-out{
 }
 
 nav.top-nav{
+    
+    @media only print{
+        display: none;
+    }
+    
     position:absolute;
     right:0;
     top:0;
     padding:0px $base-margin;
     
+    ul{
+        font-size: 0;
+    }
+    
     ul li{
+        font-size:$base-font-size;
         display: block;
         vertical-align: top;
         color:$monkey-black;
@@ -73,6 +83,11 @@ nav.top-nav{
                     background-color:rgba($monkey-light,.1);
                 }
             }
+        }
+        
+        &.current-menu-item a,
+        &.current_page_item a{
+            background-color:rgba($monkey-light,.1);
         }
     }
 }
@@ -170,6 +185,9 @@ nav.top-nav{
         
         strong{
             font-weight:400;
+            padding-left:20px;
+            background: url(../libs/img/icons/person.svg) left center no-repeat;
+            background-size:15px;
         }
     }
     

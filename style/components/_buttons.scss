@@ -30,6 +30,13 @@ body article .button:visited,{
     cursor: pointer;
     border: none;
     
+    &.small{
+        font-size:80%;
+        padding: 0px 20px;
+        height:$nav-button-size - 10;
+        line-height: $nav-button-size - 10;
+    }
+    
     &.large{
         font-size:120%;
         padding: 0px 40px;

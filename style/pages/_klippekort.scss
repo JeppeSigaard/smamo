@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+.klippekort{
+    
+    padding:$base-margin;
+    background:darken($monkey-white,2);
+    box-shadow: $base-shadow;
+    margin-bottom: $base-margin;
+    
+    ul{
+        padding-left: 0;
+        margin-bottom: 20px;
+    }
+
+}
+
+
+li.task {
+    border-bottom: 1px solid #ebebeb;
+    margin-bottom: 0;
+    padding: $base-margin/2;
+    
+    &.status-0{
+        border-bottom: 1px solid $monkey-red;
+    }
+    
+    &.status-1{
+        border-bottom: 1px solid $monkey-yellow;
+    }
+    
+    &.status-2{
+        border-bottom: 1px solid $monkey-black;
+    }
+    
+    &.status-3{
+        border-bottom: 1px solid $monkey-green;
+    }
+    
+    &:hover,
+    &.open{
+        background:$monkey-white;
+    }
+}
+
+.task-header{
+    text-align: right;
+    cursor:pointer;
+    
+    span{
+        display: inline-block;
+        padding:$base-margin/2 0 $base-margin/2 $base-margin/2;
+        min-width: 40px;
+    }
+    
+    .task-title{
+        padding:$base-margin/2 0 $base-margin/2 20px;
+        @media only print{
+             padding:$base-margin/2 0;
+        }
+        float:left;
+        font-weight:700;
+        background-size:15px;
+        background-repeat: no-repeat;
+        background-position:center left;
+        
+        &:after{
+            padding:0 $base-margin/2;
+            font-size: 75%;
+            opacity:0;
+            transition:opacity 100ms;
+        }
+        
+        
+    }
+    
+    &:hover {
+        
+        .task-title:after{
+            opacity:1;
+        }
+    }
+}
+
+.task.open .task-title:after{
+    opacity:1;
+}
+
+.status-0 .task-title{
+    background-image:url('../libs/img/icons/error_outline.svg');
+    
+    &:after{
+        content:'Inaktiv';
+        color:$monkey-red;
+    }
+}
+
+.status-1 .task-title{
+    background-image:url('../libs/img/icons/swap_vertical_circle.svg');
+    
+    &:after{
+        content:'Afventer';
+        color:$monkey-yellow;
+    }
+}
+
+.status-2 .task-title{
+    background-image:url('../libs/img/icons/av_timer.svg');
+    
+    &:after{
+        content:'Igang';
+        color:$monkey-black;
+    }
+}
+
+.status-3 .task-title{
+    background-image:url('../libs/img/icons/check_circle.svg');
+    
+    &:after{
+        content:'Udført';
+        color:$monkey-green;
+    }
+}
+
+
+.task.open .task-body,
+.task.open .task-footer{
+    display: block;
+    
+}
+.task-body, 
+.task-footer{
+    display: none;
+    @media only print{
+        display: block;
+    }
+}
+
+
+.task-footer{
+    border-top:1px solid $monkey-light;
+    padding:$base-margin 0;
+    color:lighten($monkey-black,20);
+    font-size:80%;
+}
+
+.kort-footer{
+    text-align: right;
+    padding:$base-margin/2 0;
+}

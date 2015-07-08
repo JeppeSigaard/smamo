@@ -1,3 +1,9 @@
+<?php
+
+// If called outside context
+if(!isset($post)){require '../../../../wp-load.php';}
+
+?>
 <section class="showreel">
     <div class="inner">
         <div class="video-wrap" id="showreel" <?php echo (wp_is_mobile()) ? 'class="mobile"': ''; ?>>

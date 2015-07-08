@@ -1,3 +1,7 @@
+<?php
+// If called outside context
+if(!isset($post)){require '../../../../wp-load.php';}
+?>
 <section class="simple-cta">
     <article class="inner center read-width">
         <h2>Super blæret digital markedsføring</h2>

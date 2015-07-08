@@ -1364,6 +1364,11 @@ body.menu-out .fancy-sidebars .fancy-asides {
 .top-space {
   height: 50px; }
 
+.async-load {
+  min-height: 320px;
+  background: #d2d2d2 url("../libs/img/img-loading.gif") no-repeat center;
+  border: 12px solid #ebebeb; }
+
 header.header {
   z-index: 1000;
   overflow: visible;

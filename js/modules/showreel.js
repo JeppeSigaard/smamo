@@ -38,8 +38,7 @@ function YTstateChange(event){
     }
 }
 
-
-
+    
 if($('#showreel').length && !$('#showreel').hasClass('mobile')){
     // Inject YouTube API script
     var tag = document.createElement('script');
@@ -63,3 +62,6 @@ if($('#showreel').length && !$('#showreel').hasClass('mobile')){
 
     }
 }
+
+
+

@@ -14,12 +14,12 @@ get_header(); ?>
     </article>
 </section>
 
-<?php get_template_part('section/person','gallery'); ?>
+<div class="async-load" data-load="<?php echo get_template_directory_uri() ?>/section/person-gallery.php"></div>
 
-<?php get_template_part('section/front','work'); ?>
+<div class="async-load" data-load="<?php echo get_template_directory_uri() ?>/section/front-work.php"></div>
 
 <?php get_template_part('section/show','reel'); ?>
 
-<?php get_template_part('section/cta','form'); ?>
+<div class="async-load" data-load="<?php echo get_template_directory_uri() ?>/section/cta-form.php"></div>
 
 <?php get_footer(); ?>

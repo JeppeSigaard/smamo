@@ -1,8 +1,13 @@
 <?php 
+
+// If called outside context
+if(!isset($post)){require '../../../../wp-load.php';}
+
 $subs = new WP_Query(array(
     'post_type' => 'abonnement',
     'posts_per_page' => 3,
 ));
+
 ?>
 
 <section class="subscribe">

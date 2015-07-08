@@ -1,0 +1,5 @@
+.async-load{
+    min-height:320px;
+    background:darken($monkey-light,10) url('../libs/img/img-loading.gif') no-repeat center;
+    border:$base-margin solid $monkey-light;
+}

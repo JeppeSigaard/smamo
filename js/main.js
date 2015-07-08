@@ -12,3 +12,4 @@
 //@koala-append 'modules/heading-nav.js';
 //@koala-append 'modules/showreel.js';
 //@koala-append 'modules/slide-anchor.js';
+//@koala-append 'modules/async-load.js';

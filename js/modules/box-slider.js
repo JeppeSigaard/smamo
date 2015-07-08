@@ -1,16 +1,20 @@
-$(function(){
+var SlideBoxesInit = function(){
 
     if($('.slide-boxes').length){
         
         $('.box-slider').each(function(){
-            $(this).flickity({
-                cellSelector: 'a',
-                prevNextButtons: false,
-                pageDots: false,
-                wrapAround: true,
-                setGallerySize: false,
-                cellAlign: 'left'
-            });
+            
+            if(!$(this).hasClass('flickity-enabled')){
+            
+                $(this).flickity({
+                    cellSelector: 'a',
+                    prevNextButtons: false,
+                    pageDots: false,
+                    wrapAround: true,
+                    setGallerySize: false,
+                    cellAlign: 'left'
+                });
+            }
         });
     
         
@@ -45,6 +49,11 @@ $(function(){
             }
         });
     }
+    
+}
 
+$(function(){
+    
+    SlideBoxesInit();
     
 });

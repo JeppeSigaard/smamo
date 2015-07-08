@@ -1,5 +1,8 @@
 <?php 
 
+// If called outside context
+if(!isset($post)){require '../../../../wp-load.php';}
+
 $heroes = new WP_query(array(
 
     'post_type' => 'hero',

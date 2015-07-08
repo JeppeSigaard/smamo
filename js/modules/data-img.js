@@ -1,8 +1,6 @@
-$(function(){
-
-    $(window).on('load',function(){
-        
-        $('[data-bg]').each(function(e){
+var loadDataImages = function(){
+    
+    $('[data-bg]').each(function(e){
         
             var $img = $(this),
                 $imgSrc = $(this).attr('data-bg'),
@@ -29,6 +27,10 @@ $(function(){
                 $img.removeAttr('data-src').attr('src',$imgSrc);   
             };
         });
-        
-    });
+
+
+}
+
+$(function(){
+    $(window).on('load',function(){loadDataImages();});
 });

@@ -1,4 +1,6 @@
 <?php 
+// If called outside context
+if(!isset($post)){require '../../../../wp-load.php';}
 
 $person = new WP_Query(array(
     

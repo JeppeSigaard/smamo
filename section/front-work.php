@@ -1,5 +1,8 @@
 <?php
 
+// If called outside context
+if(!isset($post)){require '../../../../wp-load.php';}
+
 $cases = new WP_Query(array(
     'post_type' => 'case',
 ));

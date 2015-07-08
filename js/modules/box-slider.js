@@ -18,7 +18,7 @@ var SlideBoxesInit = function(){
         });
     
         
-        $('.slide-boxes').on('click',function(e){
+        $('.slide-boxes').off().on('click',function(e){
             
             
             var target = $(e.target),
@@ -38,7 +38,7 @@ var SlideBoxesInit = function(){
             
         });    
         
-        $('.box-slider a').on('touchstart',function(e){
+        $('.box-slider a').off().on('touchstart',function(e){
             var t = $(e.target);
             if (!$(this).hasClass('go')){
                 

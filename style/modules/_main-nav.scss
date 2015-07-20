@@ -23,7 +23,11 @@ body.menu-out{
     }
     
     .hamburger{
-        right:$menu-width + $base-margin;
+        right:$menu-width;
+        @media only screen and(min-width:768px){
+            right:$menu-width + $base-margin;
+        }
+        
     }
     
     @media only screen and(min-width:768px){
@@ -132,7 +136,9 @@ nav.top-nav{
 .home{
     
     .hamburger{
-        top:$base-margin;
+        @media only screen and(min-width:768px){
+            top:$base-margin;
+        }
     }
     
     header.fixed .hamburger{
@@ -154,12 +160,13 @@ nav.top-nav{
     font-size: 0;
     position:fixed;
     top:0;
-    right:13px;
+    right:0;
     transition: all $menu-transition-time;
     transition-timing-function: $menu-transition-timing-function;
     background:transparent url('../libs/img/icons/menu_white.svg') no-repeat center;
     @media only screen and(min-width:768px){
         background:transparent url('../libs/img/icons/more_vert_white.svg') no-repeat center;
+        right:13px;
     }
     
     height:50px;

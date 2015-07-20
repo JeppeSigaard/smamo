@@ -1,3 +1,4 @@
+<?php $mobile = (wp_is_mobile()) ? 'mobile' : ''; ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
     <head>
@@ -6,7 +7,7 @@
         <title><?php wp_title('-',true,'right'); ?></title>
         <?php wp_head(); ?>
     </head>
-    <body <?php body_class(); ?>>
+    <body <?php body_class($mobile); ?>>
     <section class="header-section">
         <header class="header">
             <a class="header-logo" href="<?php bloginfo('url') ?>">

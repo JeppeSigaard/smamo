@@ -69,10 +69,16 @@ $(function(){
 
 
         });
-        
-        $('.hero').height($(window).height());
-        $(window).resize(function(){
+        if(!is_mobile()){
             $('.hero').height($(window).height());
-        });
+            $(window).resize(function(){
+
+                $('.hero').height($(window).height());
+
+            });
+        }
+        else{
+             $('.hero').height($(window).height() - 50);
+        }
     }
 });

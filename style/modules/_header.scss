@@ -3,7 +3,7 @@ $header-transition-timing-function: cubic-bezier(.73, .15, .5, 1.5);
 $header-shadow:$base-shadow;
 
 @media only screen and(min-width:768px){
-    .home section.header-section{height:0px;}
+    .home:not(.mobile) section.header-section{height:0px;}
 }
 section.header-section{
     height: 50px;
@@ -55,7 +55,7 @@ header.header{
 
 @media only screen and(min-width:768px){
     
-    .home header.header{
+    .home:not(.mobile) header.header{
         z-index:1000;
         overflow: visible;
         position:absolute;

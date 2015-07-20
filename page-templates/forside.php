@@ -53,6 +53,18 @@ get_header(); ?>
                     <a href="#"> _________________ </a>
                 </footer>
             </li>
+            <li class="box person">
+                <header>
+                    <a href="#"></a>
+                </header>
+                <footer>
+                    <h3> _________________ </h3>
+                    <h4> _________________ </h4>
+                    <span> _________________ </span>
+                    <a href="#"> _________________ </a>
+                    <a href="#"> _________________ </a>
+                </footer>
+            </li>
         </ul>
     </section>
 </div>

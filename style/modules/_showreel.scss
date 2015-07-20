@@ -4,7 +4,7 @@
     padding:26px 13px;
     
     .inner{
-        max-width:960px;
+        max-width:$wrapper-width;
         margin:auto;
         border: $base-margin solid darken($monkey-green,10);
     }

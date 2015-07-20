@@ -2,6 +2,7 @@
     <article class="inner read-width">
         <h3>Kontakt os nu for en uforpligtende vurdering</h3>
         <form class="left sheeted-form">
+            <?php wp_nonce_field('cta_form_nonce','cta_form_nonce'); ?>
             <div class="split">
                 <div>
                     <input type="text" name="fname">

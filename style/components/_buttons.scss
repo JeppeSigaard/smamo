@@ -88,6 +88,14 @@ body article .button:visited,{
             color:$monkey-red;
         }
         
+        &.white{
+            box-shadow: 0px 0px 0px 2px $monkey-white inset;
+            color:$monkey-white;
+            &:hover{
+                background:$monkey-black;
+            }
+        }
+        
         &:hover{
             background:lighten($monkey-light,5);
         }

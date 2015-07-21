@@ -37,5 +37,3 @@ function smamo_add_hero() {
 	   )
     );
 }
-
-?>

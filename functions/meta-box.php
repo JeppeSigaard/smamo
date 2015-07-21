@@ -27,4 +27,3 @@ function smamo_add_boxes(){
 
 return $mb;
 }
-?>

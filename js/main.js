@@ -16,3 +16,4 @@
 //@koala-append 'modules/slide-anchor.js';
 //@koala-append 'modules/async-load.js';
 //@koala-append 'modules/klippekort.js';
+//@koala-append 'modules/internal-links.js';

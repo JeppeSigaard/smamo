@@ -154,4 +154,3 @@ function smamo_footer_function(  ) {
 
 }
 
-?>

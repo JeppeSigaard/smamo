@@ -23,6 +23,3 @@ function disable_emojicons_tinymce( $plugins ) {
     return array();
   }
 }
-
-
-?>

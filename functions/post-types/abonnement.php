@@ -38,5 +38,3 @@ function smamo_add_abonnement() {
 	   )
     );
 }
-
-?>

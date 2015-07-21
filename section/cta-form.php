@@ -1,6 +1,6 @@
-<section class="form-cta">
+<section class="form-cta" id="form">
     <article class="inner read-width">
-        <h3>Kontakt os nu for en uforpligtende vurdering</h3>
+        <h3 class="center">Lad os lære dig at kende</h3>
         <form class="left sheeted-form">
             <?php wp_nonce_field('cta_form_nonce','cta_form_nonce'); ?>
             <div class="split">

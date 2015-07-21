@@ -14,7 +14,7 @@
         <a href="mailto:<?php echo $options['email'] ?>"><?php echo $options['email'] ?></a>
     </div>
     <div class="center">
-        <a class="button-dir up to-top" href="#"></a>
+        <a class="button-dir up internal" href="#top"></a>
     </div>
 </footer>
 

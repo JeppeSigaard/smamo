@@ -6,7 +6,7 @@ get_header(); ?>
 
 <?php get_template_part('section/parallax','hero'); ?>
 
-<section class="page front-page-article">
+<section class="page front-page-article" id="about">
     <article class="inner center read-width">
     <?php while(have_posts()) : the_post(); ?>
         <?php the_content(); ?>
@@ -110,4 +110,4 @@ get_header(); ?>
 <?php get_template_part('section/cta','form'); ?>
 
 
-<?php get_footer(); ?>
+<?php get_footer();

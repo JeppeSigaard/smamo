@@ -16,6 +16,6 @@ require 'functions/menus.php';
 
 require 'functions/woo.php'; 
 
-require 'functions/footer-options.php'; 
+require 'functions/footer-options.php';
 
-?>
+require 'functions/disable-pages.php'; 

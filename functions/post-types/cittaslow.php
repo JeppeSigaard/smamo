@@ -37,6 +37,3 @@ function smamo_add_cittaslow() {
 	   )
     );
 }
-
-
-?>

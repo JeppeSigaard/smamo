@@ -2,15 +2,16 @@
 var checkSuccess = function(target){
     
     if(target.val() === ''){
+
         
             target.removeClass('success').next('label').removeClass('stayup');
             
         }
     
-    else if(target.is('input[type="checkbox"], input[type="radio"]')){}
+    else if(target.is('input[type="checkbox"], input[type="radio"]')){console.log('not valid field type');}
     
     else{
-
+        
         target.addClass('success').next('label').addClass('stayup');
     }
 
@@ -21,7 +22,11 @@ var validateEmail = function(email) {
     return re.test(email);
 }
 
-$(function(){
+var formJsInit = function(){
+    
+    $('form input, form textarea').each(function(){
+        checkSuccess($(this));
+    });
     
     autosize($('form textarea:not(.no-autosize)'));
 
@@ -32,7 +37,7 @@ $(function(){
     });
     
     // Kosmetisk opdatering ved blur
-    $('form input, form textarea').on('blur',function(e){
+    $('form input, form textarea').off().on('blur',function(e){
         var target = $(e.target);
         
         // Fjern error
@@ -54,7 +59,7 @@ $(function(){
     });
     
     // Keyup validering
-    $('form').on('keyup',function(e){
+    $('form').off().on('keyup',function(e){
     
         var target = $(e.target);
         
@@ -70,5 +75,11 @@ $(function(){
         }
         
     })
+
+}
+
+$(function(){
+    
+    formJsInit();
     
 });

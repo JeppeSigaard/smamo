@@ -29,15 +29,24 @@ $kort = new WP_query(array(
                 <h1 class="post-title"><?php the_title(); ?></h1>
             </header>
             <article <?php post_class(); ?>>
+                <?php if (is_user_logged_in()) : // Bruger er logget ind ?>
+                
                 <?php if($kort->have_posts()) : while ($kort->have_posts()) : $kort->the_post(); ?>
                     
-                    <?php get_template_part('content/klippekort','list'); ?>
+                    <?php get_template_part('klippekort/render','kort'); ?>
                 
                 <?php endwhile; else :?>
                 
                 <p>Du har ingen aktive klippekort</p>
                 <a class="button">Bestil nu</a>
                 <?php endif; wp_reset_postdata(); ?>
+                
+                <?php else : // Brugeren er ikke logget ind ?>
+                
+                <?php the_content(); ?>
+                
+                
+                <?php endif; ?>
             </article>
             <?php endwhile; ?>
         </div>  

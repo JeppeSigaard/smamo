@@ -56,7 +56,7 @@ form{
         border-bottom: $input-border-width dashed rgba($monkey-black,.3);
     }
     
-    >div,.split>div{
+    >div,.split>div,>p{
         position:relative;
         @extend %font-size;
         margin-top:$label-active-size + $base-margin;

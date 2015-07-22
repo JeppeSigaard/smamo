@@ -1,0 +1,38 @@
+.modal-container{
+    position: fixed;
+    z-index: 10000;
+    background-color: rgba($monkey-black,0.2);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+    transition:background-color 500ms;
+    
+    &.fadeIn{
+        background-color:transparent;
+        transition:background-color 0s;
+    }  
+    
+    &.fadeOut{
+        background-color:transparent;
+        transition:background-color 200ms;
+    }  
+}
+
+
+.fadeIn .modal-center{
+    top:-150%;
+}
+.modal-center{
+    
+    transition: top 500ms;
+    transition-timing-function: cubic-bezier(.46, .39, .13, 1.15);
+    position: absolute;
+    top:50%;
+    left:0;
+    transform: translate(0,-50%);
+    width:100%;
+    padding:$base-margin;
+    margin-top:-50px;
+}

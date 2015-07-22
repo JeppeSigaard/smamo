@@ -1,7 +1,7 @@
 <?php 
 
 
-
+$hero_count = 0;
 $heroes = new WP_query(array(
 
     'post_type' => 'hero',
@@ -14,7 +14,7 @@ $options = get_option('footer_options');
 ?>
 <section class="hero" id="top">
     <div class="inner">
-        <?php if($heroes->have_posts()) : while($heroes->have_posts()) : $heroes->the_post();?>
+        <?php if($heroes->have_posts()) : while($heroes->have_posts()) : $heroes->the_post(); $hero_count ++;?>
         <?php $image_url = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'hero' ); ?>
         <?php $data_bg = (isset($image_url[0])) ? 'data-bg="'.$image_url[0].'"' : ''; ?>    
             <div class="hero-banner" <?php echo $data_bg; ?>>
@@ -23,13 +23,15 @@ $options = get_option('footer_options');
                     <?php the_excerpt(); ?>
                 </div>
             </div>
-        <?php endwhile; endif; ?>  
+        <?php endwhile; endif; if($hero_count > 1) : ?>  
         <div class="prev-next-right">
             <a href="#" tabindex="-1" nofollow class="button-dir"></a>
             <a href="#" tabindex="-1" nofollow class="button-dir right"></a>
         </div>
+        <?php endif; ?>
     </div>
 </section>
+<span class="hero-count"><?php echo $hero_count; ?></span>
 <footer class="hero-footer">
     <?php if ($options['email'] !== '') : ?>
     <a href="mailto:<?php echo $options['email'] ?>"><?php echo $options['email'] ?></a><br/>

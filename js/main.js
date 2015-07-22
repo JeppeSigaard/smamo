@@ -17,3 +17,5 @@
 //@koala-append 'modules/async-load.js';
 //@koala-append 'modules/klippekort.js';
 //@koala-append 'modules/internal-links.js';
+//@koala-append 'modules/do-modal.js';
+//@koala-append 'modules/replaceholders.js';

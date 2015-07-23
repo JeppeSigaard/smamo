@@ -12,6 +12,7 @@
         <header class="header">
             <a class="header-logo" href="<?php bloginfo('url') ?>">
                 <?php include 'libs/img/logo.svg'; ?>
+                <span class="smartmonkey"><?php include 'libs/img/smartmonkey.svg'; ?></span>
             </a>
             <a class="hamburger" href="#">Menu</a>
             <nav class="top-nav">

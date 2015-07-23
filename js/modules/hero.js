@@ -39,9 +39,9 @@ var parallaxHero = function(){
     }
 };
 
-// When ready
-$(function(){
-    
+
+heroBannerInit = function(){
+
     if($('.hero').length){
         
         // Define breakPointHero
@@ -119,4 +119,12 @@ $(function(){
              $('.hero').height($(window).height() - 50);
         }
     }
+
+}
+
+// When ready
+$(function(){
+    
+    heroBannerInit();
+    
 });

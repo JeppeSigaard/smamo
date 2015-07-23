@@ -13,12 +13,18 @@ $heroes = new WP_query(array(
 ));
 
 $options = get_option('footer_options');
+
+$weekday = jddayofweek(date("d"));
+
 ?>
 <section class="hero" id="top">
     <div class="inner">
-        <?php if($heroes->have_posts()) : while($heroes->have_posts()) : $heroes->the_post(); $hero_count ++;?>
-        
-        <?php 
+        <?php if($heroes->have_posts()) : while($heroes->have_posts()) : $heroes->the_post(); ?>
+        <?php
+            
+        $weekdaylimit =  (get_post_meta(get_the_ID(),'weekday_limit',true));
+        if($weekdaylimit == '' || $weekdaylimit == $weekday) :
+            
         /* Non - parallax slide */
         if (get_post_meta(get_the_ID(),'plx_active',true) !== '1') :
         ?>
@@ -45,7 +51,7 @@ $options = get_option('footer_options');
             </div>
         <?php 
         /* end slides */
-        endif; endwhile; endif; if ($hero_count > 1) :
+        endif; endif; endwhile; endif; if ($hero_count > 1) :
         ?>  
         <div class="prev-next-right">
             <a href="#" tabindex="-1" nofollow class="button-dir"></a>

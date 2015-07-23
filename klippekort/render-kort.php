@@ -1,7 +1,9 @@
+<?php $client = get_userdata(get_post_meta(get_the_ID(),'attach_client',true)); ?>
 <?php $tasks = get_post_meta(get_the_ID(),'task',true); ?>
 <div class="klippekort">
     <header class="kort-header">
-        <h4><?php the_title(); ?></h4>
+        <h6 class="kort-title"><?php echo $client->user_login; ?></h6>
+        <span class="kort-desc"><?php the_title(); ?></span>
     </header>
     <ul class="task-list">
         <?php 

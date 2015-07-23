@@ -7,19 +7,30 @@ template name: Klippekort
 get_header();
 
 $client = wp_get_current_user();
+$kort = '';
 
-$kort = new WP_query(array(
-    'post_type' => 'kort',
-    'posts_per_page' => -1,
-    'meta_query' => array(
-		array(
-			'key'     => 'attach_client',
-			'value'   => (is_object($client)) ? $client->ID : 0,
-			'compare' => 'IN',
-		),
-	),
-));
+if(user_can($client->ID,'manage_options')){
+    $kort = new WP_query(array(
+        'post_type' => 'kort',
+        'posts_per_page' => -1,
+    ));
+    
+    
+}
 
+else{
+    $kort = new WP_query(array(
+        'post_type' => 'kort',
+        'posts_per_page' => -1,
+        'meta_query' => array(
+            array(
+                'key'     => 'attach_client',
+                'value'   => (is_object($client)) ? $client->ID : 0,
+                'compare' => 'IN',
+            ),
+        ),
+    ));
+}
 ?>
 <section class="page fancy-sidebars">
     <main>

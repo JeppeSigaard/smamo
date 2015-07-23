@@ -11,6 +11,27 @@
         padding-left: 0;
         margin-bottom: 20px;
     }
+    
+    .kort-header{
+        border-bottom: 1px solid $monkey-light;
+        padding:$base-margin/2 0px $base-margin*1.5;
+    }
+    
+    .kort-title{
+        font-weight:normal;
+        font-size: 110%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    .kort-desc{
+        display: block;
+        vertical-align: middle;
+        @media only screen and(min-width:480px){
+            float:right;
+            display: inline-block;
+        }
+    }
 
 }
 
@@ -18,7 +39,10 @@
 li.task {
     border-bottom: 1px solid #ebebeb;
     margin-bottom: 0;
-    padding: $base-margin/2;
+    padding: $base-margin 0px;
+    font-size: 90%;
+    position:relative;
+    list-style: none;
     
     &.status-0{
         border-bottom: 1px solid $monkey-red;
@@ -38,7 +62,16 @@ li.task {
     
     &:hover,
     &.open{
-        background:$monkey-white;
+        &:after{
+            content:'';
+            position:absolute;
+            z-index:0;
+            background:lighten($monkey-green,100);
+            top:0;
+            bottom:0;
+            left:-$base-margin;
+            right:-$base-margin;
+        }
     }
 }
 
@@ -47,13 +80,23 @@ li.task {
     cursor:pointer;
     
     span{
+        
+            
         display: inline-block;
         padding:$base-margin/2 0 $base-margin/2 $base-margin/2;
         min-width: 40px;
+        
+    }
+    
+    @media only screen and(max-width:480px){
+        .task-time,.task-hours{
+            display: none;
+        }
     }
     
     .task-title{
         padding:$base-margin/2 0 $base-margin/2 20px;
+        white-space: nowrap;
         @media only print{
              padding:$base-margin/2 0;
         }
@@ -125,6 +168,8 @@ li.task {
 .task.open .task-body,
 .task.open .task-footer{
     display: block;
+    z-index:1;
+    position:relative;
     
 }
 .task-body, 

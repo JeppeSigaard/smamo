@@ -24,7 +24,9 @@ $weekday = jddayofweek(date("d"));
             
         $weekdaylimit =  (get_post_meta(get_the_ID(),'weekday_limit',true));
         if($weekdaylimit == '' || $weekdaylimit == $weekday) :
-            
+        
+        $hero_count ++;
+
         /* Non - parallax slide */
         if (get_post_meta(get_the_ID(),'plx_active',true) !== '1') :
         ?>

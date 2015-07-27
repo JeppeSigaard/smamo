@@ -51,7 +51,7 @@ header.header{
         }
         
         .smartmonkey{
-            width: 90px;
+            width: 100px;
             position: absolute;
             height:50px;
             top: 0px;
@@ -61,7 +61,9 @@ header.header{
             svg{
                 width: 90px;
                 margin-top:16px;
-                fill:white;
+                fill:$monkey-white;
+                stroke: $monkey-white;
+                stroke-width: 4px;
             }
         }
     }
@@ -109,7 +111,7 @@ header.header{
             }
             
             .smartmonkey{
-                width:90px;
+                width:100px;
                 transition: width 300ms;
                 transition-delay: 400ms;
             }

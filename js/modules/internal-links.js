@@ -1,3 +1,14 @@
+
+var gotoInternal = function(h){
+    $('html,body').animate({scrollTop: $(h).offset().top - 50},500);        
+    window.location.hash = h;
+    if($(h).find('form').length){
+        $(h).find('input[type="text"],input[type="email"],input[type="tel"],input[type="number"]').first().focus();
+    }
+};
+
+
+
 $('body').on('click',function(e){
 
     var t = $(e.target);
@@ -13,22 +24,16 @@ $('body').on('click',function(e){
             
         }
         
-        else if($(h).length){    
+        else if($(h).length){
             e.preventDefault();
-            
-            $('html,body').animate({scrollTop: $(h).offset().top - 50},500);        
-            window.location.hash = h;
+            gotoInternal(h);
         }
     }
 });
 
 $(function(){
     if(window.location.hash){
-        
         var h = window.location.hash;
-        if($(h).length){
-           $('html,body').animate({scrollTop: $(h).offset().top - 50},50); 
-        }
-        
+        if($(h).length){gotoInternal(h);}
     }
 });

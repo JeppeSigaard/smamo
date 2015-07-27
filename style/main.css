@@ -1463,7 +1463,7 @@ header.header {
       header.header .header-logo #smamologo .smart, header.header .header-logo #smamologo .monkey {
         display: none; }
     header.header .header-logo .smartmonkey {
-      width: 90px;
+      width: 100px;
       position: absolute;
       height: 50px;
       top: 0px;
@@ -1472,7 +1472,9 @@ header.header {
       header.header .header-logo .smartmonkey svg {
         width: 90px;
         margin-top: 16px;
-        fill: white; }
+        fill: #ffffff;
+        stroke: #ffffff;
+        stroke-width: 4px; }
 
 @media only screen and (min-width: 768px) {
   .home:not(.mobile) header.header {
@@ -1506,7 +1508,7 @@ header.header {
           height: 37px;
           width: 37px; }
       .home:not(.mobile) header.header.fixed .smartmonkey {
-        width: 90px;
+        width: 100px;
         -webkit-transition: width 300ms;
                 transition: width 300ms;
         -webkit-transition-delay: 400ms;

@@ -105,9 +105,9 @@ get_header(); ?>
     </section>
 </div>
 
-<?php get_template_part('section/show','reel'); ?>
+<?php //get_template_part('section/show','reel'); ?>
 
-<?php get_template_part('section/cta','form'); ?>
+<?php get_template_part('section/chat','form'); ?>
 
 
 <?php get_footer();

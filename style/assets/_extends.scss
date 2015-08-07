@@ -50,7 +50,13 @@
     
 }
 
+.light-marker, .dark-marker{
+    line-height: 2.2;
+}
+
+
 %paper-container{
     padding:$base-margin;
     background:lighten($monkey-light,10);
 }
+

@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*********************************************/
 /**************** STYLE RESET ****************/
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, .hero .inner .hero-banner .plx-text-layer, .flickity-viewport .hero-banner .plx-text-layer, .flickity-slider .hero-banner .plx-text-layer, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, .hero .inner .hero-banner .plx-text-layer, .flickity-viewport .hero-banner .plx-text-layer, .flickity-slider .hero-banner .plx-text-layer, .chat-form .inner, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   padding: 0;
@@ -26,7 +26,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-article, .hero .inner .hero-banner .plx-text-layer, .flickity-viewport .hero-banner .plx-text-layer, .flickity-slider .hero-banner .plx-text-layer, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+article, .hero .inner .hero-banner .plx-text-layer, .flickity-viewport .hero-banner .plx-text-layer, .flickity-slider .hero-banner .plx-text-layer, .chat-form .inner, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block; }
 
 .clear {
@@ -74,7 +74,7 @@ form label, form input[type="checkbox"]:after, .slide-boxes .flickity-viewport, 
 .hero .inner .hero-banner, .flickity-viewport .hero-banner, .flickity-slider .hero-banner {
   padding: 12px; }
 
-article, .hero .inner .hero-banner .plx-text-layer, .flickity-viewport .hero-banner .plx-text-layer, .flickity-slider .hero-banner .plx-text-layer, form input[type="text"],
+article, .hero .inner .hero-banner .plx-text-layer, .flickity-viewport .hero-banner .plx-text-layer, .flickity-slider .hero-banner .plx-text-layer, .chat-form .inner, form input[type="text"],
 form input[type="email"],
 form input[type="tel"],
 form input[type="password"],
@@ -114,6 +114,9 @@ html, body, .box, form > div, form .split > div, form > p, .fancy-sidebars main,
   -webkit-box-decoration-break: clone;
           box-decoration-break: clone;
   padding: 5px 10px; }
+
+.light-marker, .dark-marker {
+  line-height: 2.2; }
 
 .fancy-sidebars main .inner, .fancy-sidebars aside .inner {
   padding: 12px;
@@ -189,10 +192,10 @@ hr {
 section {
   margin: 12px; }
 
-body article, body .hero .inner .hero-banner .plx-text-layer, .hero .inner .hero-banner body .plx-text-layer, body .flickity-viewport .hero-banner .plx-text-layer, .flickity-viewport .hero-banner body .plx-text-layer, body .flickity-slider .hero-banner .plx-text-layer, .flickity-slider .hero-banner body .plx-text-layer {
+body article, body .hero .inner .hero-banner .plx-text-layer, .hero .inner .hero-banner body .plx-text-layer, body .flickity-viewport .hero-banner .plx-text-layer, .flickity-viewport .hero-banner body .plx-text-layer, body .flickity-slider .hero-banner .plx-text-layer, .flickity-slider .hero-banner body .plx-text-layer, body .chat-form .inner, .chat-form body .inner {
   color: #343434;
   line-height: 1.4; }
-  body article a.button, body .hero .inner .hero-banner .plx-text-layer a.button, .hero .inner .hero-banner body .plx-text-layer a.button, body .flickity-viewport .hero-banner .plx-text-layer a.button, .flickity-viewport .hero-banner body .plx-text-layer a.button, body .flickity-slider .hero-banner .plx-text-layer a.button, .flickity-slider .hero-banner body .plx-text-layer a.button,
+  body article a.button, body .hero .inner .hero-banner .plx-text-layer a.button, .hero .inner .hero-banner body .plx-text-layer a.button, body .flickity-viewport .hero-banner .plx-text-layer a.button, .flickity-viewport .hero-banner body .plx-text-layer a.button, body .flickity-slider .hero-banner .plx-text-layer a.button, .flickity-slider .hero-banner body .plx-text-layer a.button, body .chat-form .inner a.button, .chat-form body .inner a.button,
   body article a.button-dir,
   body .hero .inner .hero-banner .plx-text-layer a.button-dir,
   .hero .inner .hero-banner body .plx-text-layer a.button-dir,
@@ -200,16 +203,20 @@ body article, body .hero .inner .hero-banner .plx-text-layer, .hero .inner .hero
   .flickity-viewport .hero-banner body .plx-text-layer a.button-dir,
   body .flickity-slider .hero-banner .plx-text-layer a.button-dir,
   .flickity-slider .hero-banner body .plx-text-layer a.button-dir,
+  body .chat-form .inner a.button-dir,
+  .chat-form body .inner a.button-dir,
   body article a.playbtn,
   body .hero .inner .hero-banner .plx-text-layer a.playbtn,
   .hero .inner .hero-banner body .plx-text-layer a.playbtn,
   body .flickity-viewport .hero-banner .plx-text-layer a.playbtn,
   .flickity-viewport .hero-banner body .plx-text-layer a.playbtn,
   body .flickity-slider .hero-banner .plx-text-layer a.playbtn,
-  .flickity-slider .hero-banner body .plx-text-layer a.playbtn {
+  .flickity-slider .hero-banner body .plx-text-layer a.playbtn,
+  body .chat-form .inner a.playbtn,
+  .chat-form body .inner a.playbtn {
     margin-top: 12px; }
     @media only screen and (min-width: 640px) {
-      body article a.button, body .hero .inner .hero-banner .plx-text-layer a.button, .hero .inner .hero-banner body .plx-text-layer a.button, body .flickity-viewport .hero-banner .plx-text-layer a.button, .flickity-viewport .hero-banner body .plx-text-layer a.button, body .flickity-slider .hero-banner .plx-text-layer a.button, .flickity-slider .hero-banner body .plx-text-layer a.button,
+      body article a.button, body .hero .inner .hero-banner .plx-text-layer a.button, .hero .inner .hero-banner body .plx-text-layer a.button, body .flickity-viewport .hero-banner .plx-text-layer a.button, .flickity-viewport .hero-banner body .plx-text-layer a.button, body .flickity-slider .hero-banner .plx-text-layer a.button, .flickity-slider .hero-banner body .plx-text-layer a.button, body .chat-form .inner a.button, .chat-form body .inner a.button,
       body article a.button-dir,
       body .hero .inner .hero-banner .plx-text-layer a.button-dir,
       .hero .inner .hero-banner body .plx-text-layer a.button-dir,
@@ -217,15 +224,19 @@ body article, body .hero .inner .hero-banner .plx-text-layer, .hero .inner .hero
       .flickity-viewport .hero-banner body .plx-text-layer a.button-dir,
       body .flickity-slider .hero-banner .plx-text-layer a.button-dir,
       .flickity-slider .hero-banner body .plx-text-layer a.button-dir,
+      body .chat-form .inner a.button-dir,
+      .chat-form body .inner a.button-dir,
       body article a.playbtn,
       body .hero .inner .hero-banner .plx-text-layer a.playbtn,
       .hero .inner .hero-banner body .plx-text-layer a.playbtn,
       body .flickity-viewport .hero-banner .plx-text-layer a.playbtn,
       .flickity-viewport .hero-banner body .plx-text-layer a.playbtn,
       body .flickity-slider .hero-banner .plx-text-layer a.playbtn,
-      .flickity-slider .hero-banner body .plx-text-layer a.playbtn {
+      .flickity-slider .hero-banner body .plx-text-layer a.playbtn,
+      body .chat-form .inner a.playbtn,
+      .chat-form body .inner a.playbtn {
         margin-right: 12px; }
-        body article a.button:last-child, body .hero .inner .hero-banner .plx-text-layer a.button:last-child, .hero .inner .hero-banner body .plx-text-layer a.button:last-child, body .flickity-viewport .hero-banner .plx-text-layer a.button:last-child, .flickity-viewport .hero-banner body .plx-text-layer a.button:last-child, body .flickity-slider .hero-banner .plx-text-layer a.button:last-child, .flickity-slider .hero-banner body .plx-text-layer a.button:last-child,
+        body article a.button:last-child, body .hero .inner .hero-banner .plx-text-layer a.button:last-child, .hero .inner .hero-banner body .plx-text-layer a.button:last-child, body .flickity-viewport .hero-banner .plx-text-layer a.button:last-child, .flickity-viewport .hero-banner body .plx-text-layer a.button:last-child, body .flickity-slider .hero-banner .plx-text-layer a.button:last-child, .flickity-slider .hero-banner body .plx-text-layer a.button:last-child, body .chat-form .inner a.button:last-child, .chat-form body .inner a.button:last-child,
         body article a.button-dir:last-child,
         body .hero .inner .hero-banner .plx-text-layer a.button-dir:last-child,
         .hero .inner .hero-banner body .plx-text-layer a.button-dir:last-child,
@@ -233,55 +244,59 @@ body article, body .hero .inner .hero-banner .plx-text-layer, .hero .inner .hero
         .flickity-viewport .hero-banner body .plx-text-layer a.button-dir:last-child,
         body .flickity-slider .hero-banner .plx-text-layer a.button-dir:last-child,
         .flickity-slider .hero-banner body .plx-text-layer a.button-dir:last-child,
+        body .chat-form .inner a.button-dir:last-child,
+        .chat-form body .inner a.button-dir:last-child,
         body article a.playbtn:last-child,
         body .hero .inner .hero-banner .plx-text-layer a.playbtn:last-child,
         .hero .inner .hero-banner body .plx-text-layer a.playbtn:last-child,
         body .flickity-viewport .hero-banner .plx-text-layer a.playbtn:last-child,
         .flickity-viewport .hero-banner body .plx-text-layer a.playbtn:last-child,
         body .flickity-slider .hero-banner .plx-text-layer a.playbtn:last-child,
-        .flickity-slider .hero-banner body .plx-text-layer a.playbtn:last-child {
+        .flickity-slider .hero-banner body .plx-text-layer a.playbtn:last-child,
+        body .chat-form .inner a.playbtn:last-child,
+        .chat-form body .inner a.playbtn:last-child {
           margin-right: auto; } }
-  body article header, body .hero .inner .hero-banner .plx-text-layer header, .hero .inner .hero-banner body .plx-text-layer header, body .flickity-viewport .hero-banner .plx-text-layer header, .flickity-viewport .hero-banner body .plx-text-layer header, body .flickity-slider .hero-banner .plx-text-layer header, .flickity-slider .hero-banner body .plx-text-layer header {
+  body article header, body .hero .inner .hero-banner .plx-text-layer header, .hero .inner .hero-banner body .plx-text-layer header, body .flickity-viewport .hero-banner .plx-text-layer header, .flickity-viewport .hero-banner body .plx-text-layer header, body .flickity-slider .hero-banner .plx-text-layer header, .flickity-slider .hero-banner body .plx-text-layer header, body .chat-form .inner header, .chat-form body .inner header {
     background: none; }
-  body article h1, body .hero .inner .hero-banner .plx-text-layer h1, .hero .inner .hero-banner body .plx-text-layer h1, body .flickity-viewport .hero-banner .plx-text-layer h1, .flickity-viewport .hero-banner body .plx-text-layer h1, body .flickity-slider .hero-banner .plx-text-layer h1, .flickity-slider .hero-banner body .plx-text-layer h1 {
+  body article h1, body .hero .inner .hero-banner .plx-text-layer h1, .hero .inner .hero-banner body .plx-text-layer h1, body .flickity-viewport .hero-banner .plx-text-layer h1, .flickity-viewport .hero-banner body .plx-text-layer h1, body .flickity-slider .hero-banner .plx-text-layer h1, .flickity-slider .hero-banner body .plx-text-layer h1, body .chat-form .inner h1, .chat-form body .inner h1 {
     color: #c04545; }
-  body article h2, body .hero .inner .hero-banner .plx-text-layer h2, .hero .inner .hero-banner body .plx-text-layer h2, body .flickity-viewport .hero-banner .plx-text-layer h2, .flickity-viewport .hero-banner body .plx-text-layer h2, body .flickity-slider .hero-banner .plx-text-layer h2, .flickity-slider .hero-banner body .plx-text-layer h2 {
+  body article h2, body .hero .inner .hero-banner .plx-text-layer h2, .hero .inner .hero-banner body .plx-text-layer h2, body .flickity-viewport .hero-banner .plx-text-layer h2, .flickity-viewport .hero-banner body .plx-text-layer h2, body .flickity-slider .hero-banner .plx-text-layer h2, .flickity-slider .hero-banner body .plx-text-layer h2, body .chat-form .inner h2, .chat-form body .inner h2 {
     font-size: 250%;
     margin-bottom: 0.7em;
     line-height: 1.2;
     font-weight: 400; }
-  body article h3, body .hero .inner .hero-banner .plx-text-layer h3, .hero .inner .hero-banner body .plx-text-layer h3, body .flickity-viewport .hero-banner .plx-text-layer h3, .flickity-viewport .hero-banner body .plx-text-layer h3, body .flickity-slider .hero-banner .plx-text-layer h3, .flickity-slider .hero-banner body .plx-text-layer h3 {
+  body article h3, body .hero .inner .hero-banner .plx-text-layer h3, .hero .inner .hero-banner body .plx-text-layer h3, body .flickity-viewport .hero-banner .plx-text-layer h3, .flickity-viewport .hero-banner body .plx-text-layer h3, body .flickity-slider .hero-banner .plx-text-layer h3, .flickity-slider .hero-banner body .plx-text-layer h3, body .chat-form .inner h3, .chat-form body .inner h3 {
     font-size: 200%;
     margin-bottom: 0.7em;
     line-height: 1.2;
     font-weight: 400; }
-  body article h4, body .hero .inner .hero-banner .plx-text-layer h4, .hero .inner .hero-banner body .plx-text-layer h4, body .flickity-viewport .hero-banner .plx-text-layer h4, .flickity-viewport .hero-banner body .plx-text-layer h4, body .flickity-slider .hero-banner .plx-text-layer h4, .flickity-slider .hero-banner body .plx-text-layer h4 {
+  body article h4, body .hero .inner .hero-banner .plx-text-layer h4, .hero .inner .hero-banner body .plx-text-layer h4, body .flickity-viewport .hero-banner .plx-text-layer h4, .flickity-viewport .hero-banner body .plx-text-layer h4, body .flickity-slider .hero-banner .plx-text-layer h4, .flickity-slider .hero-banner body .plx-text-layer h4, body .chat-form .inner h4, .chat-form body .inner h4 {
     font-size: 175%;
     margin-bottom: 0.7em;
     line-height: 1.2; }
-  body article h5, body .hero .inner .hero-banner .plx-text-layer h5, .hero .inner .hero-banner body .plx-text-layer h5, body .flickity-viewport .hero-banner .plx-text-layer h5, .flickity-viewport .hero-banner body .plx-text-layer h5, body .flickity-slider .hero-banner .plx-text-layer h5, .flickity-slider .hero-banner body .plx-text-layer h5 {
+  body article h5, body .hero .inner .hero-banner .plx-text-layer h5, .hero .inner .hero-banner body .plx-text-layer h5, body .flickity-viewport .hero-banner .plx-text-layer h5, .flickity-viewport .hero-banner body .plx-text-layer h5, body .flickity-slider .hero-banner .plx-text-layer h5, .flickity-slider .hero-banner body .plx-text-layer h5, body .chat-form .inner h5, .chat-form body .inner h5 {
     font-size: 150%;
     margin-bottom: 0.7em;
     line-height: 1.2; }
-  body article p, body .hero .inner .hero-banner .plx-text-layer p, .hero .inner .hero-banner body .plx-text-layer p, body .flickity-viewport .hero-banner .plx-text-layer p, .flickity-viewport .hero-banner body .plx-text-layer p, body .flickity-slider .hero-banner .plx-text-layer p, .flickity-slider .hero-banner body .plx-text-layer p {
+  body article p, body .hero .inner .hero-banner .plx-text-layer p, .hero .inner .hero-banner body .plx-text-layer p, body .flickity-viewport .hero-banner .plx-text-layer p, .flickity-viewport .hero-banner body .plx-text-layer p, body .flickity-slider .hero-banner .plx-text-layer p, .flickity-slider .hero-banner body .plx-text-layer p, body .chat-form .inner p, .chat-form body .inner p {
     margin-bottom: 0.7em; }
-    body article p.large, body .hero .inner .hero-banner .plx-text-layer p.large, .hero .inner .hero-banner body .plx-text-layer p.large, body .flickity-viewport .hero-banner .plx-text-layer p.large, .flickity-viewport .hero-banner body .plx-text-layer p.large, body .flickity-slider .hero-banner .plx-text-layer p.large, .flickity-slider .hero-banner body .plx-text-layer p.large {
+    body article p.large, body .hero .inner .hero-banner .plx-text-layer p.large, .hero .inner .hero-banner body .plx-text-layer p.large, body .flickity-viewport .hero-banner .plx-text-layer p.large, .flickity-viewport .hero-banner body .plx-text-layer p.large, body .flickity-slider .hero-banner .plx-text-layer p.large, .flickity-slider .hero-banner body .plx-text-layer p.large, body .chat-form .inner p.large, .chat-form body .inner p.large {
       font-size: 110%; }
-  body article ul, body .hero .inner .hero-banner .plx-text-layer ul, .hero .inner .hero-banner body .plx-text-layer ul, body .flickity-viewport .hero-banner .plx-text-layer ul, .flickity-viewport .hero-banner body .plx-text-layer ul, body .flickity-slider .hero-banner .plx-text-layer ul, .flickity-slider .hero-banner body .plx-text-layer ul {
+  body article ul, body .hero .inner .hero-banner .plx-text-layer ul, .hero .inner .hero-banner body .plx-text-layer ul, body .flickity-viewport .hero-banner .plx-text-layer ul, .flickity-viewport .hero-banner body .plx-text-layer ul, body .flickity-slider .hero-banner .plx-text-layer ul, .flickity-slider .hero-banner body .plx-text-layer ul, body .chat-form .inner ul, .chat-form body .inner ul {
     padding-left: 20px;
     list-style: disc;
     margin-bottom: 0.7em; }
-  body article ol, body .hero .inner .hero-banner .plx-text-layer ol, .hero .inner .hero-banner body .plx-text-layer ol, body .flickity-viewport .hero-banner .plx-text-layer ol, .flickity-viewport .hero-banner body .plx-text-layer ol, body .flickity-slider .hero-banner .plx-text-layer ol, .flickity-slider .hero-banner body .plx-text-layer ol {
+  body article ol, body .hero .inner .hero-banner .plx-text-layer ol, .hero .inner .hero-banner body .plx-text-layer ol, body .flickity-viewport .hero-banner .plx-text-layer ol, .flickity-viewport .hero-banner body .plx-text-layer ol, body .flickity-slider .hero-banner .plx-text-layer ol, .flickity-slider .hero-banner body .plx-text-layer ol, body .chat-form .inner ol, .chat-form body .inner ol {
     padding-left: 20px;
     list-style: decimal;
     margin-bottom: 0.7em; }
-  body article ul li, body .hero .inner .hero-banner .plx-text-layer ul li, .hero .inner .hero-banner body .plx-text-layer ul li, body .flickity-viewport .hero-banner .plx-text-layer ul li, .flickity-viewport .hero-banner body .plx-text-layer ul li, body .flickity-slider .hero-banner .plx-text-layer ul li, .flickity-slider .hero-banner body .plx-text-layer ul li, body article ol li, body .hero .inner .hero-banner .plx-text-layer ol li, .hero .inner .hero-banner body .plx-text-layer ol li, body .flickity-viewport .hero-banner .plx-text-layer ol li, .flickity-viewport .hero-banner body .plx-text-layer ol li, body .flickity-slider .hero-banner .plx-text-layer ol li, .flickity-slider .hero-banner body .plx-text-layer ol li {
+  body article ul li, body .hero .inner .hero-banner .plx-text-layer ul li, .hero .inner .hero-banner body .plx-text-layer ul li, body .flickity-viewport .hero-banner .plx-text-layer ul li, .flickity-viewport .hero-banner body .plx-text-layer ul li, body .flickity-slider .hero-banner .plx-text-layer ul li, .flickity-slider .hero-banner body .plx-text-layer ul li, body .chat-form .inner ul li, .chat-form body .inner ul li, body article ol li, body .hero .inner .hero-banner .plx-text-layer ol li, .hero .inner .hero-banner body .plx-text-layer ol li, body .flickity-viewport .hero-banner .plx-text-layer ol li, .flickity-viewport .hero-banner body .plx-text-layer ol li, body .flickity-slider .hero-banner .plx-text-layer ol li, .flickity-slider .hero-banner body .plx-text-layer ol li, body .chat-form .inner ol li, .chat-form body .inner ol li {
     margin-bottom: 0.7em; }
-  body article strong, body .hero .inner .hero-banner .plx-text-layer strong, .hero .inner .hero-banner body .plx-text-layer strong, body .flickity-viewport .hero-banner .plx-text-layer strong, .flickity-viewport .hero-banner body .plx-text-layer strong, body .flickity-slider .hero-banner .plx-text-layer strong, .flickity-slider .hero-banner body .plx-text-layer strong {
+  body article strong, body .hero .inner .hero-banner .plx-text-layer strong, .hero .inner .hero-banner body .plx-text-layer strong, body .flickity-viewport .hero-banner .plx-text-layer strong, .flickity-viewport .hero-banner body .plx-text-layer strong, body .flickity-slider .hero-banner .plx-text-layer strong, .flickity-slider .hero-banner body .plx-text-layer strong, body .chat-form .inner strong, .chat-form body .inner strong {
     font-weight: bold; }
-  body article em, body .hero .inner .hero-banner .plx-text-layer em, .hero .inner .hero-banner body .plx-text-layer em, body .flickity-viewport .hero-banner .plx-text-layer em, .flickity-viewport .hero-banner body .plx-text-layer em, body .flickity-slider .hero-banner .plx-text-layer em, .flickity-slider .hero-banner body .plx-text-layer em {
+  body article em, body .hero .inner .hero-banner .plx-text-layer em, .hero .inner .hero-banner body .plx-text-layer em, body .flickity-viewport .hero-banner .plx-text-layer em, .flickity-viewport .hero-banner body .plx-text-layer em, body .flickity-slider .hero-banner .plx-text-layer em, .flickity-slider .hero-banner body .plx-text-layer em, body .chat-form .inner em, .chat-form body .inner em {
     font-style: italic; }
-  body article a:active, body .hero .inner .hero-banner .plx-text-layer a:active, .hero .inner .hero-banner body .plx-text-layer a:active, body .flickity-viewport .hero-banner .plx-text-layer a:active, .flickity-viewport .hero-banner body .plx-text-layer a:active, body .flickity-slider .hero-banner .plx-text-layer a:active, .flickity-slider .hero-banner body .plx-text-layer a:active,
+  body article a:active, body .hero .inner .hero-banner .plx-text-layer a:active, .hero .inner .hero-banner body .plx-text-layer a:active, body .flickity-viewport .hero-banner .plx-text-layer a:active, .flickity-viewport .hero-banner body .plx-text-layer a:active, body .flickity-slider .hero-banner .plx-text-layer a:active, .flickity-slider .hero-banner body .plx-text-layer a:active, body .chat-form .inner a:active, .chat-form body .inner a:active,
   body article a,
   body .hero .inner .hero-banner .plx-text-layer a,
   .hero .inner .hero-banner body .plx-text-layer a,
@@ -289,6 +304,8 @@ body article, body .hero .inner .hero-banner .plx-text-layer, .hero .inner .hero
   .flickity-viewport .hero-banner body .plx-text-layer a,
   body .flickity-slider .hero-banner .plx-text-layer a,
   .flickity-slider .hero-banner body .plx-text-layer a,
+  body .chat-form .inner a,
+  .chat-form body .inner a,
   body article a:visited,
   body .hero .inner .hero-banner .plx-text-layer a:visited,
   .hero .inner .hero-banner body .plx-text-layer a:visited,
@@ -296,13 +313,17 @@ body article, body .hero .inner .hero-banner .plx-text-layer, .hero .inner .hero
   .flickity-viewport .hero-banner body .plx-text-layer a:visited,
   body .flickity-slider .hero-banner .plx-text-layer a:visited,
   .flickity-slider .hero-banner body .plx-text-layer a:visited,
+  body .chat-form .inner a:visited,
+  .chat-form body .inner a:visited,
   body article a:hover,
   body .hero .inner .hero-banner .plx-text-layer a:hover,
   .hero .inner .hero-banner body .plx-text-layer a:hover,
   body .flickity-viewport .hero-banner .plx-text-layer a:hover,
   .flickity-viewport .hero-banner body .plx-text-layer a:hover,
   body .flickity-slider .hero-banner .plx-text-layer a:hover,
-  .flickity-slider .hero-banner body .plx-text-layer a:hover {
+  .flickity-slider .hero-banner body .plx-text-layer a:hover,
+  body .chat-form .inner a:hover,
+  .chat-form body .inner a:hover {
     text-decoration: underline !important; }
 
 /*! Flickity v1.0.2
@@ -446,13 +467,17 @@ body .flickity-viewport .hero-banner .plx-text-layer .button,
 .flickity-viewport .hero-banner body .plx-text-layer .button,
 body .flickity-slider .hero-banner .plx-text-layer .button,
 .flickity-slider .hero-banner body .plx-text-layer .button,
+body .chat-form .inner .button,
+.chat-form body .inner .button,
 body article .button:visited,
 body .hero .inner .hero-banner .plx-text-layer .button:visited,
 .hero .inner .hero-banner body .plx-text-layer .button:visited,
 body .flickity-viewport .hero-banner .plx-text-layer .button:visited,
 .flickity-viewport .hero-banner body .plx-text-layer .button:visited,
 body .flickity-slider .hero-banner .plx-text-layer .button:visited,
-.flickity-slider .hero-banner body .plx-text-layer .button:visited {
+.flickity-slider .hero-banner body .plx-text-layer .button:visited,
+body .chat-form .inner .button:visited,
+.chat-form body .inner .button:visited {
   text-decoration: none !important;
   background: #669999;
   position: relative;
@@ -483,13 +508,17 @@ body .flickity-slider .hero-banner .plx-text-layer .button:visited,
   .flickity-viewport .hero-banner body .plx-text-layer .button.small,
   body .flickity-slider .hero-banner .plx-text-layer .button.small,
   .flickity-slider .hero-banner body .plx-text-layer .button.small,
+  body .chat-form .inner .button.small,
+  .chat-form body .inner .button.small,
   body article .button:visited.small,
   body .hero .inner .hero-banner .plx-text-layer .button:visited.small,
   .hero .inner .hero-banner body .plx-text-layer .button:visited.small,
   body .flickity-viewport .hero-banner .plx-text-layer .button:visited.small,
   .flickity-viewport .hero-banner body .plx-text-layer .button:visited.small,
   body .flickity-slider .hero-banner .plx-text-layer .button:visited.small,
-  .flickity-slider .hero-banner body .plx-text-layer .button:visited.small {
+  .flickity-slider .hero-banner body .plx-text-layer .button:visited.small,
+  body .chat-form .inner .button:visited.small,
+  .chat-form body .inner .button:visited.small {
     font-size: 80%;
     padding: 0px 20px;
     height: 30px;
@@ -503,13 +532,17 @@ body .flickity-slider .hero-banner .plx-text-layer .button:visited,
   .flickity-viewport .hero-banner body .plx-text-layer .button.large,
   body .flickity-slider .hero-banner .plx-text-layer .button.large,
   .flickity-slider .hero-banner body .plx-text-layer .button.large,
+  body .chat-form .inner .button.large,
+  .chat-form body .inner .button.large,
   body article .button:visited.large,
   body .hero .inner .hero-banner .plx-text-layer .button:visited.large,
   .hero .inner .hero-banner body .plx-text-layer .button:visited.large,
   body .flickity-viewport .hero-banner .plx-text-layer .button:visited.large,
   .flickity-viewport .hero-banner body .plx-text-layer .button:visited.large,
   body .flickity-slider .hero-banner .plx-text-layer .button:visited.large,
-  .flickity-slider .hero-banner body .plx-text-layer .button:visited.large {
+  .flickity-slider .hero-banner body .plx-text-layer .button:visited.large,
+  body .chat-form .inner .button:visited.large,
+  .chat-form body .inner .button:visited.large {
     font-size: 120%;
     padding: 0px 40px;
     height: 50px;
@@ -523,13 +556,17 @@ body .flickity-slider .hero-banner .plx-text-layer .button:visited,
   .flickity-viewport .hero-banner body .plx-text-layer .button.black,
   body .flickity-slider .hero-banner .plx-text-layer .button.black,
   .flickity-slider .hero-banner body .plx-text-layer .button.black,
+  body .chat-form .inner .button.black,
+  .chat-form body .inner .button.black,
   body article .button:visited.black,
   body .hero .inner .hero-banner .plx-text-layer .button:visited.black,
   .hero .inner .hero-banner body .plx-text-layer .button:visited.black,
   body .flickity-viewport .hero-banner .plx-text-layer .button:visited.black,
   .flickity-viewport .hero-banner body .plx-text-layer .button:visited.black,
   body .flickity-slider .hero-banner .plx-text-layer .button:visited.black,
-  .flickity-slider .hero-banner body .plx-text-layer .button:visited.black {
+  .flickity-slider .hero-banner body .plx-text-layer .button:visited.black,
+  body .chat-form .inner .button:visited.black,
+  .chat-form body .inner .button:visited.black {
     background: #343434; }
   .button.red,
   .button:visited.red,
@@ -540,13 +577,17 @@ body .flickity-slider .hero-banner .plx-text-layer .button:visited,
   .flickity-viewport .hero-banner body .plx-text-layer .button.red,
   body .flickity-slider .hero-banner .plx-text-layer .button.red,
   .flickity-slider .hero-banner body .plx-text-layer .button.red,
+  body .chat-form .inner .button.red,
+  .chat-form body .inner .button.red,
   body article .button:visited.red,
   body .hero .inner .hero-banner .plx-text-layer .button:visited.red,
   .hero .inner .hero-banner body .plx-text-layer .button:visited.red,
   body .flickity-viewport .hero-banner .plx-text-layer .button:visited.red,
   .flickity-viewport .hero-banner body .plx-text-layer .button:visited.red,
   body .flickity-slider .hero-banner .plx-text-layer .button:visited.red,
-  .flickity-slider .hero-banner body .plx-text-layer .button:visited.red {
+  .flickity-slider .hero-banner body .plx-text-layer .button:visited.red,
+  body .chat-form .inner .button:visited.red,
+  .chat-form body .inner .button:visited.red {
     background: #c04545; }
   .button.flat,
   .button:visited.flat,
@@ -557,13 +598,17 @@ body .flickity-slider .hero-banner .plx-text-layer .button:visited,
   .flickity-viewport .hero-banner body .plx-text-layer .button.flat,
   body .flickity-slider .hero-banner .plx-text-layer .button.flat,
   .flickity-slider .hero-banner body .plx-text-layer .button.flat,
+  body .chat-form .inner .button.flat,
+  .chat-form body .inner .button.flat,
   body article .button:visited.flat,
   body .hero .inner .hero-banner .plx-text-layer .button:visited.flat,
   .hero .inner .hero-banner body .plx-text-layer .button:visited.flat,
   body .flickity-viewport .hero-banner .plx-text-layer .button:visited.flat,
   .flickity-viewport .hero-banner body .plx-text-layer .button:visited.flat,
   body .flickity-slider .hero-banner .plx-text-layer .button:visited.flat,
-  .flickity-slider .hero-banner body .plx-text-layer .button:visited.flat {
+  .flickity-slider .hero-banner body .plx-text-layer .button:visited.flat,
+  body .chat-form .inner .button:visited.flat,
+  .chat-form body .inner .button:visited.flat {
     background: transparent;
     box-shadow: none;
     color: #454545;
@@ -577,13 +622,17 @@ body .flickity-slider .hero-banner .plx-text-layer .button:visited,
     .flickity-viewport .hero-banner body .plx-text-layer .button.flat:hover,
     body .flickity-slider .hero-banner .plx-text-layer .button.flat:hover,
     .flickity-slider .hero-banner body .plx-text-layer .button.flat:hover,
+    body .chat-form .inner .button.flat:hover,
+    .chat-form body .inner .button.flat:hover,
     body article .button:visited.flat:hover,
     body .hero .inner .hero-banner .plx-text-layer .button:visited.flat:hover,
     .hero .inner .hero-banner body .plx-text-layer .button:visited.flat:hover,
     body .flickity-viewport .hero-banner .plx-text-layer .button:visited.flat:hover,
     .flickity-viewport .hero-banner body .plx-text-layer .button:visited.flat:hover,
     body .flickity-slider .hero-banner .plx-text-layer .button:visited.flat:hover,
-    .flickity-slider .hero-banner body .plx-text-layer .button:visited.flat:hover {
+    .flickity-slider .hero-banner body .plx-text-layer .button:visited.flat:hover,
+    body .chat-form .inner .button:visited.flat:hover,
+    .chat-form body .inner .button:visited.flat:hover {
       color: #343434; }
   .button:hover, .button:focus,
   .button:visited:hover,
@@ -595,6 +644,8 @@ body .flickity-slider .hero-banner .plx-text-layer .button:visited,
   .flickity-viewport .hero-banner body .plx-text-layer .button:hover,
   body .flickity-slider .hero-banner .plx-text-layer .button:hover,
   .flickity-slider .hero-banner body .plx-text-layer .button:hover,
+  body .chat-form .inner .button:hover,
+  .chat-form body .inner .button:hover,
   body article .button:focus,
   body .hero .inner .hero-banner .plx-text-layer .button:focus,
   .hero .inner .hero-banner body .plx-text-layer .button:focus,
@@ -602,6 +653,8 @@ body .flickity-slider .hero-banner .plx-text-layer .button:visited,
   .flickity-viewport .hero-banner body .plx-text-layer .button:focus,
   body .flickity-slider .hero-banner .plx-text-layer .button:focus,
   .flickity-slider .hero-banner body .plx-text-layer .button:focus,
+  body .chat-form .inner .button:focus,
+  .chat-form body .inner .button:focus,
   body article .button:visited:hover,
   body .hero .inner .hero-banner .plx-text-layer .button:visited:hover,
   .hero .inner .hero-banner body .plx-text-layer .button:visited:hover,
@@ -609,13 +662,17 @@ body .flickity-slider .hero-banner .plx-text-layer .button:visited,
   .flickity-viewport .hero-banner body .plx-text-layer .button:visited:hover,
   body .flickity-slider .hero-banner .plx-text-layer .button:visited:hover,
   .flickity-slider .hero-banner body .plx-text-layer .button:visited:hover,
+  body .chat-form .inner .button:visited:hover,
+  .chat-form body .inner .button:visited:hover,
   body article .button:visited:focus,
   body .hero .inner .hero-banner .plx-text-layer .button:visited:focus,
   .hero .inner .hero-banner body .plx-text-layer .button:visited:focus,
   body .flickity-viewport .hero-banner .plx-text-layer .button:visited:focus,
   .flickity-viewport .hero-banner body .plx-text-layer .button:visited:focus,
   body .flickity-slider .hero-banner .plx-text-layer .button:visited:focus,
-  .flickity-slider .hero-banner body .plx-text-layer .button:visited:focus {
+  .flickity-slider .hero-banner body .plx-text-layer .button:visited:focus,
+  body .chat-form .inner .button:visited:focus,
+  .chat-form body .inner .button:visited:focus {
     color: #ffffff;
     text-decoration: none !important;
     opacity: 1;
@@ -629,13 +686,17 @@ body .flickity-slider .hero-banner .plx-text-layer .button:visited,
   .flickity-viewport .hero-banner body .plx-text-layer .button.outline,
   body .flickity-slider .hero-banner .plx-text-layer .button.outline,
   .flickity-slider .hero-banner body .plx-text-layer .button.outline,
+  body .chat-form .inner .button.outline,
+  .chat-form body .inner .button.outline,
   body article .button:visited.outline,
   body .hero .inner .hero-banner .plx-text-layer .button:visited.outline,
   .hero .inner .hero-banner body .plx-text-layer .button:visited.outline,
   body .flickity-viewport .hero-banner .plx-text-layer .button:visited.outline,
   .flickity-viewport .hero-banner body .plx-text-layer .button:visited.outline,
   body .flickity-slider .hero-banner .plx-text-layer .button:visited.outline,
-  .flickity-slider .hero-banner body .plx-text-layer .button:visited.outline {
+  .flickity-slider .hero-banner body .plx-text-layer .button:visited.outline,
+  body .chat-form .inner .button:visited.outline,
+  .chat-form body .inner .button:visited.outline {
     background: transparent;
     color: #669999;
     box-shadow: 0px 0px 0px 2px #669999 inset;
@@ -651,13 +712,17 @@ body .flickity-slider .hero-banner .plx-text-layer .button:visited,
     .flickity-viewport .hero-banner body .plx-text-layer .button.outline.black,
     body .flickity-slider .hero-banner .plx-text-layer .button.outline.black,
     .flickity-slider .hero-banner body .plx-text-layer .button.outline.black,
+    body .chat-form .inner .button.outline.black,
+    .chat-form body .inner .button.outline.black,
     body article .button:visited.outline.black,
     body .hero .inner .hero-banner .plx-text-layer .button:visited.outline.black,
     .hero .inner .hero-banner body .plx-text-layer .button:visited.outline.black,
     body .flickity-viewport .hero-banner .plx-text-layer .button:visited.outline.black,
     .flickity-viewport .hero-banner body .plx-text-layer .button:visited.outline.black,
     body .flickity-slider .hero-banner .plx-text-layer .button:visited.outline.black,
-    .flickity-slider .hero-banner body .plx-text-layer .button:visited.outline.black {
+    .flickity-slider .hero-banner body .plx-text-layer .button:visited.outline.black,
+    body .chat-form .inner .button:visited.outline.black,
+    .chat-form body .inner .button:visited.outline.black {
       box-shadow: 0px 0px 0px 2px #343434 inset;
       color: #343434; }
     .button.outline.red,
@@ -669,13 +734,17 @@ body .flickity-slider .hero-banner .plx-text-layer .button:visited,
     .flickity-viewport .hero-banner body .plx-text-layer .button.outline.red,
     body .flickity-slider .hero-banner .plx-text-layer .button.outline.red,
     .flickity-slider .hero-banner body .plx-text-layer .button.outline.red,
+    body .chat-form .inner .button.outline.red,
+    .chat-form body .inner .button.outline.red,
     body article .button:visited.outline.red,
     body .hero .inner .hero-banner .plx-text-layer .button:visited.outline.red,
     .hero .inner .hero-banner body .plx-text-layer .button:visited.outline.red,
     body .flickity-viewport .hero-banner .plx-text-layer .button:visited.outline.red,
     .flickity-viewport .hero-banner body .plx-text-layer .button:visited.outline.red,
     body .flickity-slider .hero-banner .plx-text-layer .button:visited.outline.red,
-    .flickity-slider .hero-banner body .plx-text-layer .button:visited.outline.red {
+    .flickity-slider .hero-banner body .plx-text-layer .button:visited.outline.red,
+    body .chat-form .inner .button:visited.outline.red,
+    .chat-form body .inner .button:visited.outline.red {
       box-shadow: 0px 0px 0px 2px #c04545 inset;
       color: #c04545; }
     .button.outline.white,
@@ -687,13 +756,17 @@ body .flickity-slider .hero-banner .plx-text-layer .button:visited,
     .flickity-viewport .hero-banner body .plx-text-layer .button.outline.white,
     body .flickity-slider .hero-banner .plx-text-layer .button.outline.white,
     .flickity-slider .hero-banner body .plx-text-layer .button.outline.white,
+    body .chat-form .inner .button.outline.white,
+    .chat-form body .inner .button.outline.white,
     body article .button:visited.outline.white,
     body .hero .inner .hero-banner .plx-text-layer .button:visited.outline.white,
     .hero .inner .hero-banner body .plx-text-layer .button:visited.outline.white,
     body .flickity-viewport .hero-banner .plx-text-layer .button:visited.outline.white,
     .flickity-viewport .hero-banner body .plx-text-layer .button:visited.outline.white,
     body .flickity-slider .hero-banner .plx-text-layer .button:visited.outline.white,
-    .flickity-slider .hero-banner body .plx-text-layer .button:visited.outline.white {
+    .flickity-slider .hero-banner body .plx-text-layer .button:visited.outline.white,
+    body .chat-form .inner .button:visited.outline.white,
+    .chat-form body .inner .button:visited.outline.white {
       box-shadow: 0px 0px 0px 2px #ffffff inset;
       color: #ffffff; }
       .button.outline.white:hover,
@@ -705,13 +778,17 @@ body .flickity-slider .hero-banner .plx-text-layer .button:visited,
       .flickity-viewport .hero-banner body .plx-text-layer .button.outline.white:hover,
       body .flickity-slider .hero-banner .plx-text-layer .button.outline.white:hover,
       .flickity-slider .hero-banner body .plx-text-layer .button.outline.white:hover,
+      body .chat-form .inner .button.outline.white:hover,
+      .chat-form body .inner .button.outline.white:hover,
       body article .button:visited.outline.white:hover,
       body .hero .inner .hero-banner .plx-text-layer .button:visited.outline.white:hover,
       .hero .inner .hero-banner body .plx-text-layer .button:visited.outline.white:hover,
       body .flickity-viewport .hero-banner .plx-text-layer .button:visited.outline.white:hover,
       .flickity-viewport .hero-banner body .plx-text-layer .button:visited.outline.white:hover,
       body .flickity-slider .hero-banner .plx-text-layer .button:visited.outline.white:hover,
-      .flickity-slider .hero-banner body .plx-text-layer .button:visited.outline.white:hover {
+      .flickity-slider .hero-banner body .plx-text-layer .button:visited.outline.white:hover,
+      body .chat-form .inner .button:visited.outline.white:hover,
+      .chat-form body .inner .button:visited.outline.white:hover {
         background: #343434; }
     .button.outline:hover,
     .button:visited.outline:hover,
@@ -722,13 +799,17 @@ body .flickity-slider .hero-banner .plx-text-layer .button:visited,
     .flickity-viewport .hero-banner body .plx-text-layer .button.outline:hover,
     body .flickity-slider .hero-banner .plx-text-layer .button.outline:hover,
     .flickity-slider .hero-banner body .plx-text-layer .button.outline:hover,
+    body .chat-form .inner .button.outline:hover,
+    .chat-form body .inner .button.outline:hover,
     body article .button:visited.outline:hover,
     body .hero .inner .hero-banner .plx-text-layer .button:visited.outline:hover,
     .hero .inner .hero-banner body .plx-text-layer .button:visited.outline:hover,
     body .flickity-viewport .hero-banner .plx-text-layer .button:visited.outline:hover,
     .flickity-viewport .hero-banner body .plx-text-layer .button:visited.outline:hover,
     body .flickity-slider .hero-banner .plx-text-layer .button:visited.outline:hover,
-    .flickity-slider .hero-banner body .plx-text-layer .button:visited.outline:hover {
+    .flickity-slider .hero-banner body .plx-text-layer .button:visited.outline:hover,
+    body .chat-form .inner .button:visited.outline:hover,
+    .chat-form body .inner .button:visited.outline:hover {
       background: #f8f8f8; }
 
 .button-dir {
@@ -852,7 +933,7 @@ body .flickity-slider .hero-banner .plx-text-layer .button:visited,
 
 .box-container {
   font-size: 0;
-  max-width: 1080px;
+  max-width: 1200px;
   margin: auto; }
 
 .box {
@@ -877,6 +958,9 @@ body .flickity-slider .hero-banner .plx-text-layer .button:visited,
 
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px #ebebeb inset; }
+
+.sheeted-form input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset; }
 
 form label.stayup, form input[type="text"]:focus + label,
 form input[type="email"]:focus + label,
@@ -1871,7 +1955,7 @@ nav.top-nav {
   @media only screen and (min-width: 640px) {
     .front-work {
       padding: 40px 0px 80px; } }
-  @media only screen and (min-width: 1080px) {
+  @media only screen and (min-width: 1200px) {
     .front-work:after {
       content: '';
       position: absolute;
@@ -2024,7 +2108,7 @@ nav.top-nav {
   margin: 0;
   padding: 26px 13px; }
   .showreel .inner {
-    max-width: 1080px;
+    max-width: 1200px;
     margin: auto;
     border: 12px solid #527a7a; }
   .showreel .video-wrap {
@@ -2073,6 +2157,141 @@ nav.top-nav {
   width: 100%;
   padding: 12px;
   margin-top: -50px; }
+
+@-webkit-keyframes chat_scale {
+  from {
+    -webkit-transform: scale(0) translate3d(0, 0, 0);
+            transform: scale(0) translate3d(0, 0, 0); }
+  to {
+    -webkit-transform: scale(1) translate3d(0, 0, 0);
+            transform: scale(1) translate3d(0, 0, 0); } }
+
+@keyframes chat_scale {
+  from {
+    -webkit-transform: scale(0) translate3d(0, 0, 0);
+            transform: scale(0) translate3d(0, 0, 0); }
+  to {
+    -webkit-transform: scale(1) translate3d(0, 0, 0);
+            transform: scale(1) translate3d(0, 0, 0); } }
+.chat-form {
+  border: solid #d2d2d2;
+  border-width: 12px 0px;
+  margin: 0;
+  padding: 24px 12px; }
+  .chat-form:before, .chat-form:after {
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 12px;
+    width: 100%;
+    display: block;
+    background: #dedede; }
+  .chat-form:after {
+    top: auto;
+    bottom: 0; }
+  .chat-form .inner {
+    max-width: 640px;
+    margin: auto;
+    padding: 12px 60px; }
+  .chat-form .chat-stream {
+    min-height: 300px;
+    padding: 12px 0 24px; }
+    .chat-form .chat-stream textarea {
+      width: 100%;
+      min-height: 1.5;
+      resize: none;
+      font-size: inherit;
+      border: none;
+      outline: none;
+      font-family: inherit;
+      color: inherit;
+      font-weight: inherit; }
+  .chat-form .chat-entry {
+    line-height: 1.5;
+    background: #f0f5f5;
+    position: relative;
+    box-shadow: 1px 1px 4px rgba(52, 52, 52, 0.3);
+    padding: 12px 12px 12px;
+    margin: 12px 0 12px;
+    border-radius: 0px;
+    color: #454545;
+    font-weight: 400;
+    -webkit-transition: all 200ms;
+            transition: all 200ms;
+    -webkit-animation: chat_scale 1 cubic-bezier(0.38, 0.17, 0.39, 1.13) forwards 120ms;
+            animation: chat_scale 1 cubic-bezier(0.38, 0.17, 0.39, 1.13) forwards 120ms; }
+    .chat-form .chat-entry:before {
+      content: '';
+      background: #669999 url(../libs/img/abe_hvid.svg) no-repeat center;
+      background-size: 80%;
+      position: absolute;
+      height: 50px;
+      width: 50px;
+      left: -50px;
+      border-radius: 0px;
+      top: 0;
+      z-index: -1;
+      -webkit-transition: all 200ms;
+              transition: all 200ms; }
+    .chat-form .chat-entry:after {
+      content: '';
+      z-index: 1;
+      display: block;
+      background-color: none;
+      position: absolute;
+      top: 0px;
+      left: -7px;
+      width: 0px;
+      height: 0px;
+      border-bottom: 7px solid transparent;
+      border-right: 7px solid #f0f5f5;
+      border-top: 7px solid transparent;
+      -webkit-transition: all 200ms;
+              transition: all 200ms; }
+    .chat-form .chat-entry.user {
+      background: #ffffff; }
+      .chat-form .chat-entry.user:before {
+        left: auto;
+        top: auto;
+        right: -50px;
+        bottom: 0;
+        background: #454545 url(../libs/img/icons/person_white.svg) no-repeat center;
+        background-size: 70%; }
+      .chat-form .chat-entry.user:after {
+        left: auto;
+        top: auto;
+        bottom: 0px;
+        right: -7px;
+        border-right: 0;
+        border-left: 7px solid #ffffff; }
+    .chat-form .chat-entry.small {
+      font-size: 80%; }
+      .chat-form .chat-entry.small:before {
+        height: 40px;
+        width: 40px;
+        left: -40px; }
+      .chat-form .chat-entry.small.user:before {
+        left: auto;
+        right: -40px; }
+    .chat-form .chat-entry.large {
+      font-size: 120%; }
+      .chat-form .chat-entry.large:before {
+        height: 60px;
+        width: 60px;
+        left: -60px; }
+      .chat-form .chat-entry.large.user:before {
+        left: auto;
+        right: -60px; }
+    .chat-form .chat-entry.typing {
+      width: 60px;
+      font-size: 0;
+      color: transparent;
+      white-space: nowrap;
+      background-image: url("../libs/img/typing.gif");
+      background-size: 30px;
+      background-repeat: no-repeat;
+      background-position: center; }
 
 .footer {
   margin: 12px;

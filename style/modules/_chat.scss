@@ -4,7 +4,8 @@ $chat-icon-size-large:60px;
 $chat-border-radius:0px;
 $chat-arrow-size:7px;
 $chat-line-height:1.5;
-$monkey-talk-color:lighten($monkey-green,45);
+$monkey-talk-color:darken($monkey-green,10);
+$chat-font-weight:300;
 
 @keyframes chat_scale{
     from{
@@ -42,19 +43,55 @@ $monkey-talk-color:lighten($monkey-green,45);
     
     .inner{
         @extend article;
-        max-width: 640px;
         margin:auto;
-        padding:$base-margin $chat-icon-size-large;
-    }
-    
-    .h2{
-    
+
     }
     
     .chat-stream{
         
         min-height:300px;
-        padding:$base-margin 0 $base-margin*2;
+        text-align: left;
+        position:relative;
+        
+        padding:$base-margin $chat-icon-size-small $base-margin*2;
+        
+        @media only screen and(min-width:480px){
+            
+            padding:$base-margin $chat-icon-size-large $base-margin*2;
+        
+        }
+        
+        @media(min-width:768px){
+            
+            margin:50px 0px 50px;
+            padding:$base-margin*2 $chat-icon-size-large $base-margin*4;
+            
+            &:before{
+                content: '';
+                border:2px solid darken($monkey-light,15);
+                border-top-width:30px;
+                border-radius: 3px;
+                position: absolute;
+                top: -40px;
+                left: -40px;
+                bottom: -20px;
+                right: -40px;
+                background:lighten($monkey-light,2);
+            }
+            
+            &:after{
+                content: '';
+                background: url('../libs/img/icons/mac_navs.svg') no-repeat center left;
+                position: absolute;
+                top: -30px;
+                left: -30px;
+                height: 10px;
+                width: 50px;
+                
+                
+            }
+        
+        }
         
         textarea{
             width:100%;
@@ -72,30 +109,63 @@ $monkey-talk-color:lighten($monkey-green,45);
     .chat-entry{
         
         line-height: $chat-line-height;
-        background:$monkey-talk-color;
+        background:$monkey-white;
         position:relative;
         box-shadow: $base-shadow;
         padding:$base-margin $base-margin $base-margin;
         margin:$base-margin 0 $base-margin;
         border-radius: $chat-border-radius;
-        color:$monkey-black-2;
-        font-weight:400;
-        transition:all 200ms;
+        color:$monkey-talk-color;
+        font-weight:$chat-font-weight;
+        //transition:all 200ms;
         animation: chat_scale 1 cubic-bezier(.38, .17, .39, 1.13) forwards 120ms;
+        font-size: 80%;
+        min-height:$chat-icon-size-small;
+
         
+        @media only screen and(min-width:480px){
+            min-height:$chat-icon-size;
+            font-size: 100%;
+            
+        }
+        
+        @media only screen and(min-width:640px){
+            
+            min-height:$chat-icon-size-large;
+            font-size: 120%;
+        
+        }
         
         &:before{
             content:'';
             background:$monkey-green url(../libs/img/abe_hvid.svg) no-repeat center;
             background-size: 80%;
             position:absolute;
-            height:$chat-icon-size;
-            width:$chat-icon-size + $chat-border-radius;
-            left: - ($chat-icon-size - $chat-border-radius / 2);
             border-radius: $chat-border-radius;
             top:0;
             z-index:-1;
-            transition:all 200ms;
+            //transition:all 200ms;
+            
+            height:$chat-icon-size-small;
+            width:$chat-icon-size-small + $chat-border-radius;
+            left: - ($chat-icon-size-small - $chat-border-radius / 2);
+            
+            @media only screen and(min-width:480px){
+                
+                height:$chat-icon-size;
+                width:$chat-icon-size + $chat-border-radius;
+                left: - ($chat-icon-size - $chat-border-radius / 2);
+            
+            }
+            
+            @media only screen and(min-width:640px){
+            
+                height:$chat-icon-size-large;
+                width:$chat-icon-size-large + $chat-border-radius;
+                left: - ($chat-icon-size-large - $chat-border-radius / 2);
+            
+            }
+            
         }
         
         &:after{
@@ -109,23 +179,37 @@ $monkey-talk-color:lighten($monkey-green,45);
             width:0px;
             height:0px;
             border-bottom: $chat-arrow-size solid transparent;
-            border-right: $chat-arrow-size solid $monkey-talk-color;
+            border-right: $chat-arrow-size solid $monkey-white;
             border-top: $chat-arrow-size solid transparent;
-            transition:all 200ms;
+            //transition:all 200ms;
+            
+            
         }
         
         
         &.user{
             
             background: $monkey-white;
+            color:$monkey-black-2;
             
             &:before{
                 left:auto;
                 top:auto;
-                right: - ($chat-icon-size - $chat-border-radius / 2);
+                right: - ($chat-icon-size-small - $chat-border-radius / 2);
                 bottom:0;
                 background:$monkey-black-2 url(../libs/img/icons/person_white.svg) no-repeat center;
                 background-size: 70%;
+         
+                @media only screen and(min-width:480px){
+                     right: - ($chat-icon-size - $chat-border-radius / 2);
+                    
+                }
+                
+                @media only screen and(min-width:640px){
+                    right: - ($chat-icon-size-large - $chat-border-radius / 2);
+                    
+                }
+                
             }
             
             &:after{
@@ -140,39 +224,6 @@ $monkey-talk-color:lighten($monkey-green,45);
         }
         
         
-        &.small{
-            font-size: 80%;
-            
-            &:before{
-               
-                height:$chat-icon-size-small;
-                width:$chat-icon-size-small + $chat-border-radius;
-                left: - ($chat-icon-size-small - $chat-border-radius / 2);
-            }
-            
-            &.user:before{
-                left:auto;
-                right: - ($chat-icon-size-small - $chat-border-radius / 2);
-            }
-        }
-        
-        
-        &.large{
-            font-size: 120%;
-            
-            &:before{
-               
-                height:$chat-icon-size-large;
-                width:$chat-icon-size-large + $chat-border-radius;
-                left: - ($chat-icon-size-large - $chat-border-radius / 2);
-            }
-            
-            &.user:before{
-                left:auto;
-                right: - ($chat-icon-size-large - $chat-border-radius / 2);
-            }
-        }
-        
         &.typing{
             width: 60px;
             font-size:0;
@@ -182,6 +233,7 @@ $monkey-talk-color:lighten($monkey-green,45);
             background-size:30px;
             background-repeat: no-repeat;
             background-position:center;
+            min-height: 0px;
         }
         
     }

@@ -3,6 +3,11 @@ $text-margin:.7em;
 body article{
     color:$monkey-black;
     
+    .no-margin{
+        @extend %no-margin;
+    }
+    
+    
     a.button,
     a.button-dir,
     a.playbtn{

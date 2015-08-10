@@ -23,11 +23,18 @@ smamo_chat.init = function(){
             }
 
         });
-
-        smamo_chat.make('monkey','Hej. Vi er SmartMonkey. Hvad hedder du?', null, function(){
+        
+        var response = {
+            content : 'Hej. Vi er SmartMonkey. Hvad hedder du?',
+            action : 'make',
+            data : 'name',
+            placeholder : 'Skriv dit navn',    
+        }
+        
+        smamo_chat.make('monkey',response, function(){
             setTimeout(function(){
-            
-                smamo_chat.make('user','Indtast dit navn','name');
+                
+                smamo_chat.make('user',response);
             
             },1000);
         });
@@ -35,39 +42,58 @@ smamo_chat.init = function(){
     }
 }
 
-smamo_chat.make = function(type,msg,data,callback){
+smamo_chat.make = function(type,response,callback){
     
-    //smamo_chat.container.children('.'+type+'.medium').removeClass('medium').addClass('small');
-    //smamo_chat.container.children('.'+type+'.large').removeClass('large').addClass('medium');
-    
-    if(type === 'monkey'){
+    if(type === 'typing'){
         
-        var $box = $('<div class="chat-entry monkey large typing"></div>"'),
-            $msg = $('<span class="">'+msg+'</span>');
+        var $box = $('<div class="chat-entry monkey typing"></div>"'),
+            $msg = $('<span></span>');
         
         $box.append($msg);
         smamo_chat.container.append($box);
         
-        setTimeout(function(){
-            $box.removeClass('typing');
-        },700);
+    }
+    
+    if(type === 'monkey'){
         
+        if(smamo_chat.container.find('.typing').length){
+            smamo_chat.container.find('.chat-entry.monkey.typing span').html(response.content);
+            smamo_chat.container.find('.typing').removeClass('typing');
+        }
+        else{
+            var $box = $('<div class="chat-entry monkey typing"></div>"'),
+                $msg = $('<span>'+response.content+'</span>');
+
+            $box.append($msg);
+            smamo_chat.container.append($box);
+
+            setTimeout(function(){
+                $box.removeClass('typing');
+            },700);
+        }
     }
     
     else if (type === 'user'){
         
+        
+        
         var placeholder = '';
-        if(msg){
-            placeholder = ' placeholder="'+msg+'"';
+        if(response.placeholder){
+            placeholder = ' placeholder="'+response.placeholder+'"';
+        }
+        
+        var fieldType = '';
+        if(response.fieldType){
+            fieldType = ' data-field-type="'+response.fieldType+'"';
         }
         
         var dataAttr = '';
-        if(data){
-            dataAttr = ' data-field="'+data+'"';
+        if(response.data){
+            dataAttr = ' data-field="'+response.data+'"';
         }
         
-        var $box = $('<div class="chat-entry user large"></div>"'),
-            $msg = $('<textarea rows="1"'+placeholder+dataAttr+'></textarea>');
+        var $box = $('<div class="chat-entry user"></div>"'),
+            $msg = $('<textarea rows="1"'+placeholder+dataAttr+fieldType+'></textarea>');
         
         $box.append($msg);
         smamo_chat.container.append($box);
@@ -105,20 +131,26 @@ smamo_chat.keyUp = function(e,t){
 
 smamo_chat.send = function(data,value){
     
-    $.ajax({
-        url : smamo_chat.sendUrl,
-        type : 'POST',
-        data : {
-            'data' : data,
-            'value' : value,
-        },
-        dataType : 'json',
-        success : function(response){
+    setTimeout(function(){
+    
+         smamo_chat.make('typing');
+    
+        $.ajax({
+            url : smamo_chat.sendUrl,
+            type : 'POST',
+            data : {
+                'data' : data,
+                'value' : value,
+            },
+            dataType : 'json',
+            success : function(response){
 
-            smamo_chat.receive(response);
+                smamo_chat.receive(response);
 
-        },
-    });
+            },
+        });
+    
+    },500);
     
 }
 
@@ -126,17 +158,30 @@ smamo_chat.receive = function(response){
     
    if(response.action && response.action === 'make'){
     
-       smamo_chat.make('monkey',response.content,response.data,function(){
+       smamo_chat.make('monkey',response,function(){
         
            setTimeout(function(){
             
-               smamo_chat.make('user',null,response.data);
+               smamo_chat.make('user',response);
            
-           },1000);
+           },200);
        
        });
        
    }
+    if(response.action && response.action === 'make-yn'){
+        
+        smamo_chat.make('monkey',response,function(){
+        
+           setTimeout(function(){
+            
+               smamo_chat.make('user',response);
+           
+           },200);
+       
+       });
+        
+    }
     
 }
 

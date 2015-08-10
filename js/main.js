@@ -1,7 +1,9 @@
+//@koala-append 'assets/cookie.js';
 //@koala-append 'assets/flickity.js';
 //@koala-append 'assets/autosize.js';
 //@koala-append 'assets/styledselect.js';
 //@koala-append 'assets/is.js';
+
 
 //@koala-append 'modules/hero.js';
 //@koala-append 'modules/header.js';

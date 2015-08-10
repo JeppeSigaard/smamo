@@ -24,21 +24,41 @@ smamo_chat.init = function(){
 
         });
         
-        var response = {
-            content : 'Hej. Vi er SmartMonkey. Hvad hedder du?',
-            action : 'make',
-            data : 'name',
-            placeholder : 'Skriv dit navn',    
+        if(readCookie('smamo_chat_returning_name')){
+            
+            var response = {
+                content : 'Hej '+readCookie('smamo_chat_returning_name')+'. Vi har talt sammen tidligere, er der noget jeg kan hjælpe med?',
+                action : 'make',
+                data : 'help-2',
+                placeholder : 'Fortæl hvad du søger, og vi skal finde det sammen :-)',    
+            }
+
+            smamo_chat.make('monkey',response, function(){
+                setTimeout(function(){
+
+                    smamo_chat.make('user',response);
+
+                },1000);
+            });
+        
         }
         
-        smamo_chat.make('monkey',response, function(){
-            setTimeout(function(){
-                
-                smamo_chat.make('user',response);
-            
-            },1000);
-        });
-        
+        else{
+            var response = {
+                content : 'Hej. Vi er SmartMonkey. Hvad hedder du?',
+                action : 'make',
+                data : 'name',
+                placeholder : 'Skriv dit navn',    
+            }
+
+            smamo_chat.make('monkey',response, function(){
+                setTimeout(function(){
+
+                    smamo_chat.make('user',response);
+
+                },1000);
+            });
+        }
     }
 }
 
@@ -156,7 +176,14 @@ smamo_chat.send = function(data,value){
 
 smamo_chat.receive = function(response){
     
-   if(response.action && response.action === 'make'){
+    if(response.name){
+        
+        createCookie('smamo_chat_returning_name',response.name,100);
+    
+    }
+    
+    
+    if(response.action && response.action === 'make'){
     
        smamo_chat.make('monkey',response,function(){
         

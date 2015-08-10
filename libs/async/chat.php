@@ -39,6 +39,7 @@ if($data === 'name'){
     $response['action'] = 'make';
     $response['data'] = 'story-1';
     $response['content'] = $msg; 
+    $response['name'] = $name;
     
     echo json_encode($response);
 }
@@ -69,6 +70,13 @@ elseif($data === 'info-1'){
     
     $is_yes = 'none';
     
+    $sporg = array(
+        0 => 'information',
+        1 => 'hvad er det',
+        2 => '?',
+        3 => 'mere',
+    );
+    
     $nej = array(
         0 => 'nej',
         1 => 'nej tak',
@@ -96,6 +104,12 @@ elseif($data === 'info-1'){
         12 => 'sker der vel ikke',
     );
     
+    foreach ($sporg as $sporg){
+        if (strpos(strtolower($content), strtolower($sporg)) !== FALSE){
+            $is_yes = 'sporg';
+        }
+    }
+    
     foreach ($ja as $ja){
         if (strpos(strtolower($content), strtolower($ja)) !== FALSE){
             $is_yes = 'true';
@@ -115,6 +129,16 @@ elseif($data === 'info-1'){
         $response['content'] = 'Bum, det fik jeg ikke fat i, jeg er bare en dum hjemmeside. Kunne du tænke dig at vide mere?'; 
         $response['placeholder'] = 'Ja/Nej';
         $response['fieldType'] = 'y-n';
+    }
+    
+    elseif($is_yes === 'sporg'){
+        
+        $response['action'] = 'make';
+        $response['data'] = 'info-1';
+        $response['content'] = 'Jo altså, vi tror på at vi kan løfte enhver virksomhed med vores kompetencer. Som reglen vil vi allerhelst mødes med vores samarbejdspartnere, men til en start kan jeg bede én af mine kolleger give en uforpligtende vurdering af din virksomheds potentiale, eventuelle udfordringer og forslag til en forbedret markedsføringsstrategi. Kunne du tænke dig det?'; 
+        $response['placeholder'] = 'Ja/Nej';
+        $response['fieldType'] = 'y-n';
+        
     }
     
     elseif($is_yes === 'true'){
@@ -169,4 +193,22 @@ elseif($data === 'email'){
     echo json_encode($response);
 }
 
+elseif($data === 'help-1'){
+    
+    $response['action'] = 'make';
+    $response['data'] = 'help-2';
+    $response['content'] = 'Alletiders. Vi arbejder hovedsageligt Business 2 Business. Repræsenterer du en virksomhed?'; 
+    $response['placeholder'] = 'Skriv gerne et CVR-nummer';
+    
+    echo json_encode($response);
+}
 
+elseif($data === 'help-2'){
+    
+    $response['action'] = 'make';
+    $response['data'] = 'email';
+    $response['content'] = 'Super duper. Må jeg få en emailadresse, så vi kan vende tilbage til dig?'; 
+    $response['placeholder'] = 'Skriv din emailadresse';
+    
+    echo json_encode($response);
+}

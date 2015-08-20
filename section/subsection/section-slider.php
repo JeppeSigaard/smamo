@@ -6,5 +6,9 @@
             <img src="<?php echo $image_url[0] ?>">
         </div>
         <?php endforeach; ?>
+        <div class="prev-next-right">
+            <a href="#" tabindex="-1" nofollow class="button-dir"></a>
+            <a href="#" tabindex="-1" nofollow class="button-dir right"></a>
+        </div>
     </div>
 </section>

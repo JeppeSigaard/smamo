@@ -1,0 +1,57 @@
+
+.section-slider{
+
+    height:0;
+    min-height:0;
+    padding-bottom: 56.25%;
+    
+    .inner{
+    
+        height:0;
+        padding-bottom: 56.25%;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        
+        .flickity-viewport{
+            position:absolute;
+        }
+        
+        div{
+            height:100%;
+            width:100%;
+            
+            img{
+                width:100%;
+            }
+        }
+        
+        .flickity-page-dots{
+            bottom:$base-margin*2;
+            
+            .dot{
+            
+            width:$base-margin*1.5;
+            height:$base-margin*1.5;
+            border-radius:$base-margin;
+            opacity:1;
+            background: $monkey-light;
+            transition:background .2s;
+            
+            &:hover,
+            &.is-selected{
+                background: $monkey-black;
+            }
+        }
+        }
+        
+        .prev-next-right{
+            bottom: 20px;
+            position: absolute;
+            height: auto;
+            width: 50px;
+        }
+    }
+    
+}

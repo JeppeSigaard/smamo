@@ -11,6 +11,7 @@
 //@koala-append 'modules/fancySidebars.js';
 //@koala-append 'modules/form-cta.js';
 //@koala-append 'modules/box-slider.js';
+//@koala-append 'modules/section-slider.js';
 //@koala-append 'modules/menu-toggle.js';
 //@koala-append 'modules/data-img.js';
 //@koala-append 'modules/heading-nav.js';

@@ -1,7 +1,9 @@
 @charset "UTF-8";
 /*********************************************/
 /**************** STYLE RESET ****************/
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, .hero .inner .hero-banner .plx-text-layer, .flickity-viewport .hero-banner .plx-text-layer, .flickity-slider .hero-banner .plx-text-layer, .chat-form .inner, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, .hero .inner .hero-banner .plx-text-layer,
+.flickity-viewport .hero-banner .plx-text-layer,
+.flickity-slider .hero-banner .plx-text-layer, .chat-form .inner, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   padding: 0;
@@ -26,7 +28,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-article, .hero .inner .hero-banner .plx-text-layer, .flickity-viewport .hero-banner .plx-text-layer, .flickity-slider .hero-banner .plx-text-layer, .chat-form .inner, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+article, .hero .inner .hero-banner .plx-text-layer,
+.flickity-viewport .hero-banner .plx-text-layer,
+.flickity-slider .hero-banner .plx-text-layer, .chat-form .inner, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block; }
 
 .clear {
@@ -64,17 +68,23 @@ a, a:active, a:visited, a:hover {
     stroke-dashoffset: 0;
     fill: rgba(59, 59, 59, 0.9);
     stroke-width: 0px; } }
-form label, form input[type="checkbox"]:after, .slide-boxes .flickity-viewport, .slide-boxes .flickity-slider, .slide-boxes .box-slider.shop a:before, .slide-boxes .box-slider.shop a:after, .hero .inner, .flickity-viewport, .flickity-slider, .front-work .box-slider a:before {
+form label, form input[type="checkbox"]:after, .slide-boxes .flickity-viewport, .slide-boxes .flickity-slider, .slide-boxes .box-slider.shop a:before, .slide-boxes .box-slider.shop a:after, .hero .inner,
+.flickity-viewport,
+.flickity-slider, .front-work .box-slider a:before {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0; }
 
-.hero .inner .hero-banner, .flickity-viewport .hero-banner, .flickity-slider .hero-banner {
+.hero .inner .hero-banner,
+.flickity-viewport .hero-banner,
+.flickity-slider .hero-banner {
   padding: 12px; }
 
-article, .hero .inner .hero-banner .plx-text-layer, .flickity-viewport .hero-banner .plx-text-layer, .flickity-slider .hero-banner .plx-text-layer, .chat-form .inner, form input[type="text"],
+article, .hero .inner .hero-banner .plx-text-layer,
+.flickity-viewport .hero-banner .plx-text-layer,
+.flickity-slider .hero-banner .plx-text-layer, .chat-form .inner, form input[type="text"],
 form input[type="email"],
 form input[type="tel"],
 form input[type="password"],
@@ -122,7 +132,11 @@ html, body, .box, form > div, form .split > div, form > p, .fancy-sidebars main,
   padding: 12px;
   background: white; }
 
-body article .no-margin, body .hero .inner .hero-banner .plx-text-layer .no-margin, .hero .inner .hero-banner body .plx-text-layer .no-margin, body .flickity-viewport .hero-banner .plx-text-layer .no-margin, .flickity-viewport .hero-banner body .plx-text-layer .no-margin, body .flickity-slider .hero-banner .plx-text-layer .no-margin, .flickity-slider .hero-banner body .plx-text-layer .no-margin, body .chat-form .inner .no-margin, .chat-form body .inner .no-margin {
+body article .no-margin, body .hero .inner .hero-banner .plx-text-layer .no-margin, .hero .inner .hero-banner body .plx-text-layer .no-margin,
+body .flickity-viewport .hero-banner .plx-text-layer .no-margin,
+.flickity-viewport .hero-banner body .plx-text-layer .no-margin,
+body .flickity-slider .hero-banner .plx-text-layer .no-margin,
+.flickity-slider .hero-banner body .plx-text-layer .no-margin, body .chat-form .inner .no-margin, .chat-form body .inner .no-margin {
   margin: 0; }
 
 html, body {
@@ -195,10 +209,18 @@ hr {
 section {
   margin: 12px; }
 
-body article, body .hero .inner .hero-banner .plx-text-layer, .hero .inner .hero-banner body .plx-text-layer, body .flickity-viewport .hero-banner .plx-text-layer, .flickity-viewport .hero-banner body .plx-text-layer, body .flickity-slider .hero-banner .plx-text-layer, .flickity-slider .hero-banner body .plx-text-layer, body .chat-form .inner, .chat-form body .inner {
+body article, body .hero .inner .hero-banner .plx-text-layer, .hero .inner .hero-banner body .plx-text-layer,
+body .flickity-viewport .hero-banner .plx-text-layer,
+.flickity-viewport .hero-banner body .plx-text-layer,
+body .flickity-slider .hero-banner .plx-text-layer,
+.flickity-slider .hero-banner body .plx-text-layer, body .chat-form .inner, .chat-form body .inner {
   color: #343434;
   line-height: 1.4; }
-  body article a.button, body .hero .inner .hero-banner .plx-text-layer a.button, .hero .inner .hero-banner body .plx-text-layer a.button, body .flickity-viewport .hero-banner .plx-text-layer a.button, .flickity-viewport .hero-banner body .plx-text-layer a.button, body .flickity-slider .hero-banner .plx-text-layer a.button, .flickity-slider .hero-banner body .plx-text-layer a.button, body .chat-form .inner a.button, .chat-form body .inner a.button,
+  body article a.button, body .hero .inner .hero-banner .plx-text-layer a.button, .hero .inner .hero-banner body .plx-text-layer a.button,
+  body .flickity-viewport .hero-banner .plx-text-layer a.button,
+  .flickity-viewport .hero-banner body .plx-text-layer a.button,
+  body .flickity-slider .hero-banner .plx-text-layer a.button,
+  .flickity-slider .hero-banner body .plx-text-layer a.button, body .chat-form .inner a.button, .chat-form body .inner a.button,
   body article a.button-dir,
   body .hero .inner .hero-banner .plx-text-layer a.button-dir,
   .hero .inner .hero-banner body .plx-text-layer a.button-dir,
@@ -219,7 +241,11 @@ body article, body .hero .inner .hero-banner .plx-text-layer, .hero .inner .hero
   .chat-form body .inner a.playbtn {
     margin-top: 12px; }
     @media only screen and (min-width: 640px) {
-      body article a.button, body .hero .inner .hero-banner .plx-text-layer a.button, .hero .inner .hero-banner body .plx-text-layer a.button, body .flickity-viewport .hero-banner .plx-text-layer a.button, .flickity-viewport .hero-banner body .plx-text-layer a.button, body .flickity-slider .hero-banner .plx-text-layer a.button, .flickity-slider .hero-banner body .plx-text-layer a.button, body .chat-form .inner a.button, .chat-form body .inner a.button,
+      body article a.button, body .hero .inner .hero-banner .plx-text-layer a.button, .hero .inner .hero-banner body .plx-text-layer a.button,
+      body .flickity-viewport .hero-banner .plx-text-layer a.button,
+      .flickity-viewport .hero-banner body .plx-text-layer a.button,
+      body .flickity-slider .hero-banner .plx-text-layer a.button,
+      .flickity-slider .hero-banner body .plx-text-layer a.button, body .chat-form .inner a.button, .chat-form body .inner a.button,
       body article a.button-dir,
       body .hero .inner .hero-banner .plx-text-layer a.button-dir,
       .hero .inner .hero-banner body .plx-text-layer a.button-dir,
@@ -239,7 +265,11 @@ body article, body .hero .inner .hero-banner .plx-text-layer, .hero .inner .hero
       body .chat-form .inner a.playbtn,
       .chat-form body .inner a.playbtn {
         margin-right: 12px; }
-        body article a.button:last-child, body .hero .inner .hero-banner .plx-text-layer a.button:last-child, .hero .inner .hero-banner body .plx-text-layer a.button:last-child, body .flickity-viewport .hero-banner .plx-text-layer a.button:last-child, .flickity-viewport .hero-banner body .plx-text-layer a.button:last-child, body .flickity-slider .hero-banner .plx-text-layer a.button:last-child, .flickity-slider .hero-banner body .plx-text-layer a.button:last-child, body .chat-form .inner a.button:last-child, .chat-form body .inner a.button:last-child,
+        body article a.button:last-child, body .hero .inner .hero-banner .plx-text-layer a.button:last-child, .hero .inner .hero-banner body .plx-text-layer a.button:last-child,
+        body .flickity-viewport .hero-banner .plx-text-layer a.button:last-child,
+        .flickity-viewport .hero-banner body .plx-text-layer a.button:last-child,
+        body .flickity-slider .hero-banner .plx-text-layer a.button:last-child,
+        .flickity-slider .hero-banner body .plx-text-layer a.button:last-child, body .chat-form .inner a.button:last-child, .chat-form body .inner a.button:last-child,
         body article a.button-dir:last-child,
         body .hero .inner .hero-banner .plx-text-layer a.button-dir:last-child,
         .hero .inner .hero-banner body .plx-text-layer a.button-dir:last-child,
@@ -259,47 +289,107 @@ body article, body .hero .inner .hero-banner .plx-text-layer, .hero .inner .hero
         body .chat-form .inner a.playbtn:last-child,
         .chat-form body .inner a.playbtn:last-child {
           margin-right: auto; } }
-  body article header, body .hero .inner .hero-banner .plx-text-layer header, .hero .inner .hero-banner body .plx-text-layer header, body .flickity-viewport .hero-banner .plx-text-layer header, .flickity-viewport .hero-banner body .plx-text-layer header, body .flickity-slider .hero-banner .plx-text-layer header, .flickity-slider .hero-banner body .plx-text-layer header, body .chat-form .inner header, .chat-form body .inner header {
+  body article header, body .hero .inner .hero-banner .plx-text-layer header, .hero .inner .hero-banner body .plx-text-layer header,
+  body .flickity-viewport .hero-banner .plx-text-layer header,
+  .flickity-viewport .hero-banner body .plx-text-layer header,
+  body .flickity-slider .hero-banner .plx-text-layer header,
+  .flickity-slider .hero-banner body .plx-text-layer header, body .chat-form .inner header, .chat-form body .inner header {
     background: none; }
-  body article h1, body .hero .inner .hero-banner .plx-text-layer h1, .hero .inner .hero-banner body .plx-text-layer h1, body .flickity-viewport .hero-banner .plx-text-layer h1, .flickity-viewport .hero-banner body .plx-text-layer h1, body .flickity-slider .hero-banner .plx-text-layer h1, .flickity-slider .hero-banner body .plx-text-layer h1, body .chat-form .inner h1, .chat-form body .inner h1 {
+  body article h1, body .hero .inner .hero-banner .plx-text-layer h1, .hero .inner .hero-banner body .plx-text-layer h1,
+  body .flickity-viewport .hero-banner .plx-text-layer h1,
+  .flickity-viewport .hero-banner body .plx-text-layer h1,
+  body .flickity-slider .hero-banner .plx-text-layer h1,
+  .flickity-slider .hero-banner body .plx-text-layer h1, body .chat-form .inner h1, .chat-form body .inner h1 {
     color: #c04545; }
-  body article h2, body .hero .inner .hero-banner .plx-text-layer h2, .hero .inner .hero-banner body .plx-text-layer h2, body .flickity-viewport .hero-banner .plx-text-layer h2, .flickity-viewport .hero-banner body .plx-text-layer h2, body .flickity-slider .hero-banner .plx-text-layer h2, .flickity-slider .hero-banner body .plx-text-layer h2, body .chat-form .inner h2, .chat-form body .inner h2 {
+  body article h2, body .hero .inner .hero-banner .plx-text-layer h2, .hero .inner .hero-banner body .plx-text-layer h2,
+  body .flickity-viewport .hero-banner .plx-text-layer h2,
+  .flickity-viewport .hero-banner body .plx-text-layer h2,
+  body .flickity-slider .hero-banner .plx-text-layer h2,
+  .flickity-slider .hero-banner body .plx-text-layer h2, body .chat-form .inner h2, .chat-form body .inner h2 {
     font-size: 250%;
     margin-bottom: 0.7em;
     line-height: 1.2;
     font-weight: 400; }
-  body article h3, body .hero .inner .hero-banner .plx-text-layer h3, .hero .inner .hero-banner body .plx-text-layer h3, body .flickity-viewport .hero-banner .plx-text-layer h3, .flickity-viewport .hero-banner body .plx-text-layer h3, body .flickity-slider .hero-banner .plx-text-layer h3, .flickity-slider .hero-banner body .plx-text-layer h3, body .chat-form .inner h3, .chat-form body .inner h3 {
+  body article h3, body .hero .inner .hero-banner .plx-text-layer h3, .hero .inner .hero-banner body .plx-text-layer h3,
+  body .flickity-viewport .hero-banner .plx-text-layer h3,
+  .flickity-viewport .hero-banner body .plx-text-layer h3,
+  body .flickity-slider .hero-banner .plx-text-layer h3,
+  .flickity-slider .hero-banner body .plx-text-layer h3, body .chat-form .inner h3, .chat-form body .inner h3 {
     font-size: 200%;
     margin-bottom: 0.7em;
     line-height: 1.2;
     font-weight: 400; }
-  body article h4, body .hero .inner .hero-banner .plx-text-layer h4, .hero .inner .hero-banner body .plx-text-layer h4, body .flickity-viewport .hero-banner .plx-text-layer h4, .flickity-viewport .hero-banner body .plx-text-layer h4, body .flickity-slider .hero-banner .plx-text-layer h4, .flickity-slider .hero-banner body .plx-text-layer h4, body .chat-form .inner h4, .chat-form body .inner h4 {
+  body article h4, body .hero .inner .hero-banner .plx-text-layer h4, .hero .inner .hero-banner body .plx-text-layer h4,
+  body .flickity-viewport .hero-banner .plx-text-layer h4,
+  .flickity-viewport .hero-banner body .plx-text-layer h4,
+  body .flickity-slider .hero-banner .plx-text-layer h4,
+  .flickity-slider .hero-banner body .plx-text-layer h4, body .chat-form .inner h4, .chat-form body .inner h4 {
     font-size: 175%;
     margin-bottom: 0.7em;
     line-height: 1.2; }
-  body article h5, body .hero .inner .hero-banner .plx-text-layer h5, .hero .inner .hero-banner body .plx-text-layer h5, body .flickity-viewport .hero-banner .plx-text-layer h5, .flickity-viewport .hero-banner body .plx-text-layer h5, body .flickity-slider .hero-banner .plx-text-layer h5, .flickity-slider .hero-banner body .plx-text-layer h5, body .chat-form .inner h5, .chat-form body .inner h5 {
+  body article h5, body .hero .inner .hero-banner .plx-text-layer h5, .hero .inner .hero-banner body .plx-text-layer h5,
+  body .flickity-viewport .hero-banner .plx-text-layer h5,
+  .flickity-viewport .hero-banner body .plx-text-layer h5,
+  body .flickity-slider .hero-banner .plx-text-layer h5,
+  .flickity-slider .hero-banner body .plx-text-layer h5, body .chat-form .inner h5, .chat-form body .inner h5 {
     font-size: 150%;
     margin-bottom: 0.7em;
     line-height: 1.2; }
-  body article p, body .hero .inner .hero-banner .plx-text-layer p, .hero .inner .hero-banner body .plx-text-layer p, body .flickity-viewport .hero-banner .plx-text-layer p, .flickity-viewport .hero-banner body .plx-text-layer p, body .flickity-slider .hero-banner .plx-text-layer p, .flickity-slider .hero-banner body .plx-text-layer p, body .chat-form .inner p, .chat-form body .inner p {
+  body article p, body .hero .inner .hero-banner .plx-text-layer p, .hero .inner .hero-banner body .plx-text-layer p,
+  body .flickity-viewport .hero-banner .plx-text-layer p,
+  .flickity-viewport .hero-banner body .plx-text-layer p,
+  body .flickity-slider .hero-banner .plx-text-layer p,
+  .flickity-slider .hero-banner body .plx-text-layer p, body .chat-form .inner p, .chat-form body .inner p {
     margin-bottom: 0.7em; }
-    body article p.large, body .hero .inner .hero-banner .plx-text-layer p.large, .hero .inner .hero-banner body .plx-text-layer p.large, body .flickity-viewport .hero-banner .plx-text-layer p.large, .flickity-viewport .hero-banner body .plx-text-layer p.large, body .flickity-slider .hero-banner .plx-text-layer p.large, .flickity-slider .hero-banner body .plx-text-layer p.large, body .chat-form .inner p.large, .chat-form body .inner p.large {
+    body article p.large, body .hero .inner .hero-banner .plx-text-layer p.large, .hero .inner .hero-banner body .plx-text-layer p.large,
+    body .flickity-viewport .hero-banner .plx-text-layer p.large,
+    .flickity-viewport .hero-banner body .plx-text-layer p.large,
+    body .flickity-slider .hero-banner .plx-text-layer p.large,
+    .flickity-slider .hero-banner body .plx-text-layer p.large, body .chat-form .inner p.large, .chat-form body .inner p.large {
       font-size: 110%; }
-  body article ul, body .hero .inner .hero-banner .plx-text-layer ul, .hero .inner .hero-banner body .plx-text-layer ul, body .flickity-viewport .hero-banner .plx-text-layer ul, .flickity-viewport .hero-banner body .plx-text-layer ul, body .flickity-slider .hero-banner .plx-text-layer ul, .flickity-slider .hero-banner body .plx-text-layer ul, body .chat-form .inner ul, .chat-form body .inner ul {
+  body article ul, body .hero .inner .hero-banner .plx-text-layer ul, .hero .inner .hero-banner body .plx-text-layer ul,
+  body .flickity-viewport .hero-banner .plx-text-layer ul,
+  .flickity-viewport .hero-banner body .plx-text-layer ul,
+  body .flickity-slider .hero-banner .plx-text-layer ul,
+  .flickity-slider .hero-banner body .plx-text-layer ul, body .chat-form .inner ul, .chat-form body .inner ul {
     padding-left: 20px;
     list-style: disc;
     margin-bottom: 0.7em; }
-  body article ol, body .hero .inner .hero-banner .plx-text-layer ol, .hero .inner .hero-banner body .plx-text-layer ol, body .flickity-viewport .hero-banner .plx-text-layer ol, .flickity-viewport .hero-banner body .plx-text-layer ol, body .flickity-slider .hero-banner .plx-text-layer ol, .flickity-slider .hero-banner body .plx-text-layer ol, body .chat-form .inner ol, .chat-form body .inner ol {
+  body article ol, body .hero .inner .hero-banner .plx-text-layer ol, .hero .inner .hero-banner body .plx-text-layer ol,
+  body .flickity-viewport .hero-banner .plx-text-layer ol,
+  .flickity-viewport .hero-banner body .plx-text-layer ol,
+  body .flickity-slider .hero-banner .plx-text-layer ol,
+  .flickity-slider .hero-banner body .plx-text-layer ol, body .chat-form .inner ol, .chat-form body .inner ol {
     padding-left: 20px;
     list-style: decimal;
     margin-bottom: 0.7em; }
-  body article ul li, body .hero .inner .hero-banner .plx-text-layer ul li, .hero .inner .hero-banner body .plx-text-layer ul li, body .flickity-viewport .hero-banner .plx-text-layer ul li, .flickity-viewport .hero-banner body .plx-text-layer ul li, body .flickity-slider .hero-banner .plx-text-layer ul li, .flickity-slider .hero-banner body .plx-text-layer ul li, body .chat-form .inner ul li, .chat-form body .inner ul li, body article ol li, body .hero .inner .hero-banner .plx-text-layer ol li, .hero .inner .hero-banner body .plx-text-layer ol li, body .flickity-viewport .hero-banner .plx-text-layer ol li, .flickity-viewport .hero-banner body .plx-text-layer ol li, body .flickity-slider .hero-banner .plx-text-layer ol li, .flickity-slider .hero-banner body .plx-text-layer ol li, body .chat-form .inner ol li, .chat-form body .inner ol li {
+  body article ul li, body .hero .inner .hero-banner .plx-text-layer ul li, .hero .inner .hero-banner body .plx-text-layer ul li,
+  body .flickity-viewport .hero-banner .plx-text-layer ul li,
+  .flickity-viewport .hero-banner body .plx-text-layer ul li,
+  body .flickity-slider .hero-banner .plx-text-layer ul li,
+  .flickity-slider .hero-banner body .plx-text-layer ul li, body .chat-form .inner ul li, .chat-form body .inner ul li, body article ol li, body .hero .inner .hero-banner .plx-text-layer ol li, .hero .inner .hero-banner body .plx-text-layer ol li,
+  body .flickity-viewport .hero-banner .plx-text-layer ol li,
+  .flickity-viewport .hero-banner body .plx-text-layer ol li,
+  body .flickity-slider .hero-banner .plx-text-layer ol li,
+  .flickity-slider .hero-banner body .plx-text-layer ol li, body .chat-form .inner ol li, .chat-form body .inner ol li {
     margin-bottom: 0.7em; }
-  body article strong, body .hero .inner .hero-banner .plx-text-layer strong, .hero .inner .hero-banner body .plx-text-layer strong, body .flickity-viewport .hero-banner .plx-text-layer strong, .flickity-viewport .hero-banner body .plx-text-layer strong, body .flickity-slider .hero-banner .plx-text-layer strong, .flickity-slider .hero-banner body .plx-text-layer strong, body .chat-form .inner strong, .chat-form body .inner strong {
+  body article strong, body .hero .inner .hero-banner .plx-text-layer strong, .hero .inner .hero-banner body .plx-text-layer strong,
+  body .flickity-viewport .hero-banner .plx-text-layer strong,
+  .flickity-viewport .hero-banner body .plx-text-layer strong,
+  body .flickity-slider .hero-banner .plx-text-layer strong,
+  .flickity-slider .hero-banner body .plx-text-layer strong, body .chat-form .inner strong, .chat-form body .inner strong {
     font-weight: bold; }
-  body article em, body .hero .inner .hero-banner .plx-text-layer em, .hero .inner .hero-banner body .plx-text-layer em, body .flickity-viewport .hero-banner .plx-text-layer em, .flickity-viewport .hero-banner body .plx-text-layer em, body .flickity-slider .hero-banner .plx-text-layer em, .flickity-slider .hero-banner body .plx-text-layer em, body .chat-form .inner em, .chat-form body .inner em {
+  body article em, body .hero .inner .hero-banner .plx-text-layer em, .hero .inner .hero-banner body .plx-text-layer em,
+  body .flickity-viewport .hero-banner .plx-text-layer em,
+  .flickity-viewport .hero-banner body .plx-text-layer em,
+  body .flickity-slider .hero-banner .plx-text-layer em,
+  .flickity-slider .hero-banner body .plx-text-layer em, body .chat-form .inner em, .chat-form body .inner em {
     font-style: italic; }
-  body article a:active, body .hero .inner .hero-banner .plx-text-layer a:active, .hero .inner .hero-banner body .plx-text-layer a:active, body .flickity-viewport .hero-banner .plx-text-layer a:active, .flickity-viewport .hero-banner body .plx-text-layer a:active, body .flickity-slider .hero-banner .plx-text-layer a:active, .flickity-slider .hero-banner body .plx-text-layer a:active, body .chat-form .inner a:active, .chat-form body .inner a:active,
+  body article a:active, body .hero .inner .hero-banner .plx-text-layer a:active, .hero .inner .hero-banner body .plx-text-layer a:active,
+  body .flickity-viewport .hero-banner .plx-text-layer a:active,
+  .flickity-viewport .hero-banner body .plx-text-layer a:active,
+  body .flickity-slider .hero-banner .plx-text-layer a:active,
+  .flickity-slider .hero-banner body .plx-text-layer a:active, body .chat-form .inner a:active, .chat-form body .inner a:active,
   body article a,
   body .hero .inner .hero-banner .plx-text-layer a,
   .hero .inner .hero-banner body .plx-text-layer a,
@@ -1448,6 +1538,7 @@ body.menu-out .fancy-sidebars .fancy-asides {
       .slide-boxes .box-slider {
         border-width: 6px; } }
     .slide-boxes .box-slider a {
+      display: block;
       width: 100%;
       height: 100%;
       background-position: center;
@@ -1793,46 +1884,59 @@ nav.top-nav {
       .menu-user nav a.logout:hover {
         color: #e7b7b7; }
 
-.hero {
+.hero,
+.section-slider {
   position: relative;
   height: 100vh;
   min-height: 400px;
   margin: 0;
   overflow: hidden; }
-  .hero .prev-next-right {
+  .hero .prev-next-right,
+  .section-slider .prev-next-right {
     -webkit-transition: right 500ms;
             transition: right 500ms;
     -webkit-transition-timing-function: cubic-bezier(0.42, -0.5, 0.47, 1.14);
             transition-timing-function: cubic-bezier(0.42, -0.5, 0.47, 1.14);
     right: -90px; }
     @media only screen and (min-width: 768px) {
-      .hero .prev-next-right {
+      .hero .prev-next-right,
+      .section-slider .prev-next-right {
         right: 24px; }
-        .hero .prev-next-right.hide {
+        .hero .prev-next-right.hide,
+        .section-slider .prev-next-right.hide {
           right: -90px; } }
-  .hero .inner {
+  .hero .inner,
+  .section-slider .inner {
     top: 12px;
     left: 12px;
     right: 12px;
     bottom: 12px; }
 
-.hero .inner .hero-banner, .flickity-viewport .hero-banner, .flickity-slider .hero-banner {
+.hero .inner .hero-banner,
+.flickity-viewport .hero-banner,
+.flickity-slider .hero-banner {
   width: 100%;
   height: 100%;
   background-position: center;
   background-size: cover;
   background-color: #669999; }
-  .hero .inner .hero-banner *, .flickity-viewport .hero-banner *, .flickity-slider .hero-banner * {
+  .hero .inner .hero-banner *,
+  .flickity-viewport .hero-banner *,
+  .flickity-slider .hero-banner * {
     z-index: 1;
     position: relative; }
-  .hero .inner .hero-banner .hero-banner-text, .flickity-viewport .hero-banner .hero-banner-text, .flickity-slider .hero-banner .hero-banner-text {
+  .hero .inner .hero-banner .hero-banner-text,
+  .flickity-viewport .hero-banner .hero-banner-text,
+  .flickity-slider .hero-banner .hero-banner-text {
     top: 50%;
     overflow: hidden;
     width: 100%;
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%); }
-  .hero .inner .hero-banner .plx-text-layer, .flickity-viewport .hero-banner .plx-text-layer, .flickity-slider .hero-banner .plx-text-layer {
+  .hero .inner .hero-banner .plx-text-layer,
+  .flickity-viewport .hero-banner .plx-text-layer,
+  .flickity-slider .hero-banner .plx-text-layer {
     position: absolute;
     left: 0;
     top: 50%;
@@ -1842,7 +1946,9 @@ nav.top-nav {
             transform: translate(0, -50%);
     z-index: 10;
     padding: 0px 12px 80px; }
-  .hero .inner .hero-banner .plx-layer, .flickity-viewport .hero-banner .plx-layer, .flickity-slider .hero-banner .plx-layer {
+  .hero .inner .hero-banner .plx-layer,
+  .flickity-viewport .hero-banner .plx-layer,
+  .flickity-slider .hero-banner .plx-layer {
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
     left: 0;
@@ -1852,28 +1958,46 @@ nav.top-nav {
     background-size: cover;
     background-position: 50% 50%;
     height: 100%; }
-    .hero .inner .hero-banner .plx-layer.layer-1, .flickity-viewport .hero-banner .plx-layer.layer-1, .flickity-slider .hero-banner .plx-layer.layer-1 {
+    .hero .inner .hero-banner .plx-layer.layer-1,
+    .flickity-viewport .hero-banner .plx-layer.layer-1,
+    .flickity-slider .hero-banner .plx-layer.layer-1 {
       z-index: 5; }
-    .hero .inner .hero-banner .plx-layer.layer-2, .flickity-viewport .hero-banner .plx-layer.layer-2, .flickity-slider .hero-banner .plx-layer.layer-2 {
+    .hero .inner .hero-banner .plx-layer.layer-2,
+    .flickity-viewport .hero-banner .plx-layer.layer-2,
+    .flickity-slider .hero-banner .plx-layer.layer-2 {
       z-index: 4; }
-    .hero .inner .hero-banner .plx-layer.layer-3, .flickity-viewport .hero-banner .plx-layer.layer-3, .flickity-slider .hero-banner .plx-layer.layer-3 {
+    .hero .inner .hero-banner .plx-layer.layer-3,
+    .flickity-viewport .hero-banner .plx-layer.layer-3,
+    .flickity-slider .hero-banner .plx-layer.layer-3 {
       z-index: 3; }
-    .hero .inner .hero-banner .plx-layer.layer-4, .flickity-viewport .hero-banner .plx-layer.layer-4, .flickity-slider .hero-banner .plx-layer.layer-4 {
+    .hero .inner .hero-banner .plx-layer.layer-4,
+    .flickity-viewport .hero-banner .plx-layer.layer-4,
+    .flickity-slider .hero-banner .plx-layer.layer-4 {
       z-index: 2; }
-    .hero .inner .hero-banner .plx-layer.layer-5, .flickity-viewport .hero-banner .plx-layer.layer-5, .flickity-slider .hero-banner .plx-layer.layer-5 {
+    .hero .inner .hero-banner .plx-layer.layer-5,
+    .flickity-viewport .hero-banner .plx-layer.layer-5,
+    .flickity-slider .hero-banner .plx-layer.layer-5 {
       z-index: 1; }
-.hero .inner .flickity-page-dots, .flickity-viewport .flickity-page-dots, .flickity-slider .flickity-page-dots {
+.hero .inner .flickity-page-dots,
+.flickity-viewport .flickity-page-dots,
+.flickity-slider .flickity-page-dots {
   position: absolute;
   bottom: 24px; }
-  .hero .inner .flickity-page-dots .dot, .flickity-viewport .flickity-page-dots .dot, .flickity-slider .flickity-page-dots .dot {
-    width: 12px;
-    height: 12px;
+  .hero .inner .flickity-page-dots .dot,
+  .flickity-viewport .flickity-page-dots .dot,
+  .flickity-slider .flickity-page-dots .dot {
+    width: 18px;
+    height: 18px;
     border-radius: 12px;
     opacity: 1;
-    background: #d2d2d2;
+    background: #ebebeb, 10;
     -webkit-transition: background .2s;
             transition: background .2s; }
-    .hero .inner .flickity-page-dots .dot:hover, .hero .inner .flickity-page-dots .dot.is-selected, .flickity-viewport .flickity-page-dots .dot:hover, .flickity-viewport .flickity-page-dots .dot.is-selected, .flickity-slider .flickity-page-dots .dot:hover, .flickity-slider .flickity-page-dots .dot.is-selected {
+    .hero .inner .flickity-page-dots .dot:hover, .hero .inner .flickity-page-dots .dot.is-selected,
+    .flickity-viewport .flickity-page-dots .dot:hover,
+    .flickity-viewport .flickity-page-dots .dot.is-selected,
+    .flickity-slider .flickity-page-dots .dot:hover,
+    .flickity-slider .flickity-page-dots .dot.is-selected {
       background: #343434; }
 
 .hero-footer {
@@ -2538,5 +2662,41 @@ li.task {
     .sectioned-article .section-description .column .text {
       border-top: 1px solid #fff;
       padding-top: 12px; }
+
+.section-slider {
+  height: 0;
+  min-height: 0;
+  padding-bottom: 56.25%; }
+  .section-slider .inner {
+    height: 0;
+    padding-bottom: 56.25%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; }
+    .section-slider .inner .flickity-viewport {
+      position: absolute; }
+    .section-slider .inner div {
+      height: 100%;
+      width: 100%; }
+      .section-slider .inner div img {
+        width: 100%; }
+    .section-slider .inner .flickity-page-dots {
+      bottom: 24px; }
+      .section-slider .inner .flickity-page-dots .dot {
+        width: 18px;
+        height: 18px;
+        border-radius: 12px;
+        opacity: 1;
+        background: #ebebeb;
+        -webkit-transition: background .2s;
+                transition: background .2s; }
+        .section-slider .inner .flickity-page-dots .dot:hover, .section-slider .inner .flickity-page-dots .dot.is-selected {
+          background: #343434; }
+    .section-slider .inner .prev-next-right {
+      bottom: 20px;
+      position: absolute;
+      height: auto;
+      width: 50px; }
 
 /*# sourceMappingURL=main.css.map */

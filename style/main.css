@@ -82,18 +82,18 @@ form input[type="number"],
 form textarea, .fancy-sidebars main, .fancy-sidebars aside, .slide-boxes .wrap > .inner, .person-gallery footer {
   line-height: 1.4; }
 
-html, body, .box, form > div, form .split > div, form > p, .fancy-sidebars main, .fancy-sidebars aside, .slide-boxes .wrap > .inner {
+html, body, .box, form > div, form .split > div, form > p, .fancy-sidebars main, .fancy-sidebars aside, .slide-boxes .wrap > .inner, .sectioned-article .section-description .column {
   font-size: 14px;
   -webkit-transition: font-size .2s;
           transition: font-size .2s; }
   @media only screen and (min-width: 480px) {
-    html, body, .box, form > div, form .split > div, form > p, .fancy-sidebars main, .fancy-sidebars aside, .slide-boxes .wrap > .inner {
+    html, body, .box, form > div, form .split > div, form > p, .fancy-sidebars main, .fancy-sidebars aside, .slide-boxes .wrap > .inner, .sectioned-article .section-description .column {
       font-size: 14px; } }
   @media only screen and (min-width: 640px) {
-    html, body, .box, form > div, form .split > div, form > p, .fancy-sidebars main, .fancy-sidebars aside, .slide-boxes .wrap > .inner {
+    html, body, .box, form > div, form .split > div, form > p, .fancy-sidebars main, .fancy-sidebars aside, .slide-boxes .wrap > .inner, .sectioned-article .section-description .column {
       font-size: 15px; } }
   @media only screen and (min-width: 960px) {
-    html, body, .box, form > div, form .split > div, form > p, .fancy-sidebars main, .fancy-sidebars aside, .slide-boxes .wrap > .inner {
+    html, body, .box, form > div, form .split > div, form > p, .fancy-sidebars main, .fancy-sidebars aside, .slide-boxes .wrap > .inner, .sectioned-article .section-description .column {
       font-size: 16px; } }
 
 .heart {
@@ -2476,5 +2476,67 @@ li.task {
 .kort-footer {
   text-align: right;
   padding: 6px 0; }
+
+.sectioned-article .sectioned-header img {
+  display: block;
+  width: 100%; }
+.sectioned-article .sectioned-header .page-header-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+.sectioned-article .sectioned-header h1 {
+  font-size: 300%;
+  white-space: nowrap; }
+.sectioned-article .sectioned-header span {
+  font-size: 150%; }
+
+.sectioned-article .section-single_image {
+  margin: 0; }
+  .sectioned-article .section-single_image img {
+    width: 100%;
+    display: block; }
+
+.sectioned-article .section-description {
+  color: #fff;
+  font-size: 0;
+  margin: 0;
+  padding: 0 0 20px;
+  border: 12px solid #ffffff; }
+  @media only screen and (min-width: 640px) {
+    .sectioned-article .section-description {
+      padding: 12px 12px 80px; } }
+  .sectioned-article .section-description .column {
+    padding: 24px 12px;
+    display: inline-block;
+    vertical-align: top;
+    width: 100%; }
+    @media only screen and (min-width: 480px) {
+      .sectioned-article .section-description .column {
+        padding: 24px; } }
+    @media only screen and (min-width: 768px) {
+      .sectioned-article .section-description .column.medium {
+        width: 66.6666%; }
+      .sectioned-article .section-description .column.small {
+        width: 33.3333%; }
+      .sectioned-article .section-description .column.column-left, .sectioned-article .section-description .column.column-center {
+        clear: left;
+        float: left; } }
+    @media only screen and (min-width: 1160px) {
+      .sectioned-article .section-description .column.column-left, .sectioned-article .section-description .column.column-center {
+        clear: none;
+        float: none; }
+      .sectioned-article .section-description .column.medium {
+        width: 40%; }
+      .sectioned-article .section-description .column.small {
+        width: 20%; } }
+    .sectioned-article .section-description .column h3 {
+      text-transform: uppercase;
+      margin-bottom: 12px; }
+    .sectioned-article .section-description .column .text {
+      border-top: 1px solid #fff;
+      padding-top: 12px; }
 
 /*# sourceMappingURL=main.css.map */

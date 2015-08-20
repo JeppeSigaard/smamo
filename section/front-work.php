@@ -5,6 +5,7 @@ if(!isset($post)){require '../../../../wp-load.php';}
 
 $cases = new WP_Query(array(
     'post_type' => 'case',
+    'post_parent' => 0,
 ));
 
 $products = new WP_Query(array(

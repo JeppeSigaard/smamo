@@ -14,6 +14,7 @@ $mb[] = array(
             'id'    => "attach_client",
             'type' => 'post',
             'post_type' => 'kunde',
+            'placeholder' => __('vælg en kunde'),
             
             ),
     ),

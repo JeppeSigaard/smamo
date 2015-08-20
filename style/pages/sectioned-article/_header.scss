@@ -1,0 +1,20 @@
+.sectioned-article .sectioned-header{
+    
+    img{
+        display: block;
+        width:100%;
+    }
+    
+    .page-header-title{
+        @include center(true,true);
+    }
+    
+    h1{
+        font-size:300%;
+        white-space: nowrap;
+    }
+    span{
+        font-size: 150%;
+    }
+    
+}

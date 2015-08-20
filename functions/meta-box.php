@@ -15,7 +15,6 @@ function smamo_add_boxes(){
         $smamo_user_list[$user->ID] = __($user->display_name); 
         
     }
-    
 
     require 'meta-box/cittaslow.php'; 
     require 'meta-box/hero.php'; 
@@ -23,6 +22,7 @@ function smamo_add_boxes(){
     require 'meta-box/klippekort.php'; 
     require 'meta-box/case.php'; 
     require 'meta-box/abonnement.php'; 
+    require 'meta-box/section-control.php'; 
 
 
 return $mb;

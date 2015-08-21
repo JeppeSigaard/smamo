@@ -2333,26 +2333,33 @@ body:not(.mobile) header.fixed .top-nav-menu ul {
     @media (min-width: 768px) {
       .chat-form .chat-stream {
         margin: 50px 0px 50px;
-        padding: 24px 60px 48px; }
-        .chat-form .chat-stream:before {
-          content: '';
-          border: 2px solid #c5c5c5;
-          border-top-width: 30px;
-          border-radius: 3px;
-          position: absolute;
-          top: -40px;
-          left: -40px;
-          bottom: -20px;
-          right: -40px;
-          background: #f0f0f0; }
-        .chat-form .chat-stream:after {
-          content: '';
-          background: url("../libs/img/icons/mac_navs.svg") no-repeat center left;
-          position: absolute;
-          top: -30px;
-          left: -30px;
-          height: 10px;
-          width: 50px; } }
+        padding: 24px 60px 48px
+        /*
+        &:before{
+            content: '';
+            border:2px solid darken($monkey-light,15);
+            border-top-width:30px;
+            border-radius: 3px;
+            position: absolute;
+            top: -40px;
+            left: -40px;
+            bottom: -20px;
+            right: -40px;
+            background:lighten($monkey-light,2);
+        }
+        
+        &:after{
+            content: '';
+            background: url('../libs/img/icons/mac_navs.svg') no-repeat center left;
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            height: 10px;
+            width: 50px;
+            
+            
+        }
+        */ } }
     .chat-form .chat-stream textarea {
       width: 100%;
       min-height: 1.5;

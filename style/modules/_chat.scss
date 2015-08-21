@@ -65,7 +65,7 @@ $chat-font-weight:300;
             
             margin:50px 0px 50px;
             padding:$base-margin*2 $chat-icon-size-large $base-margin*4;
-            
+            /*
             &:before{
                 content: '';
                 border:2px solid darken($monkey-light,15);
@@ -90,7 +90,7 @@ $chat-font-weight:300;
                 
                 
             }
-        
+            */
         }
         
         textarea{

@@ -33,7 +33,7 @@ body.menu-out{
     @media only screen and(min-width:640px){
         
         .top-nav-menu ul{
-            right:50px + $base-margin + $menu-width;
+            right:$header-height + $base-margin + $menu-width;
         }
         
     }
@@ -72,8 +72,8 @@ nav.top-nav{
         a{
             display: block;
             position:relative;
-            height:50px;
-            line-height:50px;
+            height:$header-height;
+            line-height:$header-height;
             padding:0px $base-margin;
             font-size:90%;
             transition:background-color 200ms;
@@ -131,9 +131,9 @@ nav.top-nav{
         ul{
             position:fixed;
             top:0;
-            height:50px;
-            line-height:50px;
-            right:50px + $base-margin;
+            height:$header-height;
+            line-height:$header-height;
+            right:$header-height + $base-margin;
             transition: all $menu-transition-time;
             transition-timing-function: $menu-transition-timing-function;
         }
@@ -142,7 +142,8 @@ nav.top-nav{
     
 }
 
-.home:not(.mobile){
+/*.home*/body:not(.mobile){
+    
     
     .hamburger{
         @media only screen and(min-width:768px){
@@ -150,15 +151,17 @@ nav.top-nav{
         }
     }
     
-    header.fixed .hamburger{
-        top:0;
-    }
-    
     .top-nav-menu ul{
         @media only screen and(min-width:768px){
         top:$base-margin;
         }
     }
+    
+    header.fixed .hamburger{
+        top:0;
+    }
+    
+    
     
     header.fixed .top-nav-menu ul{
         top:0;
@@ -180,8 +183,8 @@ nav.top-nav{
         right:13px;
     }
     
-    height:50px;
-    width:50px;
+    height:$header-height;
+    width:$header-height;
     
     &:hover{
         background-color:rgba($monkey-light,.1);

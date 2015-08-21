@@ -1,12 +1,13 @@
 $header-transition: 400ms;
 $header-transition-timing-function: cubic-bezier(.73, .15, .5, 1.5);
 $header-shadow:$base-shadow;
+$header-height:60px;
 
 @media only screen and(min-width:768px){
-    .home:not(.mobile) section.header-section{height:0px;}
+    /*.home:*/body:not(.mobile) section.header-section{height:0px;}
 }
 section.header-section{
-    height: 50px;
+    /*height: $header-height;*/
     padding: 0;
     margin: 0;
     overflow: visible;
@@ -26,12 +27,12 @@ header.header{
     left:0;
     right:0;
     position:fixed;
-    height:50px;
+    height:$header-height;
     width:100%;
 
     .header-logo{
-        height:50px;
-        width:50px;
+        height:$header-height;
+        width:$header-height;
         display: block;
 
 
@@ -41,9 +42,9 @@ header.header{
             display: block;
             margin:0px auto 0px $base-margin;
 
-            top:12px;
-            height:37px;
-            width:37px;
+            top:14px;
+            height:47px;
+            width:47px;
             
             .smart,.monkey{
                 display: none;
@@ -51,19 +52,19 @@ header.header{
         }
         
         .smartmonkey{
-            width: 100px;
+            width: 110px;
             position: absolute;
-            height:50px;
+            height:$header-height;
             top: 0px;
-            left: 50px;
+            left: $header-height;
             overflow:hidden;
             
             svg{
-                width: 90px;
-                margin-top:16px;
+                width: 110px;
+                margin-top:20px;
                 fill:$monkey-white;
                 stroke: $monkey-white;
-                stroke-width: 4px;
+                stroke-width: 2px;
             }
         }
     }
@@ -72,7 +73,7 @@ header.header{
 
 @media only screen and(min-width:768px){
     
-    .home:not(.mobile) header.header{
+    /*.home*/body:not(.mobile) header.header{
         z-index:1000;
         overflow: visible;
         position:absolute;
@@ -96,22 +97,22 @@ header.header{
         &.fixed{
             top:0;
             position:fixed;
-            height:50px;
+            height:$header-height;
             width:100%;
 
             .header-logo{
-                height:50px;
+                height:$header-height;
 
 
                 #smamologo{
-                    top:12px;
-                    height:37px;
-                    width:37px;
+                    top:14px;
+                    height:47px;
+                    width:47px;
                 }
             }
             
             .smartmonkey{
-                width:100px;
+                width:120px;
                 transition: width 300ms;
                 transition-delay: 400ms;
             }
@@ -125,7 +126,7 @@ header.header{
             position:absolute;
             background:$monkey-black;
             width:60px;
-            height:50px;
+            height:$header-height;
             top:0;
             transition-timing-function:$header-transition-timing-function;
 

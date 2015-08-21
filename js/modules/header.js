@@ -1,6 +1,6 @@
 $(function(){
     
-    if($('body').hasClass('home')){
+    /*if($('body').hasClass('home')){*/
 
         var breakPoint = 75;//parseInt($('.header').css('top'));
 
@@ -24,6 +24,6 @@ $(function(){
 
             });
         }
-    }
+    /*}*/
     
 });

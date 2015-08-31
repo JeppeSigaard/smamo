@@ -1,6 +1,6 @@
 <?php 
 //require 'post-types/cittaslow.php'; 
-//require 'post-types/kunde.php';
+require 'post-types/kunde.php';
 
 require 'post-types/hero.php';  
  

@@ -2,14 +2,14 @@ jQuery(function($){
 
     var smamo_section = {
         select : $('#section_type'),
-        main : $('#section_main, #postimagediv, #section_color'),
+        main : $('#section_main, #postimagediv'),
         slider : $('#section_slideshow'),
         description : $('#section_description'),
         single_image : $('#section_image'),
         case_grid : $('#section_case_grid'),
         snippet : $('#section_snippet'),
         plx_hero : $('#section_plx_hero'),
-        parent : $('#section_color'),
+        parent : $('#section_color, #info, #postimagediv'),
         article : $('#postdivrich'),
         hideAll : function(){
             for (var key in smamo_section) {

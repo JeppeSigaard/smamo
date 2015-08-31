@@ -1,0 +1,92 @@
+.grid-boxes{
+    
+    margin:0;
+    
+    .inner{
+         padding:$base-margin/2;
+    }
+
+}
+
+.grid-box{
+    position:relative;
+    overflow:hidden;
+    display: inline-block;
+    border:$base-margin/2 solid $monkey-light;
+    height: 0;
+    width:100%;
+    padding-bottom: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @extend %font-size;
+    
+    @media only screen and(min-width:480px){
+        width:50%;
+        padding-bottom: 40%;
+    }
+    
+    
+    @media only screen and(min-width:768px){
+        width:33.33333%;
+        padding-bottom: 28%;
+    }
+    
+    @media only screen and(min-width:960px){
+        width:25%;
+        padding-bottom: 20%;
+    }
+    
+    
+    
+    &:before{
+            content:'';
+            @extend %fill-all;
+            background-color:transparent;
+            transition: background .3s;
+            z-index:1;
+        }        
+    
+        span{
+            @include center(true,true,translate3d(0,0,0));
+            transition:top .2s;
+            transition-delay: 0s;
+            transition-timing-function: cubic-bezier(.79, .09, .62, .83);
+            display: block;
+            color:white;
+            font-size: 110%;
+            width:100%;
+            text-align: center;
+            z-index:2;
+            backface-visibility: hidden;
+
+   
+        
+            &:first-of-type{
+                margin-top:-12px;
+                top:0px;
+                font-weight:400;
+                text-transform: uppercase;
+            }
+
+            &:nth-of-type(2){
+                top:100%;
+                margin-top:12px;
+            }
+        
+        }
+        
+        &:hover span:first-of-type,
+        &:hover span:nth-of-type(2),
+        &.go span:first-of-type,
+        &.go span:nth-of-type(2){
+            top:50%;
+            transition-delay: 0s;
+            
+        }
+        
+        &:hover:before,
+        &.go:before{
+            background-color:rgba($monkey-black,.9);
+        }
+}

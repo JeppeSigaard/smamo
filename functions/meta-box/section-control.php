@@ -19,6 +19,8 @@ $mb[] = array(
                 'slider' => 'Slideshow',
                 'snippet' => 'Kodeblok',
                 'single_image' => 'Enkelt billede',
+                'case_grid' => 'Case grid',
+                'person_gallery' => 'Persongalleri, medarbejdere',
             ),
         ),
     ),
@@ -153,6 +155,25 @@ $mb[] = array(
             'id'    => "single_image",
             'type' => 'image_advanced',
             'max_file_uploads' => 1,
+            ),
+    ),
+);
+
+
+/* Single image */
+$mb[] = array(
+    'id' => 'section_case_grid',
+    'title' => __( 'Case grid', 'rwmb' ),
+    'pages' => array('case'),
+    'context' => 'normal',
+    'priority' => 'default',
+    'autosave' => true,
+    'fields' => array(
+        
+        array(
+            'name'  => __( 'Vis antal cases', 'rwmb' ),
+            'id'    => "case_grid_num",
+            'type' => 'number'
             ),
     ),
 );

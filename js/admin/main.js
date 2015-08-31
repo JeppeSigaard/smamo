@@ -6,6 +6,7 @@ jQuery(function($){
         slider : $('#section_slideshow'),
         description : $('#section_description'),
         single_image : $('#section_image'),
+        case_grid : $('#section_case_grid'),
         snippet : $('#section_snippet'),
         hideAll : function(){
             for (var key in smamo_section) {

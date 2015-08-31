@@ -14,6 +14,8 @@ get_header(); ?>
     </article>
 </section>
 
+<div class="async-load" data-load="<?php echo get_template_directory_uri() ?>/section/case-grid.php"></div>
+
 <div class="async-load" data-load="<?php echo get_template_directory_uri() ?>/section/person-gallery.php">
     <section class="person-gallery" id="team">
         <ul class="person-list box-container">
@@ -66,42 +68,6 @@ get_header(); ?>
                 </footer>
             </li>
         </ul>
-    </section>
-</div>
-
-<div class="async-load" data-load="<?php echo get_template_directory_uri() ?>/section/front-work.php">
-    <section class="slide-boxes front-work" id="work">
-        <div class="box-container wrap">
-            <div class="inner inner-left double">
-                <header>
-                    <div class="inner">
-                    <a href="#" class="button large">Cases</a>
-                    <nav>
-                       <a href="#" tabindex="-1" nofollow class="button-dir prev"></a>
-                       <a href="#" tabindex="-1" nofollow class="button-dir right next"></a>
-                    </nav>
-                    </div>
-                </header>
-                <div class="box-slider">
-                        <a href="#"></a>
-                        <a href="#"></a>
-                </div>
-            </div>
-            <div class="inner inner-right">
-                <header>
-                    <div class="inner">
-                    <a href="#" class="button large">Shop</a>
-                    <nav>
-                        <a href="#" tabindex="-1" nofollow class="button-dir prev"></a>
-                        <a href="#" tabindex="-1" nofollow class="button-dir right next"></a>
-                    </nav>
-                    </div>
-                </header>
-                <div class="box-slider shop">
-                    <a href="#"></a>
-                </div>
-            </div>
-        </div>
     </section>
 </div>
 

@@ -1,3 +1,11 @@
-#section_main,#section_slideshow,#section_description,#section_image,#section_snippet,#postimagediv{display:none}
+#section_main,
+#section_slideshow,
+#section_description,
+#section_image,
+#section_snippet,
+#postimagediv,
+#section_color,
+#section_case_grid {
+  display: none; }
 
 /*# sourceMappingURL=main.css.map */

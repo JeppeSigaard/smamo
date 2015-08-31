@@ -36,4 +36,37 @@ function smamo_add_hero() {
             ),
 	   )
     );
+    
 }
+
+
+add_action( 'init', 'register_hero_tax', 0 );
+
+function register_hero_tax() {
+	$labels = array(
+		'name'              => _x( 'Grupper', 'taxonomy general name' ),
+		'singular_name'     => _x( 'Gruppe', 'taxonomy singular name' ),
+		'search_items'      => __( 'Søg i Grupper' ),
+		'all_items'         => __( 'Alle Grupper' ),
+		'parent_item'       => __( 'Forælder' ),
+		'parent_item_colon' => __( 'Forælder:' ),
+		'edit_item'         => __( 'Rediger gruppe' ),
+		'update_item'       => __( 'Opdater gruppe' ),
+		'add_new_item'      => __( 'Tilføj ny gruppe' ),
+		'new_item_name'     => __( 'Nygruppe' ),
+		'menu_name'         => __( 'Grupper' ),
+	);
+
+	$args = array(
+		'hierarchical'      => true,
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+		'rewrite'           => array( 'slug' => 'hero_gruppe' ),
+	);
+
+	register_taxonomy( 'hero_gruppe', array( 'hero' ), $args );
+
+}
+

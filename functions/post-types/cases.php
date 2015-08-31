@@ -16,7 +16,7 @@ function smamo_add_cases() {
 		'has_archive'        => true,
 		'hierarchical'       => true,
 		'menu_position'      => 22,
-		'supports'           => array( 'title','thumbnail','page-attributes'),
+		'supports'           => array( 'title','thumbnail','editor','page-attributes'),
         'labels'             => array(
             
             'name'               => _x( 'Cases', 'post type general name', 'smamo' ),

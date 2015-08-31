@@ -8,6 +8,9 @@ jQuery(function($){
         single_image : $('#section_image'),
         case_grid : $('#section_case_grid'),
         snippet : $('#section_snippet'),
+        plx_hero : $('#section_plx_hero'),
+        parent : $('#section_color'),
+        article : $('#postdivrich'),
         hideAll : function(){
             for (var key in smamo_section) {
                 if (smamo_section.hasOwnProperty(key) && typeof smamo_section[key] !== 'function' && smamo_section[key] !== smamo_section.select ) {

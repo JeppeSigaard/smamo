@@ -22,6 +22,8 @@ $mb[] = array(
                 'single_image' => 'Enkelt billede',
                 'case_grid' => 'Case grid',
                 'person_gallery' => 'Persongalleri, medarbejdere',
+                'plx_hero'  => 'Hero banner(e)',
+                'article' => 'Centreret artikel',
             ),
         ),
     ),
@@ -161,7 +163,7 @@ $mb[] = array(
 );
 
 
-/* Single image */
+/* case grid */
 $mb[] = array(
     'id' => 'section_case_grid',
     'title' => __( 'Case grid', 'rwmb' ),
@@ -176,5 +178,36 @@ $mb[] = array(
             'id'    => "case_grid_num",
             'type' => 'number'
             ),
+    ),
+);
+
+
+/* case grid */
+$mb[] = array(
+    'id' => 'section_plx_hero',
+    'title' => __( 'Hero bannere', 'rwmb' ),
+    'pages' => array('case'),
+    'context' => 'normal',
+    'priority' => 'default',
+    'autosave' => true,
+    'fields' => array(
+        
+        array(
+            'name'  => __( 'Max antal bannere', 'rwmb' ),
+            'id'    => "hero_banner_num",
+            'type' => 'number',
+            'std'   => 12,
+            ),
+        
+        array(
+            'name'  => __( 'Max antal bannere', 'rwmb' ),
+            'id'    => "hero_banner_group",
+            'type' => 'taxonomy_advanced',
+            
+            'options' => array(
+                'taxonomy' => 'hero_gruppe',
+                'type'  => 'list',
+            ),
+        ),
     ),
 );

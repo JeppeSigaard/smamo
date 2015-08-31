@@ -2145,7 +2145,7 @@ body:not(.mobile) header.fixed .top-nav-menu ul {
       .person-gallery footer a:hover {
         text-decoration: underline; }
 
-.front-page-article, .form-cta {
+.front-page-article, .form-cta, .page-article {
   padding-top: 70px;
   padding-bottom: 100px; }
 

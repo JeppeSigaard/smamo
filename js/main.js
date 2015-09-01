@@ -6,6 +6,7 @@
 
 
 //@koala-append 'modules/hero.js';
+//@koala-append 'modules/adjust-elem-heights.js';
 //@koala-append 'modules/header.js';
 //@koala-append 'modules/form.js';
 //@koala-append 'modules/fancySidebars.js';

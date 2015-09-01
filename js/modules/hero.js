@@ -101,23 +101,6 @@ heroBannerInit = function(){
                 }
             });
         }
-        
-        // If not mobile, set hero height to full height
-        if(!is_mobile()){
-            
-            $('.hero').height($(window).height());
-            
-            // & reapply on resize
-            $(window).resize(function(){
-                $('.hero').height($(window).height());
-
-            });
-        }
-        
-        // Else do full height minus 50 and no resize jabber
-        else{
-             $('.hero').height($(window).height() - 50);
-        }
     }
 
 }

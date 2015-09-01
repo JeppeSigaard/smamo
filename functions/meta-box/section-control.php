@@ -1,6 +1,6 @@
 <?php 
 
-$type_array = array('case','post','page','team','kunde');
+$type_array = array('case','post','page','team');
 
 $mb[] = array(
     'id' => 'section-control',

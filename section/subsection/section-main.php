@@ -1,5 +1,5 @@
 <?php $image_url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'widescreen' ); ?>
-<section class="sectioned-header" style="background-image:url(<?php echo $image_url[0] ?>);">
+<section class="sectioned-header" data-bg="<?php echo $image_url[0] ?>">
     <div class="page-header-title">
         <?php if (get_post_meta(get_the_ID(),'main_title',true) !== '') :?>
         <div class="center"><h1 class="light-marker"><?php echo get_post_meta(get_the_ID(),'main_title',true); ?></h1></div>

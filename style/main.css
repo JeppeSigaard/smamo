@@ -1573,6 +1573,8 @@ body.menu-out .fancy-sidebars .fancy-asides {
 
 .grid-boxes {
   margin: 0; }
+  .grid-boxes .box-container {
+    max-width: none; }
   .grid-boxes .inner {
     padding: 6px; }
 

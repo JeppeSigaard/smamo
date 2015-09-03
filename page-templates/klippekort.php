@@ -1,8 +1,5 @@
 <?php 
 
-/*
-template name: Klippekort
-*/
 
 get_header();
 

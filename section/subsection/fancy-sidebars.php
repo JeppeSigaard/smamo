@@ -1,14 +1,13 @@
-<?php get_header(); ?>
 <section class="page fancy-sidebars">
     <main>
         <div class="inner">
             <?php while (have_posts()) : the_post(); ?>
             <header>
-                <h1 class="post-title"><?php the_title(); ?></h1>
+                <h2 class="post-title"><?php the_title(); ?></h2>
             </header>
-            <article <?php post_class(); ?>>
+            <div <?php post_class(); ?>>
                 <?php the_content(); ?>
-            </article>
+            </div>
             <?php endwhile; ?>
         </div>  
     </main>
@@ -19,5 +18,3 @@
         </aside>
     </div>
 </section>
-<?php get_template_part('section/form','cta')?>
-<?php get_footer(); ?>

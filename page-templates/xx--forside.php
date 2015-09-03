@@ -1,7 +1,4 @@
 <?php
-/*
-template name: Forside
-*/
 get_header(); ?>
 
 <?php get_template_part('section/parallax','hero'); ?>

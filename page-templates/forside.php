@@ -13,19 +13,6 @@ get_header(); ?>
     <?php endwhile; ?>
     </article>
 </section>
-<nav>
-    <ul>
-    <li>
-        <a href="#test">Click me</a>
-        <ul class="sub-menu"></ul>
-    </li>
-     <li>
-        <a href="#test">Click me</a>
-        <ul class="sub-menu"></ul>
-    </li>
-    </ul>
-</nav>
-
 <div class="async-load" data-load="<?php echo get_template_directory_uri() ?>/section/case-grid.php"></div>
 
 <div class="async-load" data-load="<?php echo get_template_directory_uri() ?>/section/person-gallery.php">

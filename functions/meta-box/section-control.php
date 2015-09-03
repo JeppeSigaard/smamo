@@ -26,6 +26,7 @@ $mb[] = array(
                 'person_gallery' => 'Persongalleri, medarbejdere',
                 'plx_hero'  => 'Hero banner(e)',
                 'article' => 'Centreret artikel',
+                'videobg' => 'Videobaggrund',
             ),
         ),
     ),
@@ -211,5 +212,26 @@ $mb[] = array(
                 'type'  => 'list',
             ),
         ),
+    ),
+);
+
+
+
+
+/* Video baggrund */
+$mb[] = array(
+    'id' => 'video-bg',
+    'title' => __( 'Videobaggrund', 'rwmb' ),
+    'pages' => $type_array,
+    'context' => 'normal',
+    'priority' => 'default',
+    'autosave' => true,
+    'fields' => array(
+        
+        array(
+            'name'  => __( 'Link til video', 'rwmb' ),
+            'id'    => "video_bg",
+            'type' => 'url',
+            ),
     ),
 );

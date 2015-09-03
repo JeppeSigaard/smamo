@@ -70,7 +70,7 @@ a, a:active, a:visited, a:hover {
     stroke-width: 0px; } }
 form label, form input[type="checkbox"]:after, .slide-boxes .flickity-viewport, .slide-boxes .flickity-slider, .slide-boxes .box-slider.shop a:before, .slide-boxes .box-slider.shop a:after, .grid-box:before, .hero .inner,
 .flickity-viewport,
-.flickity-slider, .front-work .box-slider a:before {
+.flickity-slider, .front-work .box-slider a:before, .subsection-video-bg .inner, .subsection-video-bg .video-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -2402,6 +2402,18 @@ nav.top-nav {
       background-repeat: no-repeat;
       background-position: center;
       min-height: 0px; }
+
+.subsection-video-bg {
+  margin: 0;
+  height: 100vh; }
+  .subsection-video-bg .inner, .subsection-video-bg .video-overlay {
+    overflow: hidden;
+    z-index: 2; }
+  .subsection-video-bg iframe {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%; }
 
 .footer {
   height: 450px;

@@ -2,3 +2,10 @@
 @import 'single-image';
 @import 'description';
 @import 'slideshow';
+
+.sectioned-article{
+    position:relative;
+    z-index:1;
+    transform: translate3d(0,0,0);
+    backface-visibility: hidden;
+}

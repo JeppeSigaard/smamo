@@ -3,165 +3,48 @@ $header-transition-timing-function: cubic-bezier(.73, .15, .5, 1.5);
 $header-shadow:$base-shadow;
 $header-height:60px;
 
-@media only screen and(min-width:768px){
-    /*.home:*/body:not(.mobile) section.header-section{height:0px;}
-}
-section.header-section{
-    /*height: $header-height;*/
-    padding: 0;
-    margin: 0;
-    overflow: visible;
-    z-index: 1000;
-}
-
-header.header{
+.header-section {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin:0;
+    height: $header-height;
+    overflow:visible;
     
-    z-index:1000;
-    overflow: visible;
-    position:absolute;
-    background: $monkey-black;
-    transition:height $header-transition, width $header-transition, left $menu-transition-time, right $menu-transition-time;
-    box-shadow: $header-shadow;
-    transition-timing-function:$header-transition-timing-function;
-    top:0;
-    left:0;
-    right:0;
-    position:fixed;
-    height:$header-height;
-    width:100%;
-
-    .header-logo{
-        height:$header-height;
-        width:$header-height;
-        display: block;
-
-
-        #smamologo{
-            fill:$monkey-white;
-            position:relative;
-            display: block;
-            margin:0px auto 0px $base-margin;
-
-            top:14px;
-            height:47px;
-            width:47px;
-            
-            .smart,.monkey{
-                display: none;
-            }
-        }
-        
-        .smartmonkey{
-            width: 110px;
-            position: absolute;
-            height:$header-height;
-            top: 0px;
-            left: $header-height;
-            overflow:hidden;
-            
-            svg{
-                width: 110px;
-                margin-top:20px;
-                fill:$monkey-white;
-                stroke: $monkey-white;
-                stroke-width: 2px;
-            }
-        }
-    }
-
-}
-
-@media only screen and(min-width:768px){
-    
-    /*.home*/body:not(.mobile) header.header{
-        z-index:1000;
-        overflow: visible;
+    .header{
         position:absolute;
-        top:75px;
-        height:80px;
-        width:0px;
-
-        .smartmonkey{
-            width:0;
-            transition: width 150ms;
-            transition-delay: 0ms;
-        }
-
-
-        background: $monkey-black;
-        transition:height $header-transition, width $header-transition, left $menu-transition-time, right $menu-transition-time;
-        box-shadow: $header-shadow;
-        transition-timing-function:$header-transition-timing-function;
-
-
+        top: $base-margin;
+        left: 0;
+        right: 0;
+        height: $header-height;
+        overflow:visible;
+        transition:left $menu-transition-time;
+        transition-timing-function: $header-transition-timing-function;
+        
         &.fixed{
             top:0;
             position:fixed;
-            height:$header-height;
             width:100%;
-
-            .header-logo{
-                height:$header-height;
-
-
-                #smamologo{
-                    top:14px;
-                    height:47px;
-                    width:47px;
-                }
-            }
-            
-            .smartmonkey{
-                width:120px;
-                transition: width 300ms;
-                transition-delay: 400ms;
-            }
-
         }
+    }
+    
+    .header-logo{
+        position: absolute;
+        top: 60px;
+        width: 100px;
+        height: 80px;
+        left: 0;
+        text-align: right;
+        box-shadow: 1px 1px 4px rgba(52, 52, 52, 0.3);
+        background: #343434;
         
-        
-        .header-logo{
-            transition:height $header-transition, width $header-transition;
-            display: block;
-            position:absolute;
-            background:$monkey-black;
-            width:60px;
-            height:$header-height;
-            top:0;
-            transition-timing-function:$header-transition-timing-function;
-
-            @media only screen and(min-width:768px){
-                height:80px;
-                width:95px;
-            }
-
-
-            #smamologo{
-                transition:height $header-transition, width $header-transition, top $header-transition, left $header-transition;
-                fill:$monkey-white;
-                position:relative;
-                display: block;
-                margin:0px auto 0px $base-margin;
-
-                top:11px;
-                height:35px;
-                width:35px;
-
-
-                @media only screen and(min-width:768px){
-
-                    top:14px;
-                    height:70px;
-                    width:70px;
-
-                }
-
-                transition-timing-function:$header-transition-timing-function;
-
-                .smart,.monkey{
-                    display: none;
-                }
-            }
+        svg{
+            position: absolute;
+            height: 78px;
+            right: 0;
+            width: 88px;
         }
     }
 }

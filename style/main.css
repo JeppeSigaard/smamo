@@ -1671,135 +1671,45 @@ body.menu-out .fancy-sidebars .fancy-asides {
 .top-space {
   height: 50px; }
 
-@media only screen and (min-width: 768px) {
-  /*.home:*/
-  body:not(.mobile) section.header-section {
-    height: 0px; } }
-section.header-section {
-  /*height: $header-height;*/
-  padding: 0;
-  margin: 0;
-  overflow: visible;
-  z-index: 1000; }
-
-header.header {
-  z-index: 1000;
-  overflow: visible;
+.header-section {
   position: absolute;
-  background: #343434;
-  -webkit-transition: height 400ms, width 400ms, left 0.2s, right 0.2s;
-          transition: height 400ms, width 400ms, left 0.2s, right 0.2s;
-  box-shadow: 1px 1px 4px rgba(52, 52, 52, 0.3);
-  -webkit-transition-timing-function: cubic-bezier(0.73, 0.15, 0.5, 1.5);
-          transition-timing-function: cubic-bezier(0.73, 0.15, 0.5, 1.5);
+  z-index: 100;
   top: 0;
   left: 0;
   right: 0;
-  position: fixed;
+  margin: 0;
   height: 60px;
-  width: 100%; }
-  header.header .header-logo {
-    height: 60px;
-    width: 60px;
-    display: block; }
-    header.header .header-logo #smamologo {
-      fill: #ffffff;
-      position: relative;
-      display: block;
-      margin: 0px auto 0px 12px;
-      top: 14px;
-      height: 47px;
-      width: 47px; }
-      header.header .header-logo #smamologo .smart, header.header .header-logo #smamologo .monkey {
-        display: none; }
-    header.header .header-logo .smartmonkey {
-      width: 110px;
-      position: absolute;
-      height: 60px;
-      top: 0px;
-      left: 60px;
-      overflow: hidden; }
-      header.header .header-logo .smartmonkey svg {
-        width: 110px;
-        margin-top: 20px;
-        fill: #ffffff;
-        stroke: #ffffff;
-        stroke-width: 2px; }
-
-@media only screen and (min-width: 768px) {
-  /*.home*/
-  body:not(.mobile) header.header {
-    z-index: 1000;
-    overflow: visible;
+  overflow: visible; }
+  .header-section .header {
     position: absolute;
-    top: 75px;
-    height: 80px;
-    width: 0px;
-    background: #343434;
-    -webkit-transition: height 400ms, width 400ms, left 0.2s, right 0.2s;
-            transition: height 400ms, width 400ms, left 0.2s, right 0.2s;
-    box-shadow: 1px 1px 4px rgba(52, 52, 52, 0.3);
+    top: 12px;
+    left: 0;
+    right: 0;
+    height: 60px;
+    overflow: visible;
+    -webkit-transition: left 0.2s;
+            transition: left 0.2s;
     -webkit-transition-timing-function: cubic-bezier(0.73, 0.15, 0.5, 1.5);
             transition-timing-function: cubic-bezier(0.73, 0.15, 0.5, 1.5); }
-    body:not(.mobile) header.header .smartmonkey {
-      width: 0;
-      -webkit-transition: width 150ms;
-              transition: width 150ms;
-      -webkit-transition-delay: 0ms;
-              transition-delay: 0ms; }
-    body:not(.mobile) header.header.fixed {
+    .header-section .header.fixed {
       top: 0;
       position: fixed;
-      height: 60px;
       width: 100%; }
-      body:not(.mobile) header.header.fixed .header-logo {
-        height: 60px; }
-        body:not(.mobile) header.header.fixed .header-logo #smamologo {
-          top: 14px;
-          height: 47px;
-          width: 47px; }
-      body:not(.mobile) header.header.fixed .smartmonkey {
-        width: 120px;
-        -webkit-transition: width 300ms;
-                transition: width 300ms;
-        -webkit-transition-delay: 400ms;
-                transition-delay: 400ms; }
-    body:not(.mobile) header.header .header-logo {
-      -webkit-transition: height 400ms, width 400ms;
-              transition: height 400ms, width 400ms;
-      display: block;
+  .header-section .header-logo {
+    position: absolute;
+    top: 60px;
+    width: 100px;
+    height: 80px;
+    left: 0;
+    text-align: right;
+    box-shadow: 1px 1px 4px rgba(52, 52, 52, 0.3);
+    background: #343434; }
+    .header-section .header-logo svg {
       position: absolute;
-      background: #343434;
-      width: 60px;
-      height: 60px;
-      top: 0;
-      -webkit-transition-timing-function: cubic-bezier(0.73, 0.15, 0.5, 1.5);
-              transition-timing-function: cubic-bezier(0.73, 0.15, 0.5, 1.5); } }
-    @media only screen and (min-width: 768px) and (min-width: 768px) {
-      body:not(.mobile) header.header .header-logo {
-        height: 80px;
-        width: 95px; } }
-@media only screen and (min-width: 768px) {
-      body:not(.mobile) header.header .header-logo #smamologo {
-        -webkit-transition: height 400ms, width 400ms, top 400ms, left 400ms;
-                transition: height 400ms, width 400ms, top 400ms, left 400ms;
-        fill: #ffffff;
-        position: relative;
-        display: block;
-        margin: 0px auto 0px 12px;
-        top: 11px;
-        height: 35px;
-        width: 35px;
-        -webkit-transition-timing-function: cubic-bezier(0.73, 0.15, 0.5, 1.5);
-                transition-timing-function: cubic-bezier(0.73, 0.15, 0.5, 1.5); } }
-      @media only screen and (min-width: 768px) and (min-width: 768px) {
-        body:not(.mobile) header.header .header-logo #smamologo {
-          top: 14px;
-          height: 70px;
-          width: 70px; } }
-@media only screen and (min-width: 768px) {
-        body:not(.mobile) header.header .header-logo #smamologo .smart, body:not(.mobile) header.header .header-logo #smamologo .monkey {
-          display: none; } }
+      height: 78px;
+      right: 0;
+      width: 88px; }
+
 body {
   -webkit-transition: right 0.2s;
           transition: right 0.2s;
@@ -1818,14 +1728,6 @@ body.menu-out {
     left: -240px; }
   body.menu-out .top-nav-menu {
     right: 0; }
-  body.menu-out .hamburger {
-    right: 240px; }
-    @media only screen and (min-width: 640px) {
-      body.menu-out .hamburger {
-        right: 252px; } }
-  @media only screen and (min-width: 640px) {
-    body.menu-out .top-nav-menu ul {
-      right: 312px; } }
 
 nav.top-nav {
   position: absolute;
@@ -1842,11 +1744,6 @@ nav.top-nav {
     display: block;
     vertical-align: top;
     color: #343434; }
-    @media only screen and (min-width: 640px) {
-      nav.top-nav ul li {
-        display: inline-block;
-        vertical-align: top;
-        color: #ffffff; } }
     nav.top-nav ul li a {
       display: block;
       position: relative;
@@ -1891,35 +1788,12 @@ nav.top-nav {
     display: block;
     padding: 12px 0;
     border-bottom: 1px solid #d2d2d2; }
-  @media only screen and (min-width: 640px) {
-    .top-nav-menu ul {
-      position: fixed;
-      top: 0;
-      height: 60px;
-      line-height: 60px;
-      right: 72px;
-      -webkit-transition: all 0.2s;
-              transition: all 0.2s;
-      -webkit-transition-timing-function: cubic-bezier(0.73, 0.15, 0.5, 1.5);
-              transition-timing-function: cubic-bezier(0.73, 0.15, 0.5, 1.5); } }
-
-/*.home*/
-@media only screen and (min-width: 768px) {
-  body:not(.mobile) .hamburger {
-    top: 12px; } }
-@media only screen and (min-width: 768px) {
-  body:not(.mobile) .top-nav-menu ul {
-    top: 12px; } }
-body:not(.mobile) header.fixed .hamburger {
-  top: 0; }
-body:not(.mobile) header.fixed .top-nav-menu ul {
-  top: 0; }
 
 .hamburger {
   font-size: 0;
-  position: fixed;
+  position: absolute;
   top: 0;
-  right: 0;
+  right: 12px;
   -webkit-transition: all 0.2s;
           transition: all 0.2s;
   -webkit-transition-timing-function: cubic-bezier(0.73, 0.15, 0.5, 1.5);
@@ -1927,10 +1801,6 @@ body:not(.mobile) header.fixed .top-nav-menu ul {
   background: transparent url("../libs/img/icons/menu_white.svg") no-repeat center;
   height: 60px;
   width: 60px; }
-  @media only screen and (min-width: 640px) {
-    .hamburger {
-      background: transparent url("../libs/img/icons/more_vert_white.svg") no-repeat center;
-      right: 13px; } }
   .hamburger:hover {
     background-color: rgba(235, 235, 235, 0.1); }
 
@@ -2534,25 +2404,10 @@ body:not(.mobile) header.fixed .top-nav-menu ul {
       min-height: 0px; }
 
 .footer {
-  margin: 12px;
-  margin-top: 50px;
-  padding: 0px 0px 50px;
-  min-height: 350px; }
-  .footer .footer-before {
-    border-bottom: 2px dashed rgba(52, 52, 52, 0.5);
-    margin-bottom: 20px; }
-    .footer .footer-before .heart {
-      background: #ebebeb; }
-  .footer .center {
-    margin-top: 24px; }
-  .footer .smartmonkey {
-    width: 180px;
-    margin: 24px auto 0;
-    height: 50px;
-    position: relative;
-    display: block; }
-    .footer .smartmonkey svg {
-      fill: #454545; }
+  position: fixed;
+  background: #333;
+  z-index: -1;
+  min-height: 400px; }
 
 .klippekort {
   padding: 12px;
@@ -2784,11 +2639,5 @@ li.task {
       position: absolute;
       height: auto;
       width: 50px; }
-
-.sectioned-article {
-  margin-top: 60px; }
-  @media only screen and (min-width: 768px) {
-    .sectioned-article {
-      margin-top: 0; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -13,29 +13,14 @@ body{
 body.menu-out{
     left:auto;
     right:$menu-width;
-   
+    
+    
     header.header{
         left:-$menu-width;
     }
     
     .top-nav-menu{
         right:0;
-    }
-    
-    .hamburger{
-        right:$menu-width;
-        @media only screen and(min-width:640px){
-            right:$menu-width + $base-margin;
-        }
-        
-    }
-    
-    @media only screen and(min-width:640px){
-        
-        .top-nav-menu ul{
-            right:$header-height + $base-margin + $menu-width;
-        }
-        
     }
     
 }
@@ -60,14 +45,6 @@ nav.top-nav{
         display: block;
         vertical-align: top;
         color:$monkey-black;
-        
-        @media only screen and(min-width:640px){
-        
-            display: inline-block;
-            vertical-align: top;
-            color:$monkey-white;
-            
-        }
         
         a{
             display: block;
@@ -125,63 +102,19 @@ nav.top-nav{
         padding:$base-margin 0;
         border-bottom: 1px solid darken($monkey-light,10);
     }
-    
-    @media only screen and(min-width:640px){
-        
-        ul{
-            position:fixed;
-            top:0;
-            height:$header-height;
-            line-height:$header-height;
-            right:$header-height + $base-margin;
-            transition: all $menu-transition-time;
-            transition-timing-function: $menu-transition-timing-function;
-        }
-        
-    }
-    
 }
-
-/*.home*/body:not(.mobile){
     
-    
-    .hamburger{
-        @media only screen and(min-width:768px){
-            top:$base-margin;
-        }
-    }
-    
-    .top-nav-menu ul{
-        @media only screen and(min-width:768px){
-        top:$base-margin;
-        }
-    }
-    
-    header.fixed .hamburger{
-        top:0;
-    }
-    
-    
-    
-    header.fixed .top-nav-menu ul{
-        top:0;
-    }
-}
 
 
 .hamburger{
     
     font-size: 0;
-    position:fixed;
+    position:absolute;
     top:0;
-    right:0;
+    right:$base-margin;
     transition: all $menu-transition-time;
     transition-timing-function: $menu-transition-timing-function;
     background:transparent url('../libs/img/icons/menu_white.svg') no-repeat center;
-    @media only screen and(min-width:640px){
-        background:transparent url('../libs/img/icons/more_vert_white.svg') no-repeat center;
-        right:13px;
-    }
     
     height:$header-height;
     width:$header-height;

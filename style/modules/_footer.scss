@@ -1,33 +1,6 @@
 .footer{
-    margin:$base-margin;
-    margin-top:50px;
-    padding:0px 0px 50px ;
-    min-height: 350px;
-
-    .footer-before{
-        border-bottom:2px dashed rgba($monkey-black,.5);
-        margin-bottom: 20px;
-        
-        .heart{
-            background:$monkey-light;
-        }
-        
-    }
-    
-    .center{
-        margin-top: $base-margin * 2;
-    }
-    
-    .smartmonkey{
-        width: 180px;
-        margin: $base-margin * 2 auto 0;
-        height: 50px;
-        position: relative;
-        display: block;
-        
-        svg{
-            fill:$monkey-black-2;
-        }
-    }
-    
+    position:fixed;
+    background:#333;
+    z-index:-1;
+    min-height:400px;
 }

@@ -1,6 +1,6 @@
 var adjustElemHeights = function(){
     
-    $('.hero, .sectioned-header, .section-slider, .section-single_image').each(function(){
+    $('.sectioned-header, .section-slider, .section-single_image').each(function(){
     
     
     

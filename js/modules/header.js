@@ -2,7 +2,7 @@ $(function(){
     
     /*if($('body').hasClass('home')){*/
 
-        var breakPoint = 75;//parseInt($('.header').css('top'));
+        var breakPoint = 12;//parseInt($('.header').css('top'));
 
         if(!is_mobile()){
         
@@ -17,8 +17,6 @@ $(function(){
                 else{
 
                     $('.header').removeClass('fixed');
-
-                    $('body.menu-out').removeClass('menu-out');
 
                 }
 

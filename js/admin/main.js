@@ -9,7 +9,7 @@ jQuery(function($){
         case_grid : $('#section_case_grid'),
         snippet : $('#section_snippet'),
         plx_hero : $('#section_plx_hero'),
-        parent : $('#section_color, #info, #postimagediv, #attach_client'),
+        parent : $('#section_color, #info, #postimagediv, #attach_client, #add_user'),
         article : $('#postdivrich'),
         hideAll : function(){
             for (var key in smamo_section) {

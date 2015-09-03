@@ -6,14 +6,14 @@ var adjustElemHeights = function(){
     
     
         // If not mobile, set hero height to full height
-        if(!is_mobile()){
+        if(!is_mobile() && $(window).width() > 768){
 
-            $(this).height($(window).height());
+            $(this).height($(window).height() - 24);
         }
 
         // Else do full height minus 50 and no resize jabber
         else{
-             $(this).height($(window).height() - 50);
+             $(this).height($(window).height() - 84);
         }
         
     });

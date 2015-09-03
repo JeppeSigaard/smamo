@@ -5,6 +5,7 @@ if(!isset($post)){require '../../../../wp-load.php';}
 $person = new WP_Query(array(
     
     'posts_per_page' => 4,
+    'post_parent'   => 0,
     'post_type' => 'team',
     'post_status' => 'publish',
     'orderby'   => 'menu_order',

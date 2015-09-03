@@ -14,9 +14,9 @@ function smamo_add_users() {
 		'rewrite'            => array( 'slug' => 'team' ),
 		'capability_type'    => 'post',
 		'has_archive'        => true,
-		'hierarchical'       => false,
+		'hierarchical'       => true,
 		'menu_position'      => 22,
-		'supports'           => array( 'title'),
+		'supports'           => array( 'title','page-attributes'),
         'labels'             => array(
             
             'name'               => _x( 'Team', 'post type general name', 'smamo' ),

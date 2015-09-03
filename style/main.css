@@ -2749,38 +2749,46 @@ li.task {
       border-top: 1px solid #fff;
       padding-top: 12px; }
 
-.section-slider .inner {
-  height: 100%;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0; }
-  .section-slider .inner .flickity-viewport {
-    position: absolute; }
-  .section-slider .inner div {
+.section-slider {
+  overflow: hidden; }
+  .section-slider .inner {
     height: 100%;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeet; }
-    .section-slider .inner div img {
-      width: 100%; }
-  .section-slider .inner .flickity-page-dots {
-    bottom: 24px; }
-    .section-slider .inner .flickity-page-dots .dot {
-      width: 18px;
-      height: 18px;
-      border-radius: 12px;
-      opacity: 1;
-      background: #ebebeb;
-      -webkit-transition: background .2s;
-              transition: background .2s; }
-      .section-slider .inner .flickity-page-dots .dot:hover, .section-slider .inner .flickity-page-dots .dot.is-selected {
-        background: #343434; }
-  .section-slider .inner .prev-next-right {
-    bottom: 20px;
-    position: absolute;
-    height: auto;
-    width: 50px; }
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; }
+    .section-slider .inner .flickity-viewport {
+      position: absolute; }
+    .section-slider .inner div {
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeet; }
+      .section-slider .inner div img {
+        width: 100%; }
+    .section-slider .inner .flickity-page-dots {
+      bottom: 24px; }
+      .section-slider .inner .flickity-page-dots .dot {
+        width: 18px;
+        height: 18px;
+        border-radius: 12px;
+        opacity: 1;
+        background: #ebebeb;
+        -webkit-transition: background .2s;
+                transition: background .2s; }
+        .section-slider .inner .flickity-page-dots .dot:hover, .section-slider .inner .flickity-page-dots .dot.is-selected {
+          background: #343434; }
+    .section-slider .inner .prev-next-right {
+      bottom: 20px;
+      position: absolute;
+      height: auto;
+      width: 50px; }
+
+.sectioned-article {
+  margin-top: 60px; }
+  @media only screen and (min-width: 768px) {
+    .sectioned-article {
+      margin-top: 0; } }
 
 /*# sourceMappingURL=main.css.map */

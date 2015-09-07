@@ -11,7 +11,7 @@ jQuery(function($){
         plx_hero : $('#section_plx_hero'),
         parent : $('#section_color, #info, #postimagediv, #attach_client, #add_user'),
         article : $('#postdivrich'),
-        videobg : $('#video-bg'),
+        videobg : $('#video-bg, #section_main'),
         hideAll : function(){
             for (var key in smamo_section) {
                 if (smamo_section.hasOwnProperty(key) && typeof smamo_section[key] !== 'function' && smamo_section[key] !== smamo_section.select ) {

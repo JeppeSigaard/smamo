@@ -1,4 +1,12 @@
-
+function youtube_parser(url){
+    var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
+    var match = url.match(regExp);
+    if (match&&match[7].length==11){
+        return match[7];
+    }else{
+        alert("Url incorrecta");
+    }
+}
 
 var set_video_play = function(){
     
@@ -7,8 +15,8 @@ var set_video_play = function(){
      /* Tilføj autoplay, loop og playlist til url, hvis youtube ID findes */
         var source = $(this).attr('src');
         if(source){
-
-            $(this).attr('src',source+'&autoplay=1&loop=1&rel=0');
+            var ytID = youtube_parser(source);
+            $(this).attr('src',source+'&autoplay=1&loop=1&playlist='+ytID);
 
         }
     });

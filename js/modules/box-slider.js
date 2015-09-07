@@ -38,7 +38,7 @@ var SlideBoxesInit = function(){
             
         });    
         
-        $('.box-slider a').off().on('touchstart',function(e){
+        $('.box-slider a, .grid-boxes a').off().on('touchstart',function(e){
             var t = $(e.target);
             if (!$(this).hasClass('go')){
                 

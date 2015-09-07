@@ -4,11 +4,13 @@
 if(!isset($post)){require '../../../../../wp-load.php';}
 
 
+
 $grid_num = (get_post_meta(get_the_ID(),'case_grid_num',true)) ? get_post_meta(get_the_ID(),'case_grid_num',true): 12;
 $cases = new WP_Query(array(
     'post_type' => 'case',
     'post_parent' => 0,
     'posts_per_page' => $grid_num,
+    'post__not_in' => array((defined('BASE_ID')) ? BASE_ID : ''),
 ));
 
 ?>

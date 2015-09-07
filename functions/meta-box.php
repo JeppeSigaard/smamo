@@ -22,6 +22,7 @@ function smamo_add_boxes(){
     require 'meta-box/klippekort.php'; 
     require 'meta-box/case.php'; 
     require 'meta-box/abonnement.php'; 
+    require 'meta-box/kunde.php'; 
     require 'meta-box/section-control.php'; 
 
 

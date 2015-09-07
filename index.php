@@ -1,15 +1,19 @@
 <?php 
-$base_id = get_the_ID();
+
+global $post;
+define('BASE_ID',$post->ID);
+
 
 if ($post->post_parent)	{
-    $ancestors=get_post_ancestors($post->ID);
+    $ancestors=get_post_ancestors(BASE_ID);
     $root=count($ancestors)-1;
     $parent = $ancestors[$root];
 } else {
-    $parent = $post->ID;
+    $parent = BASE_ID;
 }
 
 get_header(); 
+
 ?>
 
 <article <?php post_class('sectioned-article post-'.$parent); ?>>
@@ -28,7 +32,7 @@ get_header();
 
     foreach($children_array as $post) : setup_postdata($post);
 
-    if ($post->ID == $base_id){ echo '<span class="scroll-anchor"></span>';}
+    if ($post->ID == BASE_ID){ echo '<span class="scroll-anchor"></span>';}
     
     $section_type = get_post_meta(get_the_ID(),'section_type',true);
 

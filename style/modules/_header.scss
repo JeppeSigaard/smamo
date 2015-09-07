@@ -1,5 +1,5 @@
 $header-transition: 400ms;
-$header-transition-timing-function: cubic-bezier(.73, .15, .5, 1.5);
+$header-transition-timing-function: $menu-transition-timing-function;
 $header-shadow:$base-shadow;
 $header-height:60px;
 
@@ -33,7 +33,7 @@ $header-height:60px;
     .header-logo{
         position: absolute;
         top: 60px;
-        width: 100px;
+        width: 90px;
         height: 80px;
         left: 0;
         text-align: right;
@@ -42,9 +42,10 @@ $header-height:60px;
         
         svg{
             position: absolute;
-            height: 78px;
-            right: 0;
-            width: 88px;
+            height: 75px;
+            right: 0px;
+            top: 2px;
+            width: 75px;
         }
     }
 }

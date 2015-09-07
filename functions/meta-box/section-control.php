@@ -124,7 +124,6 @@ $mb[] = array(
 
 
 
-
 /* Slideshow */
 $mb[] = array(
     'id' => 'section_slideshow',

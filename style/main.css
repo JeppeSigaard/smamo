@@ -1027,18 +1027,19 @@ body .chat-form .inner .button:visited,
 .box-container {
   font-size: 0;
   max-width: 1200px;
-  margin: auto; }
+  margin: auto;
+  padding: 0; }
 
 .box {
   vertical-align: top;
   display: inline-block;
-  width: 50%;
+  width: 100%;
   height: 100%;
   overflow: hidden;
   padding: 6px; }
   @media only screen and (min-width: 640px) {
     .box {
-      width: 25%; } }
+      width: 33.33333%; } }
 
 :invalid {
   box-shadow: none; }
@@ -1398,8 +1399,8 @@ form {
       padding: 12px 12px 12px 6px;
       -webkit-transition: right 0.2s;
               transition: right 0.2s;
-      -webkit-transition-timing-function: cubic-bezier(0.73, 0.15, 0.5, 1.5);
-              transition-timing-function: cubic-bezier(0.73, 0.15, 0.5, 1.5);
+      -webkit-transition-timing-function: cubic-bezier(0.99, 0.3, 0.21, 0.88);
+              transition-timing-function: cubic-bezier(0.99, 0.3, 0.21, 0.88);
       width: 33%;
       top: 50px;
       right: 0;
@@ -1411,8 +1412,8 @@ form {
         width: auto;
         -webkit-transition: right 0.2s;
                 transition: right 0.2s;
-        -webkit-transition-timing-function: cubic-bezier(0.73, 0.15, 0.5, 1.5);
-                transition-timing-function: cubic-bezier(0.73, 0.15, 0.5, 1.5); }
+        -webkit-transition-timing-function: cubic-bezier(0.99, 0.3, 0.21, 0.88);
+                transition-timing-function: cubic-bezier(0.99, 0.3, 0.21, 0.88); }
         .fancy-sidebars .fancy-asides aside:nth-of-type(2) {
           margin-top: 12px; }
       .fancy-sidebars .fancy-asides.stop, .fancy-sidebars .fancy-asides.start {
@@ -1576,13 +1577,14 @@ body.menu-out .fancy-sidebars .fancy-asides {
   .grid-boxes .box-container {
     max-width: none; }
   .grid-boxes .inner {
-    padding: 6px; }
+    padding: 6px;
+    background-color: #ffffff; }
 
 .grid-box {
   position: relative;
   overflow: hidden;
   display: inline-block;
-  border: 6px solid #ebebeb;
+  border: 6px solid #ffffff;
   height: 0;
   width: 100%;
   padding-bottom: 80%;
@@ -1597,7 +1599,7 @@ body.menu-out .fancy-sidebars .fancy-asides {
     .grid-box {
       width: 33.33333%;
       padding-bottom: 28%; } }
-  @media only screen and (min-width: 960px) {
+  @media only screen and (min-width: 1280px) {
     .grid-box {
       width: 25%;
       padding-bottom: 20%; } }
@@ -1689,8 +1691,8 @@ body.menu-out .fancy-sidebars .fancy-asides {
     overflow: visible;
     -webkit-transition: left 0.2s;
             transition: left 0.2s;
-    -webkit-transition-timing-function: cubic-bezier(0.73, 0.15, 0.5, 1.5);
-            transition-timing-function: cubic-bezier(0.73, 0.15, 0.5, 1.5); }
+    -webkit-transition-timing-function: cubic-bezier(0.99, 0.3, 0.21, 0.88);
+            transition-timing-function: cubic-bezier(0.99, 0.3, 0.21, 0.88); }
     .header-section .header.fixed {
       top: 0;
       position: fixed;
@@ -1698,7 +1700,7 @@ body.menu-out .fancy-sidebars .fancy-asides {
   .header-section .header-logo {
     position: absolute;
     top: 60px;
-    width: 100px;
+    width: 90px;
     height: 80px;
     left: 0;
     text-align: right;
@@ -1706,15 +1708,16 @@ body.menu-out .fancy-sidebars .fancy-asides {
     background: #343434; }
     .header-section .header-logo svg {
       position: absolute;
-      height: 78px;
-      right: 0;
-      width: 88px; }
+      height: 75px;
+      right: 0px;
+      top: 2px;
+      width: 75px; }
 
 body {
   -webkit-transition: right 0.2s;
           transition: right 0.2s;
-  -webkit-transition-timing-function: cubic-bezier(0.73, 0.15, 0.5, 1.5);
-          transition-timing-function: cubic-bezier(0.73, 0.15, 0.5, 1.5);
+  -webkit-transition-timing-function: cubic-bezier(0.99, 0.3, 0.21, 0.88);
+          transition-timing-function: cubic-bezier(0.99, 0.3, 0.21, 0.88);
   right: 0;
   width: 100%;
   position: relative;
@@ -1774,8 +1777,8 @@ nav.top-nav {
   width: 240px;
   -webkit-transition: right 0.2s;
           transition: right 0.2s;
-  -webkit-transition-timing-function: cubic-bezier(0.73, 0.15, 0.5, 1.5);
-          transition-timing-function: cubic-bezier(0.73, 0.15, 0.5, 1.5);
+  -webkit-transition-timing-function: cubic-bezier(0.99, 0.3, 0.21, 0.88);
+          transition-timing-function: cubic-bezier(0.99, 0.3, 0.21, 0.88);
   padding: 0 12px;
   height: 100vh;
   min-height: 500px;
@@ -1796,9 +1799,12 @@ nav.top-nav {
   right: 12px;
   -webkit-transition: all 0.2s;
           transition: all 0.2s;
-  -webkit-transition-timing-function: cubic-bezier(0.73, 0.15, 0.5, 1.5);
-          transition-timing-function: cubic-bezier(0.73, 0.15, 0.5, 1.5);
-  background: transparent url("../libs/img/icons/menu_white.svg") no-repeat center;
+  -webkit-transition-timing-function: cubic-bezier(0.99, 0.3, 0.21, 0.88);
+          transition-timing-function: cubic-bezier(0.99, 0.3, 0.21, 0.88);
+  background: #333 url("../libs/img/icons/menu_white.svg") no-repeat center;
+  border-radius: 60px;
+  top: 12px;
+  right: 24px;
   height: 60px;
   width: 60px; }
   .hamburger:hover {
@@ -1963,8 +1969,8 @@ nav.top-nav {
 
 .person-gallery {
   margin: 0;
-  padding: 6px;
-  background: #ffffff;
+  padding: 90px 6px 120px;
+  background: #ebebeb;
   position: relative; }
   .person-gallery .box {
     position: relative; }
@@ -2562,23 +2568,27 @@ li.task {
   text-align: right;
   padding: 6px 0; }
 
-.sectioned-article .sectioned-header {
+.sectioned-article .sectioned-header,
+.video-overlay {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   margin: 0;
   border: 12px solid #ebebeb; }
-  .sectioned-article .sectioned-header .page-header-title {
+  .sectioned-article .sectioned-header .page-header-title,
+  .video-overlay .page-header-title {
     position: absolute;
     left: 50%;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); }
-  .sectioned-article .sectioned-header h1 {
+  .sectioned-article .sectioned-header h1,
+  .video-overlay h1 {
     font-size: 300%;
     white-space: nowrap; }
-  .sectioned-article .sectioned-header span {
+  .sectioned-article .sectioned-header span,
+  .video-overlay span {
     font-size: 150%; }
 
 .sectioned-article .section-single_image {
@@ -2626,6 +2636,22 @@ li.task {
     .sectioned-article .section-description .column .text {
       border-top: 1px solid #fff;
       padding-top: 12px; }
+      .sectioned-article .section-description .column .text .task {
+        padding-left: 20px;
+        position: relative; }
+        .sectioned-article .section-description .column .text .task:before {
+          content: '';
+          position: absolute;
+          display: block;
+          left: 0;
+          top: 2px;
+          width: 5px;
+          height: 11px;
+          border-bottom: 3px solid #fff;
+          border-right: 3px solid #fff;
+          -webkit-transform: rotate(40deg);
+              -ms-transform: rotate(40deg);
+                  transform: rotate(40deg); }
 
 .section-slider {
   overflow: hidden; }
@@ -2669,6 +2695,7 @@ li.task {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden; }
+          backface-visibility: hidden;
+  min-height: 100vh; }
 
 /*# sourceMappingURL=main.css.map */

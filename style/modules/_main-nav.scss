@@ -114,7 +114,10 @@ nav.top-nav{
     right:$base-margin;
     transition: all $menu-transition-time;
     transition-timing-function: $menu-transition-timing-function;
-    background:transparent url('../libs/img/icons/menu_white.svg') no-repeat center;
+    background:#333 url('../libs/img/icons/menu_white.svg') no-repeat center;
+    border-radius: $header-height;
+    top: 12px;
+    right: 24px;
     
     height:$header-height;
     width:$header-height;

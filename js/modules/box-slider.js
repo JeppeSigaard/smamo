@@ -38,7 +38,16 @@ var SlideBoxesInit = function(){
             
         });    
         
-        $('.box-slider a, .grid-boxes a').off().on('touchstart',function(e){
+        
+    }
+    
+}
+
+$(function(){
+    
+    SlideBoxesInit();
+    
+    $('.box-slider a, .grid-boxes a').off().on('touchstart',function(e){
             var t = $(e.target);
             if (!$(this).hasClass('go')){
                 
@@ -48,12 +57,5 @@ var SlideBoxesInit = function(){
                 $(this).addClass('go');
             }
         });
-    }
-    
-}
-
-$(function(){
-    
-    SlideBoxesInit();
     
 });

@@ -232,5 +232,12 @@ $mb[] = array(
             'id'    => "video_bg",
             'type' => 'url',
             ),
+        
+        array(
+            'name'  => __( 'Fallback billede, mobil (feks gif)', 'rwmb' ),
+            'id'    => "video_bg_fallback",
+            'type' => 'file_advanced',
+            'max_file_uploads' => 1,
+            ),
     ),
 );

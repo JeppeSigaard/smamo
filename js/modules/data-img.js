@@ -13,18 +13,23 @@ var loadDataImages = function(){
                 $imgSrc = $(this).attr('data-bg'),
                 $imgPlaceholder = new Image();
             
-            // render background into local storage by applying it to the placeholder
-            $imgPlaceholder.src = $imgSrc;
-            
-            // When the placeholder is loaded
-            $imgPlaceholder.onload = function(){
-                
-                // Apply the source to 'this', hide 'this' and fade it in
-                $img.removeAttr('data-bg').css({
-                    opacity:0,
-                    backgroundImage: 'url('+$imgSrc+')',
-                }).animate({opacity:1},500);
-            };
+            if($imgSrc !== ''){
+                // render background into local storage by applying it to the placeholder
+                $imgPlaceholder.src = $imgSrc;
+
+                // When the placeholder is loaded
+                $imgPlaceholder.onload = function(){
+
+                    // Apply the source to 'this', hide 'this' and fade it in
+                    $img.removeAttr('data-bg').css({
+                        opacity:0,
+                        backgroundImage: 'url('+$imgSrc+')',
+                    }).animate({opacity:1},500);
+                };
+            }
+            else{
+                 $img.removeAttr('data-bg');
+            }
         });
         
     
@@ -37,10 +42,18 @@ var loadDataImages = function(){
                 $imgSrc = $(this).attr('data-src'),
                 $imgPlaceholder = new Image();
             
-            $imgPlaceholder.src = $imgSrc;
-            $imgPlaceholder.onload = function(){
-                $img.css({opacity:0}).removeAttr('data-src').attr('src',$imgSrc).animate({opacity:1},500);
-            };
+            if($imgSrc !== ''){
+            
+                $imgPlaceholder.src = $imgSrc;
+                $imgPlaceholder.onload = function(){
+                    $img.css({opacity:0}).removeAttr('data-src').attr('src',$imgSrc).animate({opacity:1},500);
+                };
+            }
+            
+            else{
+               $img.removeAttr('data-src');
+            }
+            
         });
 
 

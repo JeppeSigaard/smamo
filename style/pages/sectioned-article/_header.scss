@@ -9,11 +9,25 @@
     
     .page-header-title{
         @include center(true,true);
+        width:calc(100% - #{$base-margin} * 2);
     }
     
     h1{
-        font-size:300%;
-        white-space: nowrap;
+        
+        font-size: 175%;
+        line-height:1.9;
+        
+        @media only screen and(min-width:480px){
+            font-size:200%;
+        }
+        @media only screen and(min-width:640px){
+            font-size:250%;
+        }
+        @media only screen and(min-width:768px){
+            font-size:300%;
+            white-space: nowrap;
+        }
+        
     }
     span{
         font-size: 150%;

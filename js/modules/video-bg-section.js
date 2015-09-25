@@ -24,8 +24,8 @@ var set_video_play = function(){
 
 var set_video_bg_size = function(){
     var windowSize = {
-                h : $(window).height(),
-                w : $(window).width(),
+                h : $(window).height() + 60,
+                w : $(window).width() + 60,
             };
     
     

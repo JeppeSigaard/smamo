@@ -28,5 +28,7 @@
     
     .video-bg-fallback:not([data-bg]){
         background-color:$monkey-green;
+        background-size: cover;
+        background-position:center;
     }
 }

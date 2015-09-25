@@ -25,3 +25,4 @@
 //@koala-append 'modules/do-modal.js';
 //@koala-append 'modules/replaceholders.js';
 //@koala-append 'modules/chat.js';
+//@koala-append 'modules/footer-height.js';

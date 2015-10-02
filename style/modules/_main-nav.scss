@@ -129,36 +129,23 @@ nav.top-nav{
 }
 
 
-.menu-user{
-    font-size:90%;
-    margin:0 0-$base-margin;
-    padding:$base-margin $base-margin $base-margin*2;
-    position:relative;
-    margin-top:-1px;
-    
-    header{
-        padding:$base-margin / 2 0;
-        border-bottom: 1px solid darken($monkey-light,10);
-        
-        strong{
-            font-weight:400;
-            padding-left:20px;
-            background: url(../libs/img/icons/person.svg) left center no-repeat;
-            background-size:15px;
-        }
-    }
-    
-    nav{
-        font-size:90%;
-        a{
-            border-bottom:none;
-            padding:$base-margin 0 0;
-            transition:color .2s;
-            
-            &.logout:hover{
-                color:lighten($monkey-red,30);
-            }
-        }
-    }
-    
+@media only screen and(min-width:768px){
+
+	.hamburger{
+		display: none;
+	}
+
+
+	.top-nav-menu{
+		width:auto;
+		right:0;
+		height:$header-height;
+		min-height:0px;
+		box-shadow: none;
+    	background-color: transparent;
+	}
+
+	nav.top-nav ul li{
+		display: inline-block;
+	}
 }

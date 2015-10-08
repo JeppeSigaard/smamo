@@ -4,11 +4,12 @@
     height:100vh;
     border:$base-margin solid $monkey-light;
     overflow:hidden;
+    background: $monkey-green;
     
     .inner, .video-overlay{
         @extend %fill-all;
         overflow:hidden;
-        z-index:2;
+        z-index:3;
     }
     
     .inner{
@@ -24,6 +25,11 @@
         z-index:1;
         width:100%;
         height:100%;
+        opacity:0;
+    }
+    
+    iframe{
+        z-index:2;
     }
     
     .video-bg-fallback:not([data-bg]){

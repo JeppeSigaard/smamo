@@ -23,19 +23,22 @@
     padding-bottom: 80%;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto 100%;
     @extend %font-size;
+	transition:background-size 200ms;
+	transition-delay: 100ms;
     
     @media only screen and(min-width:480px){
         width:50%;
         padding-bottom: 40%;
     }
     
-    
+    /*
     @media only screen and(min-width:768px){
         width:33.33333%;
         padding-bottom: 28%;
     }
+	*/
     
     @media only screen and(min-width:1280px){
         width:25%;
@@ -47,7 +50,7 @@
     &:before{
             content:'';
             @extend %fill-all;
-            background-color:transparent;
+			background-color:rgba($monkey-black,.95);
             transition: background .3s;
             z-index:1;
         }        
@@ -64,34 +67,40 @@
             text-align: center;
             z-index:2;
             backface-visibility: hidden;
-
+			top:50%;
    
         
             &:first-of-type{
                 margin-top:-12px;
-                top:0px;
                 font-weight:400;
                 text-transform: uppercase;
             }
 
             &:nth-of-type(2){
-                top:100%;
                 margin-top:12px;
             }
         
         }
+		&:hover,
+		&.go{
+			background-size:auto 103%;
+		}
         
         &:hover span:first-of-type,
         &:hover span:nth-of-type(2),
         &.go span:first-of-type,
         &.go span:nth-of-type(2){
-            top:50%;
+            top:0px;
+
+			&:nth-of-type(2){
+				top:100%;
+			}
             transition-delay: 0s;
             
         }
         
         &:hover:before,
         &.go:before{
-            background-color:rgba($monkey-black,.9);
+            background-color:transparent;
         }
 }

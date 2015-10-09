@@ -1,4 +1,3 @@
-<?php if(!is_user_logged_in()){header('location:http://facebook.com/smartmonkey.dk');} ?>
 <?php $mobile = (wp_is_mobile()) ? 'mobile' : ''; ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -11,7 +10,7 @@
     <body <?php body_class($mobile); ?>>
     <section class="header-section">
         <header class="header">
-            <!-- <a class="hamburger" href="#">Menu</a> -->
+            <a class="hamburger" href="#">Menu</a>
             <nav class="top-nav">
                 <div class="top-nav-menu">
                     <?php wp_nav_menu(array( 'theme_location' => 'main_menu', 'container' => false, 'fallback_cb' => '', 'menu_id' => 'main-menu', )); ?>

@@ -2,7 +2,6 @@ $text-margin:.7em;
 
 body article{
     color:$monkey-black;
-	background-color: $monkey-light;
     
     .no-margin{
         @extend %no-margin;
@@ -101,10 +100,4 @@ body article{
     a:hover{
         text-decoration: underline!important;
     }
-}
-
-.page-article  p{
-	font-size:130%;
-	font-weight:400;
-	color:$monkey-black-2;
 }

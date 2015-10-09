@@ -8,8 +8,7 @@ $button-border-radius: 5px;
 .button, 
 .button:visited,
 body article .button,
-body article .button:visited,
-.page-article p .button{
+body article .button:visited,{
     text-decoration: none!important;
     background: $monkey-green;
     position:relative;
@@ -30,7 +29,6 @@ body article .button:visited,
     font-weight:400;
     cursor: pointer;
     border: none;
-	font-size:100%;
     
     &.small{
         font-size:80%;

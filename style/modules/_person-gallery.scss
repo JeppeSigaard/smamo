@@ -6,6 +6,7 @@
     //box-shadow: $button-shadow;
     position:relative;
     //z-index:3;
+	cursor: default;
     
     .box{
         position:relative;
@@ -54,13 +55,13 @@
     }
     
     footer{
-        padding:$base-margin 0px $base-margin;
         @extend %article-font-style;
         
         h3{
             text-transform: uppercase;
             font-weight: 700;
             line-height: 1;
+			margin-top:$base-margin;
             margin-bottom:5px;
             font-size:100%;
         }
@@ -68,6 +69,11 @@
         h4{
             color:$monkey-green;
             font-size:100%;
+			font-weight: 400;
+			margin:0 0 $base-margin;
+			padding:0 0 $base-margin;
+			border-bottom:1px solid $monkey-light-2;
+
         }
         
         span,a{
@@ -75,10 +81,17 @@
         }
         
         a{
-            margin-top:5px;
-            font-weight:400;
-            font-size:80%;
+			margin-top:5px;
+			padding:0 0 $base-margin*1.5;
+            //border-bottom:1px solid $monkey-light-2;
             
+			&:first-of-type{
+				margin:$base-margin 0 0;
+				padding:$base-margin 0 0;
+				border-top:1px solid $monkey-light-2;
+				border-bottom:none;
+			}
+
             &:hover{
                 text-decoration: underline;
             }

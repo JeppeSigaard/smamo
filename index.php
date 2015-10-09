@@ -23,7 +23,7 @@ get_header();
         'post_parent' => $parent,
         'post_type'   => 'any', 
         'numberposts' => -1,
-        'post_status' => 'any',
+        'post_status' => 'publish',
         'orderby'    => 'menu_order',
         'order'       => 'ASC',
     ); 

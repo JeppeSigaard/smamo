@@ -7,7 +7,7 @@ html,body{
     font-weight: $base-font-weight;
     @extend %font-size;
     box-sizing:border-box;
-    text-rendering: optimizeLegibility;
+    text-rendering: geometricPrecision;
     backface-visibility: hidden;
     -webkit-text-size-adjust: 100%;
     background:$monkey-light;

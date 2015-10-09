@@ -13,12 +13,19 @@ var set_video_play = function(){
     $('.subsection-video-bg iframe').each(function(){
     
      /* Tilføj autoplay, loop og playlist til url, hvis youtube ID findes */
-        var source = $(this).attr('src');
+        var video = $(this);
+        var source = video.attr('src');
         if(source){
             var ytID = youtube_parser(source);
-            $(this).attr('src',source+'&autoplay=1&loop=1&playlist='+ytID);
+            video.attr('src',source+'&autoplay=1&loop=1&playlist='+ytID);
 
         }
+
+        setTimeout(function(){
+            video.animate({opacity:1},500);
+            video.next('.video-bg-fallback').stop().animate({opacity:0},500);
+        },2500);
+
     });
 }
 

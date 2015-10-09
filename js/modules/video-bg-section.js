@@ -20,12 +20,12 @@ var set_video_play = function(){
             video.attr('src',source+'&autoplay=1&loop=1&playlist='+ytID);
 
         }
-        
+
         setTimeout(function(){
             video.animate({opacity:1},500);
             video.next('.video-bg-fallback').stop().animate({opacity:0},500);
         },2500);
-        
+
     });
 }
 

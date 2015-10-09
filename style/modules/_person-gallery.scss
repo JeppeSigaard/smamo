@@ -68,16 +68,22 @@
         h4{
             color:$monkey-green;
             font-size:100%;
+            margin-bottom: 0;
         }
         
         span,a{
             display: block;
         }
         
+        span:first-of-type,
+        a:first-of-type{
+                margin-top:$base-margin;
+                padding-top:$base-margin;
+                border-top:1px solid darken($monkey-light,5);
+            }
+        
         a{
             margin-top:5px;
-            font-weight:400;
-            font-size:80%;
 
             &:hover{
                 text-decoration: underline;

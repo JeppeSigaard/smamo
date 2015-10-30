@@ -7,11 +7,16 @@
 	left: 0;
 	bottom:0;
 	right:0;
+    opacity:.97;
 	
 	.booking-form-close{
 		font-size:40px;
 		width: 40px;
 		height:40px;
+        line-height:1;
+        transform-origin:center;
+        transition:transform 200ms;
+        
 		@media(min-width:480px){
 			font-size:50px;
 			width: 50px;
@@ -34,6 +39,30 @@
 		text-align:center;
 		display:block;
 		line-height:1;
+        
+        &:hover{
+            transform: rotate(90deg);
+            
+            &:after,
+            &:before{    
+                background-color: $monkey-red;
+            }
+        }
+        
+        &:before,
+        &:after{
+            content:'';
+            display: block;
+            @include center(true,true,rotate(45deg));
+            width:3px;
+            height:75%;
+            background-color: $monkey-black-2;
+            transition: background-color 250ms;
+        }
+        
+        &:after{
+            @include center(true,true,rotate(-45deg));
+        }
 	}
 	
 	.inner{

@@ -1,5 +1,5 @@
 <div class="booking-form">
-	<span class="booking-form-close">&times;</span>
+	<span class="booking-form-close"></span>
 	<article class="inner">
 		<form class="paginated-form" action="<?php echo admin_url('admin-ajax.php') ?>" method="post">
 		    <input type="hidden" name="action" value="smamo_booking_form">

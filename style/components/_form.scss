@@ -149,6 +149,19 @@ form{
                 color:$monkey-red;
             }
         }
+        
+         &.huge{
+            font-size: 175%;
+
+            & + label{
+                font-size: 175%;
+            }
+
+            &:focus + label,
+            & + label.stayup{
+                font-size: 100%;
+            }
+        }	
     
     }
     

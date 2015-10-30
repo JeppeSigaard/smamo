@@ -1,4 +1,6 @@
+<?php get_template_part('modals/booking'); ?>
 <?php $options = get_option('footer_options'); ?>
+
 <footer id="footer" class="footer">
     <div class="inner">
         <?php include get_template_directory().'/libs/img/logo.svg'; ?>
@@ -6,7 +8,7 @@
             <?php bloginfo('description'); ?>
         </div>
         <div class="center">
-             <a href="#" class="book-btn button white outline">Book et møde</a>
+             <a href="#" class="booking-form-open button white outline">Book et møde</a>
         </div>
         <div class="copy">
             <span><?php echo $options['firma']; ?></span>

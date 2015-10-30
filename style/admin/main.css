@@ -1,16 +1,3 @@
-#section_main,
-#section_slideshow,
-#section_description,
-#section_image,
-#section_snippet,
-#postimagediv,
-#section_color,
-#section_case_grid,
-#section_plx_hero,
-#postdivrich,
-#info,
-#attach_client,
-#add_user {
-  display: none; }
+#section_main,#section_slideshow,#section_description,#section_image,#section_snippet,#postimagediv,#section_color,#section_case_grid,#section_plx_hero,#postdivrich,#info,#attach_client,#add_user{display:none}body#tinymce.wp-editor{font-family:'Lato',sans-serif}
 
 /*# sourceMappingURL=main.css.map */

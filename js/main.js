@@ -10,8 +10,8 @@
 //@koala-append 'modules/video-bg-section.js';
 //@koala-append 'modules/header.js';
 //@koala-append 'modules/form.js';
+//@koala-append 'modules/booking.js';
 //@koala-append 'modules/fancySidebars.js';
-//@koala-append 'modules/form-cta.js';
 //@koala-append 'modules/box-slider.js';
 //@koala-append 'modules/section-slider.js';
 //@koala-append 'modules/menu-toggle.js';

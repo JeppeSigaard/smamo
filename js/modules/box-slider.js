@@ -47,14 +47,15 @@ $(function(){
     
     SlideBoxesInit();
     
-    $('.box-slider a, .grid-boxes a').off().on('touchstart',function(e){
+    $('.box-slider a, .grid-boxes a').off().on('touchend',function(e){
             var t = $(e.target);
-            if (!$(this).hasClass('go')){
+            if (!t.hasClass('go')){
                 
                 e.preventDefault();
                 
-                $('.box-slider a').removeClass('go');
+                $('.box-container .go').removeClass('go');
                 $(this).addClass('go');
+            
             }
         });
     

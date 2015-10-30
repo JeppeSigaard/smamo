@@ -1,0 +1,7 @@
+.paginated-form>div{
+	display:none;
+	
+	&.active{
+		display:block;
+	}
+}

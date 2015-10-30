@@ -43,6 +43,12 @@ header,section,footer{
     overflow: auto;
 }
 
+.underline{
+    border-bottom: 1px solid $monkey-black;
+    margin-bottom: $base-margin;
+    padding-bottom: $base-margin;
+}
+
 .hidden{
     display:none;
 }

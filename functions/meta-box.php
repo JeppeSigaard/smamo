@@ -24,6 +24,7 @@ function smamo_add_boxes(){
     require 'meta-box/abonnement.php'; 
     require 'meta-box/kunde.php'; 
     require 'meta-box/section-control.php'; 
+    require 'meta-box/booking.php'; 
 
 
 return $mb;

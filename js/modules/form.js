@@ -2,13 +2,14 @@
 var checkSuccess = function(target){
     
     if(target.val() === ''){
-
         
-            target.removeClass('success').next('label').removeClass('stayup');
-            
-        }
+        target.removeClass('success').next('label').removeClass('stayup');
+
+    }
     
-    else if(target.is('input[type="checkbox"], input[type="radio"]')){console.log('not valid field type');}
+    else if(target.is('input[type="checkbox"], input[type="radio"]')){
+    
+    }
     
     else{
         
@@ -50,7 +51,7 @@ var formJsInit = function(){
         
             if(!validateEmail(target.val())){
             
-                target.addClass('error');
+                target.removeClass('success').addClass('error');
             }
             
         

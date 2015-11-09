@@ -19,3 +19,5 @@ require 'functions/woo.php';
 require 'functions/footer-options.php';
 
 require 'functions/disable-pages.php'; 
+
+require 'functions/ajax.php';

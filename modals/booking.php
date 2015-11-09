@@ -15,7 +15,7 @@
 				<label for="email">Din email</label>
 			</div>
 			<div class="center active" data-group="1">
-				<a href="#" class="button outline next-btn">Næste (2/4)</a>
+				<a href="#" class="button outline next-btn submit">Næste (2/4)</a>
 			</div>
 			<!-- side 2 -->
 			<div data-group="2">
@@ -34,7 +34,7 @@
 			</div>
 			<div class="center" data-group="2">
 				<a href="#" class="button outline black prev-btn">Forrige</a>
-				<a href="#" class="button outline next-btn">Næste (3/4)</a>
+				<a href="#" class="button outline next-btn submit">Næste (3/4)</a>
 			</div>
 			<!-- side 3 -->
 			<div data-group="3">
@@ -53,7 +53,7 @@
 			</div>
 			<div class="center" data-group="3">
 				<a href="#" class="button outline black prev-btn">Forrige</a>
-				<a href="#" class="button outline next-btn">Næste (4/4)</a>
+				<a href="#" class="button outline next-btn submit">Næste (4/4)</a>
 			</div>
 			<!-- side 4 -->
 			<div data-group="4">
@@ -76,7 +76,7 @@
             </div>
 			<div class="center" data-group="4">
 				<a href="#" class="button outline black prev-btn">Forrige</a>
-				<a href="#" class="button outline next-btn booking-form-close">Afslut</a>
+				<a href="#" class="button outline submit booking-form-close">Afslut</a>
 			</div>
 		</form>
 	</article>

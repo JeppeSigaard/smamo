@@ -72,6 +72,10 @@ $(function() {
                 }, 120);
 
             }
+            
+            if(t.is('.submit')){
+                if(!form.hasClass('loading')){partialSubmitForm(form);}
+            }
 
             if (t.is('.prev-btn')) {
                 

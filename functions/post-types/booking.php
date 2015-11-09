@@ -5,7 +5,7 @@ add_action( 'init', 'smamo_add_booking' );
 function smamo_add_booking() {
 	register_post_type( 'booking', array(
 		
-        'menu_icon' 		 => 'dashicons-businessman',
+        'menu_icon' 		 => 'dashicons-calendar-alt',
 		'public'             => false,
 		'publicly_queryable' => false,
 		'show_ui'            => true,

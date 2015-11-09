@@ -9,4 +9,5 @@ require 'post-types/klippekort.php';
 require 'post-types/cases.php'; 
 
 require 'post-types/abonnement.php'; 
+
 require 'post-types/booking.php'; 

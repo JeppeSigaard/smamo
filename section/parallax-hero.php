@@ -12,8 +12,6 @@ $heroes = new WP_query(array(
 
 ));
 
-$options = get_option('footer_options');
-
 $weekday = jddayofweek(date("d"));
 
 ?>
@@ -62,12 +60,5 @@ $weekday = jddayofweek(date("d"));
         <?php endif; ?>
     </div>
 </section>
-<footer class="hero-footer">
-    <?php if ($options['email'] !== '') : ?>
-    <a href="mailto:<?php echo $options['email'] ?>"><?php echo $options['email'] ?></a><br/>
-    <?php endif; if ($options['tlf'] !== '') :?>
-    <a href="tel:<?php echo str_replace(' ','',$options['tlf']); ?>"><?php echo $options['tlf']; ?></a>
-    <?php endif; ?>
-</footer>
 
 

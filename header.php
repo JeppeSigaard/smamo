@@ -14,4 +14,12 @@
         <a class="header-logo" href="<?php bloginfo('url') ?>">
             <?php include 'libs/img/abe_hvid.svg'; ?>
         </a>
+        <?php $options = get_option('footer_options'); ?>
+		<footer class="header-footer">
+			<?php if ($options['email'] !== '') : ?>
+			<a href="mailto:<?php echo $options['email'] ?>"><?php echo $options['email'] ?></a><br/>
+			<?php endif; if ($options['tlf'] !== '') :?>
+			<a href="tel:<?php echo str_replace(' ','',$options['tlf']); ?>"><?php echo $options['tlf']; ?></a>
+			<?php endif; ?>
+		</footer>
     </section>

@@ -1,5 +1,26 @@
 $text-margin:.7em;
 
+section.page-article{
+
+	padding-top:20px;
+	padding-bottom:40px;
+
+	@media only screen and(min-width:480px){
+		padding-top:30px;
+		padding-bottom:50px;
+	}
+
+	@media only screen and(min-width:768px){
+		padding-top:40px;
+		padding-bottom:60px;
+	}
+
+	@media only screen and(min-width:960px){
+		padding-top:50px;
+		padding-bottom:70px;
+	}
+}
+
 body article{
     color:$monkey-black;
     

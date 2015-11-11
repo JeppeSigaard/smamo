@@ -50,3 +50,27 @@ $header-height:60px;
         }
     }
 }
+
+.header-footer{
+    display: none;
+    @media only screen and(min-width:640px){
+        display: block;
+    }
+
+    position:absolute;
+    top: calc(100vh - 125px);
+    height: 0;
+    overflow: visible;
+
+    a{
+        display: inline-block;
+        padding:8px $base-margin 8px $base-margin * 2;
+        @extend %dark-marker;
+        margin:0 0 $base-margin;
+        box-shadow: $base-shadow;
+
+        &:nth-of-type(2){
+             margin:0;
+        }
+    }
+}

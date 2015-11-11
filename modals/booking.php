@@ -8,14 +8,17 @@
 			<!-- side 1 -->
 			<div class="active" data-group="1">
 				<h3 class="center">Book et møde</h3>
-		        <p>Det eneste vi skal bruge er din email-adresse:</p>
+		        <p>Vi vil selvfølgelig rigtig gerne mødes med dig, og vi skal nok tage os af det hele. Det eneste vi skal bruge er din email-adresse, så vi kan komme i kontakt med dig:</p>
 			</div>
 			<div class="active" data-group="1">
 				<input class="huge" type="email" name="email" required>
 				<label for="email">Din email</label>
 			</div>
 			<div class="center active" data-group="1">
-				<a href="#" class="button outline next-btn submit">Næste (2/4)</a>
+				<a href="#" class="button outline next-btn submit">Send og næste (2/4)</a>
+			</div>
+			<div class="center active" data-group="1">
+				<p class="small"><a href="mailto:hej@smartmonkey.dk">Send en email i stedet</a></p>
 			</div>
 			<!-- side 2 -->
 			<div data-group="2">
@@ -31,6 +34,8 @@
                 <label>En native app</label>
                 <input type="checkbox" name="task_3" value="En kampagne">
                 <label>En kampagne</label>
+                <input type="checkbox" name="task_4" value="Noget helt andet">
+                <label>Noget helt andet</label>
 			</div>
 			<div class="center" data-group="2">
 				<a href="#" class="button outline black prev-btn">Forrige</a>
@@ -38,16 +43,18 @@
 			</div>
 			<!-- side 3 -->
 			<div data-group="3">
-				<h3 class="center">Har du et budget?</h3>
-		        <p></p>
+				<h3 class="center">Alletiders. Har du et budget?</h3>
+		        <p>Som regel kan vi komme ekstra godt fra start, hvis vi på forhånd kender din investeringsvillighed. Det giver os et fingerpeg om hvad vi kan nå at realisere indenfor en kommende projektperiode. </p>
 			</div>
 			<div data-group="3">
-			    <input type="radio" name="budget" value="ca. 10.000 - 25.000">
-			    <label>ca. 10.000 - 25.000</label>
+			    <input type="radio" name="budget" value="ca. 15.000 - 25.000">
+			    <label>Ca. 15.000 - 25.000</label>
 			    <input type="radio" name="budget" value="ca. 25.000 - 50.000">
-			    <label>ca. 25.000 - 50.000</label>
+			    <label>Ca. 25.000 - 50.000</label>
 			    <input type="radio" name="budget" value="ca. 50.000 - 100.000">
-			    <label>ca. 50.000 - 100.000</label>
+			    <label>Ca. 50.000 - 100.000</label>
+			    <input type="radio" name="budget" value="mere end 100.000">
+			    <label>Mere end 100.000</label>
 			    <input type="radio" name="budget" value="Ved ikke">
 			    <label>Ved ikke</label>
 			</div>
@@ -76,7 +83,12 @@
             </div>
 			<div class="center" data-group="4">
 				<a href="#" class="button outline black prev-btn">Forrige</a>
-				<a href="#" class="button outline submit booking-form-close">Afslut</a>
+				<a href="#" class="button outline submit next-btn submit-final">Afslut</a>
+			</div>
+			<!-- side 5 (tak for det) -->
+			<div data-group="5">
+				<h3 class="center">Super duper!</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur qui deserunt facere deleniti doloribus autem similique ipsa sequi tempore quas ratione impedit magnam beatae iure, aspernatur suscipit id iste quis.</p>
 			</div>
 		</form>
 	</article>

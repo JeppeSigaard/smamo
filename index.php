@@ -38,8 +38,34 @@ get_header();
 
     get_template_part('section/subsection/section',$section_type);
     
-    endforeach; wp_reset_postdata(); ?>
+    endforeach; wp_reset_postdata();
 
+	if ('case' === get_post_type(BASE_ID)) :
+
+    $cases = new WP_Query(array(
+		'post_type' => 'case',
+		'post_parent' => 0,
+		'posts_per_page' => 4,
+		'post__not_in' => array((defined('BASE_ID')) ? BASE_ID : ''),
+	));
+
+	?>
+
+	<section class="grid-boxes front-cases" id="cases">
+		<div class="box-container wrap">
+			<div class="inner">
+				<?php while ($cases->have_posts()) : $cases->the_post();  ?>
+					<?php $image_url = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'full' ); ?>
+					<a href="<?php the_permalink(); ?>" <?php post_class('grid-box') ?> data-bg="<?php echo $image_url[0] ?>">
+						<span><?php the_title() ?></span>
+						<?php $client = get_post(get_post_meta(get_the_ID(),'attach_client',true)) ?>
+						<span><?php echo (get_post_meta(get_the_ID(),'attach_client',true) !== '') ? $client->post_title: ''; ?></span>
+					</a>
+				<?php endwhile; wp_reset_postdata(); ?>
+			</div>
+		</div>
+	</section>
+	<?php endif; ?>
 </article>
 
 <?php get_footer(); ?>

@@ -6,6 +6,7 @@ require '../../../../../wp-load.php';
 $cc_1 = get_posts(array(
     'post_type' => 'any',
     'meta_key'     => 'section_contrast',
+	'posts_per_page' => -1,
 ));
 
 foreach($cc_1 as $post) : $post_id = $post->ID;

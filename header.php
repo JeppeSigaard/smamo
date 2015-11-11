@@ -1,3 +1,4 @@
+<?php if(!is_user_logged_in()) {header('location:http://facebook.com/smartmonkey.dk');} ?>
 <?php $mobile = (wp_is_mobile()) ? 'mobile' : ''; ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>

@@ -55,22 +55,26 @@ $(function() {
                 form = t.parents('form'),
                 group = t.parents('div').attr('data-group');
 
-            if (t.is('.next-btn') && validatePartial(form)) {
+            if (t.is('.next-btn') ) {
                 
                 e.preventDefault();
                 
-                if(!form.hasClass('loading')){partialSubmitForm(form);}
+                if (validatePartial(form)){
                 
-                form.find('.active').fadeOut(100, function() {
-                    $(this).removeClass('active').removeAttr('style');
-                });
+                    if(!form.hasClass('loading')){
+                        partialSubmitForm(form);
+                    }
 
-                setTimeout(function() {
-                    group++;
-                    $('div[data-group=' + group + ']').addClass('active');
-                    $('form textarea:not(.no-autosize)').removeAttr('style');
-                }, 120);
+                    form.find('.active').fadeOut(100, function() {
+                        $(this).removeClass('active').removeAttr('style');
+                    });
 
+                    setTimeout(function() {
+                        group++;
+                        $('div[data-group=' + group + ']').addClass('active');
+                        $('form textarea:not(.no-autosize)').removeAttr('style');
+                    }, 120);
+                }
             }
             
             if(t.is('.submit')){

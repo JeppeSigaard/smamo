@@ -205,6 +205,19 @@ form{
                 border:2px solid $monkey-light;
 
             }
+            
+            &:after{
+                content: '';
+                position: absolute;
+                display: block;
+                right: 17px;
+                top: 17px;
+                width: 5px;
+                height: 11px;
+                border:none;
+                transform: rotate(40deg);
+                transition:border 120ms;
+            }
 
     
             &:hover{
@@ -220,15 +233,17 @@ form{
         
         &:checked + label{
 
-                &:before{
-                    font-size: inherit;
-                    content:'\221A';
-                    background:lighten($monkey-green,30);
-                    border:2px solid lighten($monkey-green,20);
-                }
-
+            &:before{
+                background:lighten($monkey-green,30);
+                border:2px solid lighten($monkey-green,20);
             }
 
+            &:after{
+                border-bottom: 3px solid $monkey-black;
+                border-right: 3px solid $monkey-black;
+            }
+
+        }
     }
     
     /* SELECT */

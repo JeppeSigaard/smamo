@@ -4,6 +4,7 @@ $description-color: #fff;
     color:$description-color;
     font-size:0;
     margin:0;
+    overflow: auto;
     padding:0 0 20px;
     @media only screen and(min-width:640px){
         padding:$base-margin $base-margin 80px;
@@ -24,15 +25,28 @@ $description-color: #fff;
         
         width: 100%;
         
+        &.small{
+            
+            p{
+                margin-bottom:0;
+                
+            }
+            
+        }
+        
         @media only screen and(min-width:768px){
             
             &.medium{
-            width:50%;
+            width:calc(100% - 320px);
             }
 
             &.small{
-                width:33.3333%;
-				padding-left:16.66666666%;
+                position: absolute;
+                top: $base-margin;
+                right: $base-margin;
+                width:320px;
+                
+                
             }
 
             &.column-left,
@@ -57,16 +71,11 @@ $description-color: #fff;
                 float:none;
             }
             
-        &.medium{
-            width:33%;
-			max-width:420px;
-        }
+            &.medium{
+                width:33%;
+                max-width:480px;
+            }
         
-        &.small{
-            width:25%;
-			float:right;
-			padding-left:0;
-        }
             
             
         }
@@ -79,11 +88,17 @@ $description-color: #fff;
         
         .text{
             border-top:1px solid $description-color;
-            padding:20px 0px;
+            padding:20px 0px 17px;
+            
+            a{
+                text-decoration: none!important;
+            }
             
             .task{
                 padding-left:20px;
                 position:relative;
+                
+                
                 
                 &:before{
                     content: '';
@@ -98,6 +113,19 @@ $description-color: #fff;
                     transform: rotate(40deg);
                 }
             } 
+        }
+        
+        .tasks a{
+            
+            display: block;
+            opacity:.7;
+            transition: opacity 120ms;
+            
+            &.current-case,
+            &:hover{
+                opacity:1;
+            }
+            
         }
     }
 }

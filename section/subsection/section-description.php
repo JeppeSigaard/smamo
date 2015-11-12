@@ -49,7 +49,8 @@ $kunde_q = new WP_Query(array(
             </div>
             <div class="text tasks">
                 <?php while ($kunde_q->have_posts()) : $kunde_q->the_post(); ?>
-                    <a <?php post_class(); ?> href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                    <?php $class = (get_the_ID() === BASE_ID) ? 'current-case': ''; ?>
+                    <a <?php post_class($class); ?> href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 <?php endwhile; wp_reset_postdata(); ?>
             </div>
         </div>
